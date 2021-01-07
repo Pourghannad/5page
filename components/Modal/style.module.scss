@@ -1,0 +1,39 @@
+.modal-container {
+    position: fixed;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 420px;
+    min-height: 160px;
+    background-color: rgba(20, 7, 9, 0.97);
+    max-height: 80vh;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    .close { 
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        right: -21px;
+        top: -21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg {
+            width: 60%;
+            height: 60%;
+            path {
+                fill: #fff;
+            }
+        }
+    }
+    .wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 36px;
+        width: 100%;
+    }
+}
