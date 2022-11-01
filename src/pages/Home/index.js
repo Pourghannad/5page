@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 import Intro from "./component/intro"
 import { ReactComponent as Play } from "../../assets/play.svg";
 const Home = (props) => {
-    const [intro, setIntro] = useState(false);
+    const [intro, setIntro] = useState(true);
     setTimeout(() => {
         setIntro(false);
     }, 1200);
