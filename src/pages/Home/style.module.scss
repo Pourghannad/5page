@@ -1,8 +1,27 @@
 .home-page-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    .intro-wrapper {
+        background-color: #090304;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 1;
+        transition-property: opacity;
+        transition-delay: 200ms;
+        transition-duration: 200ms;
+        svg path {
+            transition: fill 200ms;
+        }
+        &.deactive-intro {
+            opacity: 0;
+            svg path {
+                fill: #090304;
+            }
+        }
+
+    }
     .fivepage-logo-type {
         color: #C8102E;
         font-weight: bold;

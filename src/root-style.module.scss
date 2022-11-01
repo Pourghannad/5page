@@ -7,6 +7,9 @@
         height: 100%;
         box-shadow: 0 0 35px -30px #ffffff;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .ads-container { 
             position: fixed;
             height: 50px;

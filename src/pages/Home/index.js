@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classNames from "classnames";
 import style from "./style.module.scss";
 import { withRouter } from "react-router";
 import Intro from "./component/intro"
@@ -10,20 +11,18 @@ const Home = (props) => {
     }, 1200);
     return (
         <div className={style["home-page-container"]}>
-            {intro &&
+            <div className={classNames(style["intro-wrapper"], {[style["deactive-intro"]]: !intro})}>
                 <Intro />
-            }
-            {!intro && 
-                <React.Fragment>
-                    <span className={style["fivepage-logo-type"]}>5Page</span>
-                    <div className={style["action-button-container"]}>
-                        <button></button>
-                        <button onClick={() => props.history.push("/play")}>
-                            <Play />
-                        </button>
-                    </div>
-                </React.Fragment>
-            }
+            </div>
+            <React.Fragment>
+                <span className={style["fivepage-logo-type"]}>5Page</span>
+                <div className={style["action-button-container"]}>
+                    <button></button>
+                    <button onClick={() => props.history.push("/play")}>
+                        <Play />
+                    </button>
+                </div>
+            </React.Fragment>
         </div>
     );
 };
