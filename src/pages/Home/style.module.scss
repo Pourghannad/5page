@@ -38,7 +38,24 @@
                 height: 30px;
                 path {
                     stroke: #00B2A9;
-                    stroke-width: 18px;
+                    stroke-width: 10px;
+                    stroke-dasharray: 190px;
+                    stroke-dashoffset: 0px;
+                    animation-name: playActionAnimation;
+                    animation-iteration-count: infinite;
+                    animation-duration: 3s;
+                    animation-timing-function: linear;
+                }
+                @keyframes playActionAnimation {
+                    0% {
+                        stroke-dashoffset: 0px;
+                    }
+                    50% { 
+                        stroke-dashoffset: 570px;
+                    }
+                    100% {
+                        stroke-dashoffset: 760px;
+                    }
                 }
             }
         }
