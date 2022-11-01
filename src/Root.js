@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +11,9 @@ import Home from "./pages/Home";
 import Play from "./pages/Play";
 import { InitUser } from './utils/webID';
 const Root = () => {
-  InitUser();
+  useEffect(() => {
+    InitUser();
+  }, [])
   return (
     <Router>
       <main className={style["main-container"]}>
@@ -25,7 +27,7 @@ const Root = () => {
             </Route>
           </Switch>
           <div className={style["ads-container"]}>
-            ADS
+            <span>ADS</span>
           </div>
         </section>
         </main>
