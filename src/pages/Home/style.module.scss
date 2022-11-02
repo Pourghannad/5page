@@ -8,14 +8,16 @@
         left: 0;
         z-index: 2;
         opacity: 1;
-        transition-property: opacity;
-        transition-delay: 200ms;
+        transition-property: opacity, z-index;
+        transition-delay: 200ms opacity;
+        transition-delay: 400ms z-index;
         transition-duration: 200ms;
         svg path {
             transition: fill 200ms;
         }
         &.deactive-intro {
             opacity: 0;
+            z-index: -2;
             svg path {
                 fill: #090304;
             }
@@ -68,13 +70,6 @@
                 height: 25px;
                 path {
                     stroke: #00B2A9;
-                    stroke-width: 10px;
-                    stroke-dasharray: 190px;
-                    stroke-dashoffset: 0px;
-                    animation-name: playActionAnimation;
-                    animation-iteration-count: infinite;
-                    animation-duration: 3s;
-                    animation-timing-function: linear;
                 }
                 @keyframes playActionAnimation {
                     0% {
@@ -87,6 +82,15 @@
                         stroke-dashoffset: 760px;
                     }
                 }
+            }
+            svg {
+                stroke-width: 10px;
+                stroke-dasharray: 190px;
+                stroke-dashoffset: 0px;
+                animation-name: playActionAnimation;
+                animation-iteration-count: infinite;
+                animation-duration: 3s;
+                animation-timing-function: linear;
             }
         }
     }
