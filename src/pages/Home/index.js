@@ -17,7 +17,6 @@ const Home = (props) => {
             <React.Fragment>
                 <span className={style["fivepage-logo-type"]}>5Page</span>
                 <div className={style["action-button-container"]}>
-                    <button></button>
                     <button onClick={() => props.history.push("/play")}>
                         <Play />
                     </button>
