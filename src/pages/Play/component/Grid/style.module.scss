@@ -1,5 +1,6 @@
 .grid-container { 
     width: 100vw;
+    max-width: 500px;
     .items-container {
         display: flex;
         flex-wrap: wrap;
