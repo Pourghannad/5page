@@ -7,11 +7,11 @@ const Play = () => {
     useEffect(() => {
         if (playContainerRef.current) {
             setTimeout(() => {
-                playContainerRef.current.scrollLeft = 80;
+                playContainerRef.current.scrollLeft = 140;
                 setTimeout(() => {
                     playContainerRef.current.scrollLeft = 0;
                 }, 350);
-            }, 700);
+            }, 500);
         }
     }, []);
     return (
@@ -23,6 +23,22 @@ const Play = () => {
             <div className={style["page-container"]}>
                 <span className={style["text"]}>Page 1</span>
                 <Grid data={data["1"].page1} />
+            </div>
+            <div className={style["page-container"]}>
+                <span className={style["text"]}>Page 2</span>
+                <Grid data={data["1"].page2} />
+            </div>
+            <div className={style["page-container"]}>
+                <span className={style["text"]}>Page 3</span>
+                <Grid data={data["1"].page3} />
+            </div>
+            <div className={style["page-container"]}>
+                <span className={style["text"]}>Page 4</span>
+                <Grid data={data["1"].page5} />
+            </div>
+            <div className={style["page-container"]}>
+                <span className={style["text"]}>Page 5</span>
+                <Grid data={data["1"].page5} />
             </div>
         </div>
     );
