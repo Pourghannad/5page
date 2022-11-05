@@ -18,7 +18,7 @@ const Play = () => {
         <div ref={playContainerRef} className={style["play-main-container"]}>
             <div className={style["page-container"]}>
                 <span className={style["text"]}>Standard</span>
-                <Grid data={data["1"].standard} />
+                <Grid standard data={data["1"].standard} />
             </div>
             <div className={style["page-container"]}>
                 <span className={style["text"]}>Page 1</span>
