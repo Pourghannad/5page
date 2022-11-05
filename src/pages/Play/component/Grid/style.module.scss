@@ -36,4 +36,8 @@
             }
         }
     }
+    &.standard .item:hover {
+        background-color: transparent;
+        cursor: unset;
+    }
 }
