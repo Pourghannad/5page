@@ -103,8 +103,7 @@ export const data = {
               },
               {
                 "uuid": "f73d87f9-4752-4d08-98dc-948de72b6a06",
-                "css": {
-                }
+                "css": {}
               },
               {
                 "uuid": "3ba88804-16ff-4fe2-8ce8-fb746e1331b1",
@@ -234,8 +233,7 @@ export const data = {
               },
               {
                 "uuid": "ad3a057e-0c96-44d1-be34-4e959d3a73f8",
-                "css": {
-                }
+                "css": {}
               },
               {
                 "uuid": "cc9cfb6f-2216-4120-82d5-31e3336c2577",

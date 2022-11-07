@@ -13,6 +13,7 @@ const Grid = (props) => {
                     return item !== param.uuid
                 }));
             }
+            props.onSelected(param.uuid);
         }
     }
     return (

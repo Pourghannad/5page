@@ -21,3 +21,13 @@
         margin-bottom: 40px;
     }
 }
+.submit {
+    position: absolute;
+    bottom: 3em;
+    appearance: none;
+    background-color: rgb(69 27 122 / 60%);
+    color: #fff;
+    padding: 1em 2em;
+    border: 3px solid rgb(55 18 101);
+    cursor: pointer;
+}
