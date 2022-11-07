@@ -48,6 +48,23 @@ const Play = () => {
             return false
     }
 
+    const handleSubmit = () => {
+        if (
+            selected[1].length === 1 &&
+            selected[2].length === 1 &&
+            selected[3].length === 1 &&
+            selected[4].length === 1 &&
+            selected[5].length === 1 && 
+            data["1"]["ok"][0] === selected[1][0] && 
+            data["1"]["ok"][1] === selected[2][0] && 
+            data["1"]["ok"][2] === selected[3][0] && 
+            data["1"]["ok"][3] === selected[4][0] && 
+            data["1"]["ok"][4] === selected[5][0]
+            ) {
+                alert('win')
+            }
+    }
+
     return (
         <>
             <div ref={playContainerRef} className={style["play-main-container"]}>
@@ -69,7 +86,7 @@ const Play = () => {
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 4</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data["1"].page5} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data["1"].page4} />
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 5</span>
@@ -77,7 +94,7 @@ const Play = () => {
                 </div>
             </div>
             {submitCondition() &&
-                <button className={style["submit"]}>Submit</button>
+                <button onClick={handleSubmit} className={style["submit"]}>Submit</button>
             }
         </>
     );
