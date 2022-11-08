@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76a96a2f.chunk.css",
+    "main.js": "/static/js/main.54b82868.chunk.js",
+    "main.js.map": "/static/js/main.54b82868.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.031e40fb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.031e40fb.js.map",
+    "static/js/2.da04cfcf.chunk.js": "/static/js/2.da04cfcf.chunk.js",
+    "static/js/2.da04cfcf.chunk.js.map": "/static/js/2.da04cfcf.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0b37ba231c3dffabfbf60e1b3a100cc5.js": "/precache-manifest.0b37ba231c3dffabfbf60e1b3a100cc5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.76a96a2f.chunk.css.map": "/static/css/main.76a96a2f.chunk.css.map",
+    "static/js/2.da04cfcf.chunk.js.LICENSE.txt": "/static/js/2.da04cfcf.chunk.js.LICENSE.txt",
+    "static/media/fonts.scss": "/static/media/SpaceGrotesk-Regular.fbbf6d98.woff",
+    "static/media/azard.dc588f53.svg": "/static/media/azard.dc588f53.svg",
+    "static/media/checked.c6f2233c.svg": "/static/media/checked.c6f2233c.svg",
+    "static/media/play.00337609.svg": "/static/media/play.00337609.svg",
+    "static/media/wrong.62efe098.svg": "/static/media/wrong.62efe098.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.031e40fb.js",
+    "static/js/2.da04cfcf.chunk.js",
+    "static/css/main.76a96a2f.chunk.css",
+    "static/js/main.54b82868.chunk.js"
+  ]
+}
