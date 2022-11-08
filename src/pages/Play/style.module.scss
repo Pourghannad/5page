@@ -23,11 +23,45 @@
 }
 .submit {
     position: absolute;
-    bottom: 3em;
+    bottom: 2.75em;
     appearance: none;
     background-color: rgb(69 27 122 / 60%);
     color: #fff;
     padding: 1em 2em;
     border: 3px solid rgb(55 18 101);
+    width: 76%;
     cursor: pointer;
+}
+.status-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #090304;
+    svg {
+        width: 100%;
+        height: 100%;
+        path {
+            stroke: #0c511e;
+            stroke-width: 2px;
+            stroke-dasharray: 0px;
+            animation-name: checkedModalAnimation;
+            animation-duration: 1500ms;
+        }
+        @keyframes checkedModalAnimation {
+            0% {
+                stroke-dasharray: 70px;
+            }
+            80% {
+                stroke-dasharray: 20px;
+            }
+            100% {
+                stroke-dasharray: 0px;
+            }
+        }
+    }
+    &.wrong {
+        svg path {
+            stroke: #641212;
+        }
+    }
 }

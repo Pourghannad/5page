@@ -1,10 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import style from "./style.module.scss";
 import Grid from './component/Grid';
+import { ReactComponent as CheckedSvg } from "../../assets/checked.svg";
+import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import { data } from './level.js';
+import classNames from 'classnames';
 const Play = () => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
+    const [modalStatus, setModalStatus] = useState('');
     useEffect(() => {
         if (playContainerRef.current) {
             setTimeout(() => {
@@ -61,7 +65,13 @@ const Play = () => {
             data["1"]["ok"][3] === selected[4][0] && 
             data["1"]["ok"][4] === selected[5][0]
             ) {
-                alert('win')
+                setModalStatus('win');
+            } else {
+                setModalStatus('wrong');
+                setTimeout(() => {
+                    setModalStatus('');
+                    setSelected({});
+                }, 3000);
             }
     }
 
@@ -95,6 +105,12 @@ const Play = () => {
             </div>
             {submitCondition() &&
                 <button onClick={handleSubmit} className={style["submit"]}>Submit</button>
+            }
+            {modalStatus === 'win' && 
+                <div className={style["status-modal"]}><CheckedSvg /></div>
+            }
+            {modalStatus === 'wrong' && 
+                <div className={classNames(style["status-modal"], style["wrong"])}><WrongSvg /></div>
             }
         </>
     );
