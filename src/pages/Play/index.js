@@ -15,8 +15,8 @@ const Play = () => {
                 playContainerRef.current.scrollLeft = 140;
                 setTimeout(() => {
                     playContainerRef.current.scrollLeft = 0;
-                }, 350);
-            }, 500);
+                }, 250);
+            }, 250);
         }
     }, []);
 
