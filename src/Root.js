@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from 'react-router-dom'
 import style from "./root-style.module.scss";
 import "./reset.scss";
 import "./fonts.scss";
@@ -10,7 +10,7 @@ const Root = () => {
     InitUser();
   }, [])
   return (
-    <Router>
+    <HashRouter>
       <main className={style["main-container"]}>
         <section className={style["wrapper"]}>
           <RouterSwitch />
@@ -19,7 +19,7 @@ const Root = () => {
           </div>
         </section>
         </main>
-    </Router>
+    </HashRouter>
   );
 }
 
