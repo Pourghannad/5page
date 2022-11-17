@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/5page/static/css/main.9c42edaf.chunk.css",
+    "main.css": "/5page/static/css/main.33ee2e4f.chunk.css",
     "main.js": "/5page/static/js/main.55dfce7d.chunk.js",
     "main.js.map": "/5page/static/js/main.55dfce7d.chunk.js.map",
     "runtime-main.js": "/5page/static/js/runtime-main.015ee029.js",
@@ -8,9 +8,9 @@
     "static/js/2.536afdfd.chunk.js": "/5page/static/js/2.536afdfd.chunk.js",
     "static/js/2.536afdfd.chunk.js.map": "/5page/static/js/2.536afdfd.chunk.js.map",
     "index.html": "/5page/index.html",
-    "precache-manifest.9e213c5bf66bcdcf39529d6f00b3d97e.js": "/5page/precache-manifest.9e213c5bf66bcdcf39529d6f00b3d97e.js",
+    "precache-manifest.4f447edcb4990b1f29886d7748db3f53.js": "/5page/precache-manifest.4f447edcb4990b1f29886d7748db3f53.js",
     "service-worker.js": "/5page/service-worker.js",
-    "static/css/main.9c42edaf.chunk.css.map": "/5page/static/css/main.9c42edaf.chunk.css.map",
+    "static/css/main.33ee2e4f.chunk.css.map": "/5page/static/css/main.33ee2e4f.chunk.css.map",
     "static/js/2.536afdfd.chunk.js.LICENSE.txt": "/5page/static/js/2.536afdfd.chunk.js.LICENSE.txt",
     "static/media/fonts.scss": "/5page/static/media/SpaceGrotesk-Regular.fbbf6d98.woff",
     "static/media/azard.dc588f53.svg": "/5page/static/media/azard.dc588f53.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.015ee029.js",
     "static/js/2.536afdfd.chunk.js",
-    "static/css/main.9c42edaf.chunk.css",
+    "static/css/main.33ee2e4f.chunk.css",
     "static/js/main.55dfce7d.chunk.js"
   ]
 }
