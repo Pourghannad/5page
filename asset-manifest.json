@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.5169bc40.chunk.css",
-    "main.js": "./static/js/main.e371fbe4.chunk.js",
-    "main.js.map": "./static/js/main.e371fbe4.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.47e23aad.js",
-    "runtime-main.js.map": "./static/js/runtime-main.47e23aad.js.map",
-    "static/js/2.25b4a568.chunk.js": "./static/js/2.25b4a568.chunk.js",
-    "static/js/2.25b4a568.chunk.js.map": "./static/js/2.25b4a568.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.7c24a9884d01fcc00367f9154385a310.js": "./precache-manifest.7c24a9884d01fcc00367f9154385a310.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.5169bc40.chunk.css.map": "./static/css/main.5169bc40.chunk.css.map",
-    "static/js/2.25b4a568.chunk.js.LICENSE.txt": "./static/js/2.25b4a568.chunk.js.LICENSE.txt",
-    "static/media/fonts.scss": "./static/media/SpaceGrotesk-Regular.fbbf6d98.woff",
-    "static/media/azard.dc588f53.svg": "./static/media/azard.dc588f53.svg",
-    "static/media/checked.c6f2233c.svg": "./static/media/checked.c6f2233c.svg",
-    "static/media/play.00337609.svg": "./static/media/play.00337609.svg",
-    "static/media/wrong.62efe098.svg": "./static/media/wrong.62efe098.svg"
+    "main.css": "/5page/static/css/main.9c42edaf.chunk.css",
+    "main.js": "/5page/static/js/main.77629061.chunk.js",
+    "main.js.map": "/5page/static/js/main.77629061.chunk.js.map",
+    "runtime-main.js": "/5page/static/js/runtime-main.015ee029.js",
+    "runtime-main.js.map": "/5page/static/js/runtime-main.015ee029.js.map",
+    "static/js/2.25b4a568.chunk.js": "/5page/static/js/2.25b4a568.chunk.js",
+    "static/js/2.25b4a568.chunk.js.map": "/5page/static/js/2.25b4a568.chunk.js.map",
+    "index.html": "/5page/index.html",
+    "precache-manifest.65d7d001fd74ddf3ad2e734144d71bc1.js": "/5page/precache-manifest.65d7d001fd74ddf3ad2e734144d71bc1.js",
+    "service-worker.js": "/5page/service-worker.js",
+    "static/css/main.9c42edaf.chunk.css.map": "/5page/static/css/main.9c42edaf.chunk.css.map",
+    "static/js/2.25b4a568.chunk.js.LICENSE.txt": "/5page/static/js/2.25b4a568.chunk.js.LICENSE.txt",
+    "static/media/fonts.scss": "/5page/static/media/SpaceGrotesk-Regular.fbbf6d98.woff",
+    "static/media/azard.dc588f53.svg": "/5page/static/media/azard.dc588f53.svg",
+    "static/media/checked.c6f2233c.svg": "/5page/static/media/checked.c6f2233c.svg",
+    "static/media/play.00337609.svg": "/5page/static/media/play.00337609.svg",
+    "static/media/wrong.62efe098.svg": "/5page/static/media/wrong.62efe098.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.47e23aad.js",
+    "static/js/runtime-main.015ee029.js",
     "static/js/2.25b4a568.chunk.js",
-    "static/css/main.5169bc40.chunk.css",
-    "static/js/main.e371fbe4.chunk.js"
+    "static/css/main.9c42edaf.chunk.css",
+    "static/js/main.77629061.chunk.js"
   ]
 }
