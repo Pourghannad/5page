@@ -12,6 +12,9 @@
     padding-bottom: 12px;
     padding-top: 4px;
     width: 100%;
+    &.intro {
+        filter:  blur(10px);
+    }
     .text { 
         font-size: 22px;
         color: #fff;
@@ -64,4 +67,12 @@
             stroke: #641212;
         }
     }
+}
+
+.intro-modal {
+    position: absolute;
+    width: 75%;
+    padding: 20px;
+    background: rgb(255 255 255 / 30%);
+    color: rgb(0 0 0 / 70%);
 }
