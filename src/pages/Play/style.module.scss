@@ -13,7 +13,8 @@
     padding-top: 4px;
     width: 100%;
     &.intro {
-        filter:  blur(10px);
+        filter: blur(10px);
+        overflow: hidden;
     }
     .text { 
         font-size: 22px;
@@ -73,6 +74,19 @@
     position: absolute;
     width: 75%;
     padding: 20px;
-    background: rgb(255 255 255 / 30%);
-    color: rgb(0 0 0 / 70%);
+    background-color: rgb(255 255 255 / 50%);
+    color: rgb(0 0 0 / 80%);
+    font-size: 15px;
+    button {
+        width: 100%;
+        appearance: none;
+        border: 0;
+        background-color: rgb(255 255 255 / 57%);
+        padding: 1em;
+        margin-top: 15px;
+        box-shadow: 0 0 0 3px inset rgb(255 255 255 / 29%);
+        letter-spacing: 2px;
+        font-size: 15px;
+        cursor: pointer;
+    }
 }

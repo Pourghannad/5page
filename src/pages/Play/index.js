@@ -5,12 +5,13 @@ import { ReactComponent as CheckedSvg } from "../../assets/checked.svg";
 import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import { data } from './level.js';
 import classNames from 'classnames';
+import { LSG, LSS } from '../../utils/store';
 const Play = () => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
-    const [modalStatus, setModalStatus] = useState('');
+    const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
     useEffect(() => {
-        if (playContainerRef.current) {
+        if (playContainerRef.current && !LSG('intro')) {
             setTimeout(() => {
                 playContainerRef.current.scrollLeft = 140;
                 setTimeout(() => {
@@ -77,7 +78,7 @@ const Play = () => {
 
     return (
         <>
-            <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: true})}>
+            <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Standard</span>
                     <Grid standard data={data["1"].standard} />
@@ -112,10 +113,15 @@ const Play = () => {
             {modalStatus === 'wrong' && 
                 <div className={classNames(style["status-modal"], style["wrong"])}><WrongSvg /></div>
             }
-            {}
-            <div className={style["intro-modal"]}>
-                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
-            </div>
+            {modalStatus === 'intro' && 
+                <div className={style["intro-modal"]}>
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
+                    <button onClick={() => {
+                        setModalStatus('');
+                        LSS('intro', true);
+                    }}>OK</button>
+                </div>
+            }
         </>
     );
 };
