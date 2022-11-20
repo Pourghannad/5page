@@ -11,15 +11,15 @@ const Play = () => {
     const [selected, setSelected] = useState({});
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
     useEffect(() => {
-        if (playContainerRef.current && !LSG('intro')) {
+        if (playContainerRef.current && modalStatus === '' && LSG('intro')) {
             setTimeout(() => {
-                playContainerRef.current.scrollLeft = 140;
+                playContainerRef.current.scrollLeft = 150;
                 setTimeout(() => {
                     playContainerRef.current.scrollLeft = 0;
                 }, 250);
             }, 250);
         }
-    }, []);
+    }, [modalStatus]);
 
     const handleSelected = (uuid, page) => {
         if (selected[page]) {
@@ -115,6 +115,7 @@ const Play = () => {
             }
             {modalStatus === 'intro' && 
                 <div className={style["intro-modal"]}>
+                    <h5>About the game</h5>
                     On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
                     <button onClick={() => {
                         setModalStatus('');
