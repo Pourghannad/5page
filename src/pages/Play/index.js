@@ -115,7 +115,7 @@ const Play = () => {
             }
             {modalStatus === 'intro' && 
                 <div className={style["intro-modal"]}>
-                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.
+                    On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
                     <button onClick={() => {
                         setModalStatus('');
                         LSS('intro', true);
