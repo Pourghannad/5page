@@ -11,7 +11,7 @@ const Play = () => {
     const [selected, setSelected] = useState({});
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
     useEffect(() => {
-        if (playContainerRef.current && modalStatus === '' && LSG('intro')) {
+        if (playContainerRef.current && !LSG('intro')) {
             setTimeout(() => {
                 playContainerRef.current.scrollLeft = 150;
                 setTimeout(() => {
@@ -71,7 +71,6 @@ const Play = () => {
                 setModalStatus('wrong');
                 setTimeout(() => {
                     setModalStatus('');
-                    setSelected({});
                 }, 3000);
             }
     }
@@ -81,28 +80,27 @@ const Play = () => {
             <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Standard</span>
-                    <Grid standard data={data["1"].standard} />
+                    <Grid standard data={data[1].standard} />
                 </div>
-                {console.log('fooo', selected)}
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 1</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data["1"].page1} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data[1].page1} />
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 2</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={data["1"].page2} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={data[1].page2} />
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 3</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={data["1"].page3} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={data[1].page3} />
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 4</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data["1"].page4} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data[1].page4} />
                 </div>
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 5</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={data["1"].page5} />
+                    <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={data[1].page5} />
                 </div>
             </div>
             {submitCondition() &&
