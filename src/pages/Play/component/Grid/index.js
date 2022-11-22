@@ -7,7 +7,7 @@ const Grid = (props) => {
     const itemHandleClick = (param) => {
         if (!props.standard)  {
             if (!selected.includes(param.uuid)) {
-                setSelected([...selected, param.uuid])
+                setSelected([param.uuid])
             } else {
                 setSelected(selected.filter((item) => {
                     return item !== param.uuid

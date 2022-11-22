@@ -24,7 +24,7 @@ const Play = () => {
     const handleSelected = (uuid, page) => {
         if (selected[page]) {
             if (!selected[page].includes(uuid)) {
-                setSelected({...selected, [page]: [...selected[page] ,uuid]});
+                setSelected({...selected, [page]: [uuid]});
             } else {
                 setSelected({...selected, [page]: selected[page].filter((item) => {
                     return item !== uuid
@@ -83,6 +83,7 @@ const Play = () => {
                     <span className={style["text"]}>Standard</span>
                     <Grid standard data={data["1"].standard} />
                 </div>
+                {console.log('fooo', selected)}
                 <div className={style["page-container"]}>
                     <span className={style["text"]}>Page 1</span>
                     <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data["1"].page1} />
