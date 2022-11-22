@@ -7,12 +7,8 @@ import Play from "./pages/Play";
 const RouterSwitch = () => {
     return (
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/play">
-            <Play />
-          </Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/play" component={Play} />
       </Switch>
     );
 }

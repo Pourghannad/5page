@@ -6,10 +6,12 @@ import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import { data } from './level.js';
 import classNames from 'classnames';
 import { LSG, LSS } from '../../utils/store';
+import useQueryParams from '../../utils/useQueryParams';
 const Play = () => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
+    const { queryParams } = useQueryParams();
     useEffect(() => {
         if (playContainerRef.current && !LSG('intro')) {
             setTimeout(() => {
@@ -74,56 +76,61 @@ const Play = () => {
                 }, 3000);
             }
     }
+    if (queryParams.level) {
+        return (
+            <>
+            <h4>Level {queryParams.level}</h4>
+                <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Standard</span>
+                        <Grid standard data={data[queryParams.level].standard} />
+                    </div>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Page 1</span>
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data[queryParams.level].page1} />
+                    </div>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Page 2</span>
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={data[queryParams.level].page2} />
+                    </div>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Page 3</span>
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={data[queryParams.level].page3} />
+                    </div>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Page 4</span>
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data[queryParams.level].page4} />
+                    </div>
+                    <div className={style["page-container"]}>
+                        <span className={style["text"]}>Page 5</span>
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={data[queryParams.level].page5} />
+                    </div>
+                </div>
+                {submitCondition() &&
+                    <button onClick={handleSubmit} className={style["submit"]}>Submit</button>
+                }
+                {modalStatus === 'win' && 
+                    <div className={style["status-modal"]}><CheckedSvg /></div>
+                }
+                {modalStatus === 'wrong' && 
+                    <div className={classNames(style["status-modal"], style["wrong"])}><WrongSvg /></div>
+                }
+                {modalStatus === 'intro' && 
+                    <div className={style["intro-modal"]}>
+                        <h5>About the game</h5>
+                        On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
+                        <button onClick={() => {
+                            setModalStatus('');
+                            LSS('intro', true);
+                        }}>OK</button>
+                    </div>
+                }
+            
+            </>
+        );
 
-    return (
-        <>
-            <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Standard</span>
-                    <Grid standard data={data[1].standard} />
-                </div>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Page 1</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data[1].page1} />
-                </div>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Page 2</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={data[1].page2} />
-                </div>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Page 3</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={data[1].page3} />
-                </div>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Page 4</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data[1].page4} />
-                </div>
-                <div className={style["page-container"]}>
-                    <span className={style["text"]}>Page 5</span>
-                    <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={data[1].page5} />
-                </div>
-            </div>
-            {submitCondition() &&
-                <button onClick={handleSubmit} className={style["submit"]}>Submit</button>
-            }
-            {modalStatus === 'win' && 
-                <div className={style["status-modal"]}><CheckedSvg /></div>
-            }
-            {modalStatus === 'wrong' && 
-                <div className={classNames(style["status-modal"], style["wrong"])}><WrongSvg /></div>
-            }
-            {modalStatus === 'intro' && 
-                <div className={style["intro-modal"]}>
-                    <h5>About the game</h5>
-                    On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
-                    <button onClick={() => {
-                        setModalStatus('');
-                        LSS('intro', true);
-                    }}>OK</button>
-                </div>
-            }
-        </>
-    );
+    }
+    return <></>
 };
 
 export default Play;
