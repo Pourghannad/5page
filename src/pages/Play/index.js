@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { withRouter } from "react-router";
 import style from "./style.module.scss";
 import Grid from './component/Grid';
 import { ReactComponent as CheckedSvg } from "../../assets/checked.svg";
@@ -7,7 +8,7 @@ import { data } from './level.js';
 import classNames from 'classnames';
 import { LSG, LSS } from '../../utils/store';
 import useQueryParams from '../../utils/useQueryParams';
-const Play = () => {
+const Play = (props) => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
@@ -22,6 +23,12 @@ const Play = () => {
             }, 250);
         }
     }, [modalStatus]);
+
+    useEffect(() => {
+        if (playContainerRef.current) {
+            playContainerRef.current.scrollLeft = 0;
+        }
+    }, [props.location]);
 
     const handleSelected = (uuid, page) => {
         if (selected[page]) {
@@ -62,13 +69,21 @@ const Play = () => {
             selected[3].length === 1 &&
             selected[4].length === 1 &&
             selected[5].length === 1 && 
-            data["1"]["ok"][0] === selected[1][0] && 
-            data["1"]["ok"][1] === selected[2][0] && 
-            data["1"]["ok"][2] === selected[3][0] && 
-            data["1"]["ok"][3] === selected[4][0] && 
-            data["1"]["ok"][4] === selected[5][0]
+            data[queryParams.level]["ok"][0] === selected[1][0] && 
+            data[queryParams.level]["ok"][1] === selected[2][0] && 
+            data[queryParams.level]["ok"][2] === selected[3][0] && 
+            data[queryParams.level]["ok"][3] === selected[4][0] && 
+            data[queryParams.level]["ok"][4] === selected[5][0]
             ) {
                 setModalStatus('win');
+                if (queryParams.level === "1") {
+                    props.history.push('/play?level=2')
+                    setSelected({});
+                    setTimeout(() => {
+                        setModalStatus('');
+                    }, 2000);
+                    
+                }
             } else {
                 setModalStatus('wrong');
                 setTimeout(() => {
@@ -79,6 +94,9 @@ const Play = () => {
     if (queryParams.level) {
         return (
             <>
+            <button className={style["back"]} onClick={() => {
+                props.history.push('/')
+            }}></button>
             <h4>Level {queryParams.level}</h4>
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                     <div className={style["page-container"]}>
@@ -125,7 +143,6 @@ const Play = () => {
                         }}>OK</button>
                     </div>
                 }
-            
             </>
         );
 
@@ -133,4 +150,4 @@ const Play = () => {
     return <></>
 };
 
-export default Play;
+export default withRouter(Play);

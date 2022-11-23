@@ -1,3 +1,31 @@
+.back {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 45px;
+    left: 10px;
+    border: 0;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:before, &:after {
+        content: "";
+        width: 16px;
+        height: 2px;
+        right: 9px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 2px;
+    }
+    &:before {
+        transform: rotate(35deg);
+        top: 19px;
+    }
+    &:after {
+        transform: rotate(-35deg);
+        top: 11px;
+    }
+}
 h4 {
     color: #00b2a9;
     text-align: center;
