@@ -4,8 +4,9 @@ import style from "./style.module.scss";
 import { withRouter } from "react-router";
 import Intro from "./component/intro"
 import { ReactComponent as Play } from "../../assets/play.svg";
+import { LSG } from "../../utils/store";
 const Home = (props) => {
-    const [intro, setIntro] = useState(true);
+    const [intro, setIntro] = useState(!LSG('intro'));
     setTimeout(() => {
         setIntro(false);
     }, 1200);

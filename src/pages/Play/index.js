@@ -14,7 +14,7 @@ const Play = (props) => {
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
     const { queryParams } = useQueryParams();
     useEffect(() => {
-        if (playContainerRef.current && !LSG('intro')) {
+        if (playContainerRef.current && modalStatus === '') {
             setTimeout(() => {
                 playContainerRef.current.scrollLeft = 150;
                 setTimeout(() => {
@@ -95,7 +95,7 @@ const Play = (props) => {
         return (
             <>
             <button className={style["back"]} onClick={() => {
-                props.history.push('/')
+                props.history.push('/', {from: "play"})
             }}></button>
             <h4>Level {queryParams.level}</h4>
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
