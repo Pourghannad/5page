@@ -8,6 +8,7 @@ import { data } from './level.js';
 import classNames from 'classnames';
 import { LSG, LSS } from '../../utils/store';
 import useQueryParams from '../../utils/useQueryParams';
+import Help from "../../assets/help.mp4";
 const Play = (props) => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
@@ -136,9 +137,12 @@ const Play = (props) => {
                 {modalStatus === 'intro' && 
                     <div className={style["intro-modal"]}>
                         <h5>About the game</h5>
+                        <video style={{display : 'none'}}>
+                            <source src={Help} type="video/mp4" />
+                        </video>
                         On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
                         <a 
-                            href='https://pourghannad.github.io/5page/static/media/help.mp4'
+                            href='https://pourghannad.github.io/5page/static/media/help.ca92b90a.mp4'
                             rel='noopener noreferrer'
                             target='_blank'
                         >
