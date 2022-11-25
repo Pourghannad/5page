@@ -137,6 +137,13 @@ const Play = (props) => {
                     <div className={style["intro-modal"]}>
                         <h5>About the game</h5>
                         On the standard page, one item is selected from among the available boxes due to a special feature compared to the others. Find this special feature and select the item that you think has this feature on the next 5 pages.
+                        <a 
+                            href='https://pourghannad.github.io/5page/static/media/help.mp4'
+                            rel='noopener noreferrer'
+                            target='_blank'
+                        >
+                            Video
+                        </a>
                         <button onClick={() => {
                             setModalStatus('');
                             LSS('intro', true);
