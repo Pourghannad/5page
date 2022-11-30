@@ -14,9 +14,9 @@ const Root = () => {
       <main className={style["main-container"]}>
         <section className={style["wrapper"]}>
           <RouterSwitch />
-          <div className={style["ads-container"]}>
+          {/* <div className={style["ads-container"]}>
             <span>ADS</span>
-          </div>
+          </div> */}
         </section>
         </main>
     </HashRouter>
