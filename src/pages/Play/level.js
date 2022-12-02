@@ -868,30 +868,46 @@ export const data = {
               }
             },
             {
-              "css": {}
-            },
-            {
-              "css": {}
-            },
-            {
-              "css": {}
-            },
-            {
-              "css": {}
+              "css": {
+                "width": "10px",
+                "height": "10px",
+                "transform": "rotateZ(25deg)",
+              }
             },
             {
               "css": {
-                "width": "40px"
+                "transform": "rotateZ(80deg)",
+              }
+            },
+            {
+              "css": {
+                "width": "45px",
+                "height": "45px"
+              }
+            },
+            {
+              "css": {
+                "backgroundColor": "rgb(132 132 132)"
+              }
+            },
+            {
+              "css": {
+                "width": "4px"
               }
             },
             {
               "css": {}
             },
             {
-              "css": {}
+              "css": {
+                "transform": "rotateZ(-80deg)",
+                "height": "10px"
+              }
             },
             {
-              "css": {}
+              "css": {
+                "transform": "perspective(29px)rotateX(30deg)"
+              }
             },
             {
               "css": {
