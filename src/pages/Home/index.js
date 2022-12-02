@@ -28,7 +28,19 @@ const Home = (props) => {
             </React.Fragment>
             {levelModal && 
                 <div className={style["level-modal"]}>
-                    
+                    <h6>LEVEL SELECT</h6>
+                    <div>
+                        <span onClick={() => props.history.push("/play?level=1")}>1</span>
+                        <span onClick={() => props.history.push("/play?level=2")}>2</span>
+                        <span onClick={() => props.history.push("/play?level=3")}>3</span>
+                        <span className={style["soon"]}>4</span>
+                        <span className={style["soon"]}>5</span>
+                        <span className={style["soon"]}>6</span>
+                        <span className={style["soon"]}>7</span>
+                        <span className={style["soon"]}>8</span>
+                        <span className={style["soon"]}>9</span>
+                        <span className={style["soon"]}>10</span>
+                    </div>
                 </div>
             }
         </div>
