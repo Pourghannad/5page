@@ -1015,38 +1015,61 @@ export const data = {
         },
         "page2": {
           "defaultItem": {
-            "width": "35px",
+            "width": "25px",
             "height": "35px",
-            "backgroundColor": "#00B2A9"
+            "backgroundColor": "rgb(71 71 96)"
           },
           "grid": [
             {
               "uuid": "69e6d2df-f247-4bfd-9559-ff25da9fc5a4",
-              "css": {}
+              "css": {
+                "borderRadius": "50px"
+              }
             },
             {
               "uuid": "6a10c587-1c3d-4d4d-b8ab-7886d9403282",
-              "css": {}
+              "css": {
+                "width": "9px",
+                "height": "3px",
+              }
             },
             {
               "uuid": "337494b9-cfef-401d-b681-2ad55507c04a",
-              "css": {}
+              "css": {
+                "backgroundColor": "rgb(75 66 15)"
+              }
             },
             {
               "uuid": "e5c86343-7520-47cd-9e41-c228eb2d710a",
-              "css": {}
+              "css": {
+                "width": "40px",
+                "height": "40px",
+                "backgroundColor": "rgb(24 24 24)"
+              }
             },
             {
               "uuid": "4f58bb95-c271-491f-9f6d-dae86025009b",
-              "css": {}
+              "css": {
+                "width": "34px",
+                "height": "34px",
+                "transform": "rotateZ(25deg)",
+                "backgroundColor": "#00f"
+              }
             },
             {
               "uuid": "c1167f61-396a-429a-bb03-0a96e3de583a",
-              "css": {}
+              "css": {
+                "width": "34px",
+                "height": "34px",
+                "transform": "skewY(35deg)",
+                "backgroundColor": "rgb(66, 46, 96)"
+              }
             },
             {
               "uuid": "c7b477eb-9166-4645-8a22-13a76ee3c375",
-              "css": {}
+              "css": {
+                "transform": "rotateZ(45deg)",
+              }
             },
             {
               "uuid": "268f28a2-8a57-4f8c-a4c5-fbb99e9742c0",
@@ -1057,7 +1080,9 @@ export const data = {
             },
             {
               "uuid": "3cbf3fec-cdba-4ffd-90cc-1ecf8cc629f4",
-              "css": {}
+              "css": {
+                "width": "1px"
+              }
             },
             {
               "uuid": "c1011abc-ec5d-45f1-b97f-224e4a73759c",
