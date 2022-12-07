@@ -1105,16 +1105,21 @@ export const data = {
           "defaultItem": {
             "width": "48px",
             "height": "48px",
-            "backgroundColor": "#00B2A9"
+            "backgroundColor": "#00B2A9",
+            "borderRadius": "50px"
           },
           "grid": [
             {
               "uuid": "60ea3e55-807c-4d56-8106-a61b028e89f0",
-              "css": {}
+              "css": {
+                "width": "10px",
+              }
             },
             {
               "uuid": "e2903c9b-4434-4937-967f-8b81eac0413e",
-              "css": {}
+              "css": {
+                "borderRadius": "0px",
+              }
             },
             {
               "uuid": "4eeccb9a-316f-4887-ba4d-461e6ecee4fe",
@@ -1125,29 +1130,46 @@ export const data = {
             },
             {
               "uuid": "b3ad7aa9-b3d5-40fe-ba04-2af4b46ef459",
-              "css": {}
+              "css": {
+                "borderRadius": "0px 0px 50px 0px"
+              }
             },
             {
               "uuid": "d6cc739e-eb91-4697-9d81-506e14af34c9",
-              "css": {}
+              "css": {
+                "height": "20px",
+                "borderRadius": "0px 0px 50px 0px",
+                "transform": "rotateZ(25deg)",
+              }
             },
             {
               "uuid": "b34a731d-1348-4a2f-8763-f911b38a8559",
-              "css": {}
+              "css": {
+                "borderRadius": "0px",
+                "width": "28px",
+                "height": "28px",
+                "transform": "skewY(35deg)",
+              }
             },
             {
               "uuid": "3b13e8b0-a3ec-4913-91f9-93e6f5a654b5",
               "css": {
-                "height": "35px"
+                "height": "35px",
+                "transform": "skewY(15deg)",
               }
             },
             {
               "uuid": "5bcdb2ab-2e04-4f8d-a17c-84ff84ce338c",
-              "css": {}
+              "css": {
+                "transform": "skewY(10deg)",
+              }
             },
             {
               "uuid": "76266b67-d52c-4e68-9367-004838e2059b",
-              "css": {}
+              "css": {
+                "borderRadius": "0px",
+                "width": "10px"
+              }
             },
             {
               "uuid": "63e7dd13-94d6-4fe1-a308-097fde4b5de0",
