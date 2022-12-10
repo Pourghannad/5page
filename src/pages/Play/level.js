@@ -1394,15 +1394,14 @@ export const data = {
           "standard": {
             "standard": true,
             "defaultItem": {
-              "width": "30px",
-              "height": "30px",
+              "width": "5px",
+              "height": "5px",
               "backgroundColor": "#00B2A9"
             },
             "grid": [
               {
                 "css": {
-                  "width": "6px",
-                  "height": "6px"
+                  "transform": "translate3d(20px, 20px, 0)",
                 },
                 "active": true
               },
@@ -1411,34 +1410,45 @@ export const data = {
               },
               {
                 "css": {
-                  "width": "20px"
+                  "width": "20px",
+                  "transform": "translate3d(20px, 5px, 0)",
                 }
-              },
-              {
-                "css": {}
-              },
-              {
-                "css": {}
-              },
-              {
-                "css": {}
               },
               {
                 "css": {}
               },
               {
                 "css": {
-                  "width": "40px"
+                  "transform": "translate3d(-20px, 5px, 0)",
+                }
+              },
+              {
+                "css": {
+                  "transform": "translate3d(2px, -25px, 0)",
                 }
               },
               {
                 "css": {}
               },
               {
-                "css": {}
+                "css": {
+                  "width": "40px",
+                  "height": "30px",
+                  "borderRadius": "50px"
+                }
+              },
+              {
+                "css": {
+                  "transform": "translate3d(20px, -5px, 0)",
+                }
               },
               {
                 "css": {}
+              },
+              {
+                "css": {
+                  "transform": "translate3d(20px, -25px, 0)",
+                }
               },
               {
                 "css": {
@@ -1501,7 +1511,9 @@ export const data = {
               },
               {
                 "uuid": "a5f10e2d-2f5e-475f-8494-109fad5a9279",
-                "css": {}
+                "css": {
+
+                }
               },
               {
                 "uuid": "cebc4fb6-1b20-43c8-b5c2-290e6cf32e26",
