@@ -1402,6 +1402,7 @@ export const data = {
               {
                 "css": {
                   "transform": "translate3d(20px, 20px, 0)",
+                  "backgroundColor": "rgb(247 228 62)"
                 },
                 "active": true
               },
@@ -1415,7 +1416,9 @@ export const data = {
                 }
               },
               {
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(247 228 62)",
+                }
               },
               {
                 "css": {
@@ -1425,16 +1428,20 @@ export const data = {
               {
                 "css": {
                   "transform": "translate3d(2px, -25px, 0)",
+                  "backgroundColor": "rgb(119 64 64)"
                 }
               },
               {
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(119 64 64)"
+                }
               },
               {
                 "css": {
                   "width": "40px",
                   "height": "30px",
-                  "borderRadius": "50px"
+                  "borderRadius": "50px",
+                  "backgroundColor": "rgb(119 64 64)"
                 }
               },
               {
@@ -1443,11 +1450,14 @@ export const data = {
                 }
               },
               {
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(247 228 62)"
+                }
               },
               {
                 "css": {
                   "transform": "translate3d(20px, -25px, 0)",
+                  "backgroundColor": "rgb(247 228 62)"
                 }
               },
               {
@@ -1466,7 +1476,9 @@ export const data = {
             "grid": [
               {
                 "uuid": "3e53a5a8-cbb8-47e1-9c35-f8bfff119f31",
-                "css": {}
+                "css": {
+                  "transform": "translate3d(20px, -5px, 0)",
+                }
               },
               {
                 "uuid": "40e55717-dcae-4263-829a-4802d35af088",
