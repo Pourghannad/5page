@@ -1657,9 +1657,9 @@ export const data = {
           },
           "page3": {
             "defaultItem": {
-              "width": "48px",
-              "height": "48px",
-              "backgroundColor": "#00B2A9"
+              "width": "10px",
+              "height": "10px",
+              "backgroundColor": "rgb(52 89 12)"
             },
             "grid": [
               {
@@ -1668,48 +1668,84 @@ export const data = {
               },
               {
                 "uuid": "7e19c7f6-a92a-40f2-ba42-7d7c1ffef7a9",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(247, 228, 62)",
+                  "height": "40px",
+                  "transform": "skewX(35deg)",
+                }
               },
               {
                 "uuid": "c5c83e84-eebd-4612-a4f1-7aa2fd0b725a",
                 "css": {
-                  "width": "9px",
-                  "height": "9px"
+                  "backgroundColor": "rgb(247, 28, 62)",
+                  "height": "30px",
+                  "transform": "skewX(-35deg)",
                 }
               },
               {
                 "uuid": "83a5dc8c-e871-4fbb-b87a-aa04caa3b92d",
-                "css": {}
+                "css": {
+                  "transform": "skewY(-35deg)",
+                }
               },
               {
                 "uuid": "bd05cbbe-6503-4a1a-bb7d-8b0a8a2aa824",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(27, 28, 22)",
+                  "transform": "skewY(55deg)",
+                }
               },
               {
                 "uuid": "5b08fcf5-0641-4853-9cb9-e72fca78394a",
-                "css": {}
+                "css": {
+                  "width": "30px",
+                  "height": "30px",
+                  "borderRadius": "0px 0px 0px 50px",
+                  "backgroundColor": "rgb(247, 228, 62)",
+                }
               },
               {
                 "uuid": "9cf19bf3-c337-4538-b0a5-4dea5112a09e",
                 "css": {
-                  "height": "35px"
+                  "width": "30px",
+                  "height": "30px",
+                  "borderRadius": "0px 0px 50px 0px",
+                  "backgroundColor": "rgb(247, 248, 232)",
+                  "transform": "skewX(20deg)skewY(10deg)",
                 }
               },
               {
                 "uuid": "5e51cc94-de7a-41c7-9460-5b9ecfb54b4a",
-                "css": {}
+                "css": {
+                  "width": "30px",
+                  "height": "30px",
+                  "borderRadius": "0px 50px 50px 0px",
+                  "backgroundColor": "rgb(47, 248, 232)",
+                  "transform": "skewX(20deg)skewY(10deg)",
+                }
               },
               {
                 "uuid": "f646c575-9f93-411d-8c64-29a06127d3ae",
-                "css": {}
+                "css": {
+                  "width": "4px",
+                  "height": "4px",
+                  "transform": "translate3d(-20px, 20px, 0)",
+                }
               },
               {
                 "uuid": "45c31564-20b1-46ff-bc9b-62b969cd8cf2",
-                "css": {}
+                "css": {
+                  "width": "20px",
+                  "height": "20px",
+                  "transform": "translate3d(20px, 20px, 0)",
+                }
               },
               {
                 "uuid": "ede1b44f-ba61-440a-9f54-cc2c341c9067",
-                "css": {}
+                "css": {
+                  "transform": "translate3d(20px, -20px, 0)",
+                  "backgroundColor": "#000"
+                }
               },
               {
                 "uuid": "f62e6d1f-0ebe-4e57-b9a4-75ab90b84944",
