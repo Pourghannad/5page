@@ -92,6 +92,13 @@ const Play = (props) => {
                         setModalStatus('');
                     }, 2000);
                 }
+                if (queryParams.level === "3") {
+                    props.history.push('/play?level=4')
+                    setSelected({});
+                    setTimeout(() => {
+                        setModalStatus('');
+                    }, 2000);
+                }
             } else {
                 setModalStatus('wrong');
                 setTimeout(() => {
