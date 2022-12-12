@@ -1757,56 +1757,85 @@ export const data = {
           },
           "page4": {
             "defaultItem": {
-              "width": "20px",
-              "height": "25px",
-              "backgroundColor": "#00B2A9"
+              "width": "10px",
+              "height": "15px",
+              "backgroundColor": "rgb(121 45 223)"
             },
             "grid": [
               {
                 "uuid": "ae664a3e-ac05-4d54-ad51-80381847653b",
                 "css": {
-                  "width": "10px"
+                  "width": "8px",
+                  "height": "8px",
+                  "borderRadius": "20%",
+                  "transform": "translate3d(16px, -16px, 0)",
                 }
               },
               {
                 "uuid": "58e1836f-f397-492f-b725-79eabc54c39a",
-                "css": {}
+                "css": {
+                  "transform": "translate3d(-16px, -16px, 0)",
+                  "backgroundColor": "#00f"
+                }
               },
               {
                 "uuid": "b1de51d5-7a38-49ea-a347-bfabb87d77c5",
                 "css": {
-                  "height": "5px"
+                  "height": "5px",
+                  "width": "25px",
+                  "transform": "rotateZ(20deg)",
+                  "backgroundColor": "rgb(247, 228, 62)"
                 }
               },
               {
                 "uuid": "4424d2a0-3bf0-4072-8b42-ce2b8cce7794",
-                "css": {}
+                "css": {
+                  "width": "20px",
+                  "height": "20px",
+                  "borderRadius": "50px 0px 50px 0px",
+                  "transform": "rotateZ(20deg)translate3d(40px, 14px, 0)",
+                }
               },
               {
                 "uuid": "dd43f776-e190-44b6-8da9-b153a3da5718",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(147 225 138)",
+                  "borderRadius": "50px"
+                }
               },
               {
                 "uuid": "c1488a8d-efa4-4ced-9bb0-dfa053a474dc",
-                "css": {}
+                "css": {
+                  "transform": "skewY(35deg)",
+                }
               },
               {
                 "uuid": "5d07fb1b-7e41-4146-9840-afd8f69a3cb1",
-                "css": {}
+                "css": {
+                  "transform": "skewX(-55deg)",
+                  "backgroundColor": "#eee"
+                }
               },
               {
                 "uuid": "4450e38c-09aa-413c-b763-a1d1bd9edc1c",
                 "css": {
-                  "height": "50px"
+                  "height": "50px",
+                  "transform": "rotateZ(10deg)translate3d(-28px, 14px, 0)",
                 }
               },
               {
                 "uuid": "729cf1f2-082e-468b-b289-60be9266459f",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(255 0 186)"
+                }
               },
               {
                 "uuid": "3d8a23e3-7e62-4de4-b62f-cc3392510b3d",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(255 0 186)",
+                  "width": "30px",
+                  "borderRadius": "20px"
+                }
               },
               {
                 "uuid": "afe725cd-dd6c-4775-9ed2-4fe69f6c6499",
@@ -1817,7 +1846,10 @@ export const data = {
               },
               {
                 "uuid": "915b353d-e78f-40f5-865a-7170554fbeeb",
-                "css": {}
+                "css": {
+                  "backgroundColor": "rgb(2 55 13)",
+                  "transform": "rotateZ(15deg)"
+                }
               }
             ]
           },
