@@ -19,7 +19,7 @@
             justify-content: center;
             transition: background-color 200ms;
             &.active {
-                box-shadow: 0 0 0 2px rgba(51, 156, 32, 0.50);
+                box-shadow: 0 0 0 3px rgba(51, 156, 32, 0.70);
             }
             &.selected {
                 box-shadow: 0 0 0 3px rgb(0 178 169 / 50%);
