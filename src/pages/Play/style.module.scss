@@ -26,6 +26,35 @@
         top: 11px;
     }
 }
+.intro-scroll {
+    position: absolute;
+    background-color: rgb(255 255 255 / 53%);
+    z-index: 2;
+    right: 0;
+    height: 310px;
+    margin-top: 50px;
+    color: #fff;
+    transform: translate3d(0px, 0px, 0px);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    animation-name: introScroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes introScroll {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    50% {
+        transform: translate3d(20px, 0px, 0px);
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
 h4 {
     color: #00b2a9;
     text-align: center;

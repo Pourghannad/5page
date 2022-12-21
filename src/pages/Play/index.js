@@ -13,15 +13,14 @@ const Play = (props) => {
     const playContainerRef = useRef(null);
     const [selected, setSelected] = useState({});
     const [modalStatus, setModalStatus] = useState(!LSG('intro') ? 'intro' : '');
+    const [intro, setIntro] = useState(false);
     const { queryParams } = useQueryParams();
     useEffect(() => {
         if (playContainerRef.current && modalStatus === '') {
+            setIntro(true);
             setTimeout(() => {
-                playContainerRef.current.scrollLeft = 150;
-                setTimeout(() => {
-                    playContainerRef.current.scrollLeft = 0;
-                }, 250);
-            }, 250);
+                setIntro(false);
+            }, 2000);
         }
     }, [modalStatus]);
 
@@ -119,6 +118,9 @@ const Play = (props) => {
             <button className={style["back"]} onClick={() => {
                 props.history.push('/', {from: "play"})
             }}></button>
+            {intro &&
+                <div className={style["intro-scroll"]}>scroll horizontally</div>
+            }
             <h4>Level {queryParams.level}</h4>
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                     <div className={style["page-container"]}>
