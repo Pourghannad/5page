@@ -118,9 +118,7 @@ const Play = (props) => {
             <button className={style["back"]} onClick={() => {
                 props.history.push('/', {from: "play"})
             }}></button>
-            {intro &&
-                <div className={style["intro-scroll"]}>scroll horizontally</div>
-            }
+            <div className={classNames(style["intro-scroll"], {[style["active"]] : intro})}>scroll horizontally</div>
             <h4>Level {queryParams.level}</h4>
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                     <div className={style["page-container"]}>
