@@ -8,7 +8,7 @@ import RouterSwitch from './Router';
 const Root = () => {
   useEffect(() => {
     InitUser();
-  }, [])
+  }, []);
   return (
     <HashRouter>
       <main className={style["main-container"]}>
