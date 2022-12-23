@@ -20,7 +20,7 @@ const Play = (props) => {
             setIntro(true);
             setTimeout(() => {
                 setIntro(false);
-            }, 2000);
+            }, 1500);
         }
     }, [modalStatus]);
 
@@ -76,30 +76,8 @@ const Play = (props) => {
             data[queryParams.level]["ok"][4] === selected[5][0]
             ) {
                 setModalStatus('win');
-                // TODO: add conditional function
-                if (queryParams.level === "1") {
-                    props.history.push('/play?level=2')
-                    setSelected({});
-                    setTimeout(() => {
-                        setModalStatus('');
-                    }, 2000);
-                }
-                if (queryParams.level === "2") {
-                    props.history.push('/play?level=3')
-                    setSelected({});
-                    setTimeout(() => {
-                        setModalStatus('');
-                    }, 2000);
-                }
-                if (queryParams.level === "3") {
-                    props.history.push('/play?level=4')
-                    setSelected({});
-                    setTimeout(() => {
-                        setModalStatus('');
-                    }, 2000);
-                }
-                if (queryParams.level === "4") {
-                    props.history.push('/play?level=5')
+                if (queryParams.level !== "6") {
+                    props.history.push(`/play?level=${(queryParams.level*1) +1}`)
                     setSelected({});
                     setTimeout(() => {
                         setModalStatus('');
