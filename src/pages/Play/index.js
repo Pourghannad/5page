@@ -91,6 +91,7 @@ const Play = (props) => {
             }
     }
     if (queryParams.level) {
+        const currentLevel = require(`./level/${queryParams.level}.json`);
         return (
             <>
             <button className={style["back"]} onClick={() => {
@@ -101,27 +102,27 @@ const Play = (props) => {
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Standard</span>
-                        <Grid standard data={data[queryParams.level].standard} />
+                        <Grid standard data={currentLevel.standard} />
                     </div>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Page 1</span>
-                        <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={data[queryParams.level].page1} />
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 1)} data={currentLevel.page1} />
                     </div>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Page 2</span>
-                        <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={data[queryParams.level].page2} />
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 2)} data={currentLevel.page2} />
                     </div>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Page 3</span>
-                        <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={data[queryParams.level].page3} />
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 3)} data={currentLevel.page3} />
                     </div>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Page 4</span>
-                        <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={data[queryParams.level].page4} />
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 4)} data={currentLevel.page4} />
                     </div>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Page 5</span>
-                        <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={data[queryParams.level].page5} />
+                        <Grid onSelected={(uuid) => handleSelected(uuid, 5)} data={currentLevel.page5} />
                     </div>
                 </div>
                 {submitCondition() &&
