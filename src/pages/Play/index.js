@@ -4,7 +4,6 @@ import style from "./style.module.scss";
 import Grid from './component/Grid';
 import { ReactComponent as CheckedSvg } from "../../assets/checked.svg";
 import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
-import { data } from './level.js';
 import classNames from 'classnames';
 import { LSG, LSS } from '../../utils/store';
 import useQueryParams from '../../utils/useQueryParams';
@@ -63,17 +62,18 @@ const Play = (props) => {
     }
 
     const handleSubmit = () => {
+        const currentLevel = require(`./level/${queryParams.level}.json`);
         if (
             selected[1].length === 1 &&
             selected[2].length === 1 &&
             selected[3].length === 1 &&
             selected[4].length === 1 &&
             selected[5].length === 1 && 
-            data[queryParams.level]["ok"][0] === selected[1][0] && 
-            data[queryParams.level]["ok"][1] === selected[2][0] && 
-            data[queryParams.level]["ok"][2] === selected[3][0] && 
-            data[queryParams.level]["ok"][3] === selected[4][0] && 
-            data[queryParams.level]["ok"][4] === selected[5][0]
+            currentLevel["ok"][0] === selected[1][0] && 
+            currentLevel["ok"][1] === selected[2][0] && 
+            currentLevel["ok"][2] === selected[3][0] && 
+            currentLevel["ok"][3] === selected[4][0] && 
+            currentLevel["ok"][4] === selected[5][0]
             ) {
                 setModalStatus('win');
                 if (queryParams.level !== "6") {
