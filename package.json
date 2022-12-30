@@ -11,8 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "uuid": "^7.0.2"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "HOST=0.0.0.0 PORT=5555 react-scripts start",
