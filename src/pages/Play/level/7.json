@@ -2,24 +2,25 @@
        "standard": {
           "standard": true,
           "defaultItem": {
-             "width": "30px",
-             "height": "30px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
                 "css": {
-                   "width": "6px",
-                   "height": "6px"
+                   "backgroundImage": "url('')"
                 },
                 "active": true
              },
              {
-                "css": {}
+                "css": {
+                  "backgroundImage": "url('')"
+                }
              },
              {
                 "css": {
-                   "width": "20px"
+                  "backgroundImage": "url('')"
                 }
              },
              {
@@ -57,9 +58,9 @@
        },
        "page1": {
           "defaultItem": {
-             "width": "30px",
-             "height": "30px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
@@ -119,9 +120,9 @@
        },
        "page2": {
           "defaultItem": {
-             "width": "35px",
-             "height": "35px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
@@ -182,9 +183,9 @@
        },
        "page3": {
           "defaultItem": {
-             "width": "48px",
-             "height": "48px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
@@ -246,9 +247,9 @@
        },
        "page4": {
           "defaultItem": {
-             "width": "20px",
-             "height": "25px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
@@ -312,9 +313,9 @@
        },
        "page5": {
           "defaultItem": {
-             "width": "50px",
-             "height": "50px",
-             "backgroundColor": "#00B2A9"
+            "width": "58px",
+            "height": "58px",
+            "backgroundSize": "cover"
           },
           "grid": [
              {
