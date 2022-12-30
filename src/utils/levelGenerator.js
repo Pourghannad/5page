@@ -216,194 +216,236 @@ const levelGenerator = () => {
                 "grid": [
                   {
                     "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
                     "css": {
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "width": "9px",
-                        "height": "9px"
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "35px"
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "width": "3px"
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
                     }
                   }
                 ]
             },
             "page4": {
                 "defaultItem": {
-                  "width": "20px",
-                  "height": "25px",
-                  "backgroundColor": "#00B2A9"
+                  "width": "58px",
+                  "height": "58px",
+                  "backgroundSize": "cover"
                 },
                 "grid": [
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "width": "10px"
+                      "backgroundImage": "url('')"
                     }
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "5px"
+                      "backgroundImage": "url('')"
                     }
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "50px"
+                      "backgroundImage": "url('')"
                     }
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "2px",
-                        "width": "2px"
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
-                    "css": {}
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
                   }
                 ]
             },
             "page5": {
                 "defaultItem": {
-                  "width": "50px",
-                  "height": "50px",
-                  "backgroundColor": "#00B2A9"
+                  "width": "58px",
+                  "height": "58px",
+                  "backgroundSize": "cover"
                 },
                 "grid": [
                   {
                     "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
-                    "css": {}
-                  },
-                  {
-                    "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "40px",
-                        "width": "40px",
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "30px",
-                        "width": "30px",
-                        
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "20px",
-                        "width": "20px",
+                      "backgroundImage": "url('')"
                     }
                   },
                   {
                     "uuid": crypto.randomUUID(),
                     "css": {
-                        "height": "5px",
-                        "width": "5px",
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
+                    }
+                  },
+                  {
+                    "uuid": crypto.randomUUID(),
+                    "css": {
+                      "backgroundImage": "url('')"
                     }
                   }
                 ]
