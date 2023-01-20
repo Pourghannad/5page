@@ -37,7 +37,7 @@ const Home = (props) => {
                         <span onClick={() => props.history.push("/play?level=5")}>5</span>
                         <span onClick={() => props.history.push("/play?level=6")}>6</span>
                         <span onClick={() => props.history.push("/play?level=7")}>7</span>
-                        <span className={style["soon"]}>8</span>
+                        <span onClick={() => props.history.push("/play?level=8")}>8</span>
                         <span className={style["soon"]}>9</span>
                         <span className={style["soon"]}>10</span>
                     </div>
