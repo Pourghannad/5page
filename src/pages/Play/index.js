@@ -76,7 +76,7 @@ const Play = (props) => {
             currentLevel["ok"][4] === selected[5][0]
             ) {
                 setModalStatus('win');
-                if (queryParams.level !== "8") {
+                if (queryParams.level !== "9") {
                     props.history.push(`/play?level=${(queryParams.level*1) +1}`)
                     setSelected({});
                     setTimeout(() => {

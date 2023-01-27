@@ -1,0 +1,316 @@
+{
+  "standard": {
+    "standard": true,
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      { "css": { "backgroundImage": "url('')" }, "active": true },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } },
+      { "css": { "backgroundImage": "url('')" } }
+    ]
+  },
+  "page1": {
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      {
+        "uuid": "b23f7840-25dc-4379-b0fc-c9c8d52368c4",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d0899b1a-118c-41dd-bef3-9922c86bf48d",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "862a8ccd-1446-46d7-a745-4fed78466639",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "b3578c8c-274f-49fd-8b77-bfb60eb8463e",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d5a9559a-c123-4896-8c2a-d2c324d94ff5",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "1d17cc7f-b94e-4dc8-8453-acb1eacf8bbf",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "9861d38e-3ca6-469e-a522-62ec872b20fe",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d5bb4ee6-fa3e-4ac2-9fe6-b5bb0545daa2",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "64baa249-2235-48d0-854a-a3f6b60687f9",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "20c9defc-5b65-48ff-8a6d-3b6f98eac4c8",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "a3b60cbd-60f8-4056-8b2a-a6b79574e2d6",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "a91b34e9-5b53-4b56-9231-9fbb8f2d286e",
+        "css": { "backgroundImage": "url('')" }
+      }
+    ]
+  },
+  "page2": {
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      {
+        "uuid": "49c64e01-cfe9-4131-a255-2ecad2a7f1e6",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "9799a158-372a-49d2-a567-f968f24d63b9",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "be41b9a5-ec3a-4501-a967-e4980360898f",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "56545b77-cff6-443b-a98b-013ae4cfca35",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "fce830d8-1b3b-44af-a358-cf0892b7e790",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "0c600c83-feaf-4ac3-9082-5a73581e54cf",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "2ba303ff-1853-4c12-a416-aaefa8cdfe4b",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d6950f98-7316-4a4e-9235-e3908b892b10",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "99b6f2e8-79b0-4809-ab96-78f6b74dbce8",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d280cc22-7cf3-4e17-85ba-4dd9ff18a65a",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "b5861040-e893-496f-ab62-f7d8c8865e45",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "1f6849ee-ec0d-4f06-ba32-07d3c0153327",
+        "css": { "backgroundImage": "url('')" }
+      }
+    ]
+  },
+  "page3": {
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      {
+        "uuid": "0b61c78c-83cc-4081-9f4f-987ba038d261",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "be7547ef-b82c-43d9-9d61-dfd65477ab89",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "751cc7f9-d082-4b7c-8de8-ba1f84eccb95",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "1918d441-6c44-495b-9ebc-18e576e270a5",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "18c9e9d0-563c-462e-a291-64284348a5a2",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "ade39178-303e-4b05-b571-b217b26f7ac6",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "133fe25c-0f7a-4eb8-9f84-de8d96d071c4",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "ff5377bd-806c-4e8a-92db-d200d7cdff12",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "2a367605-853e-4085-bb97-5629f2540b90",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "527e66b3-1f17-4689-a6ff-15667714b24a",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "450982f5-6021-4358-9e8c-8442d69e0fef",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "9e1bded8-2726-4960-906b-88932b989c5d",
+        "css": { "backgroundImage": "url('')" }
+      }
+    ]
+  },
+  "page4": {
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      {
+        "uuid": "778d0973-9a61-4a03-8bec-8fbcc9966534",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "582e786c-31c1-49f4-91bc-32fd53cec07d",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "c99f62b4-cbb1-48a6-9bc6-8f11d7ab787a",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "6ef6be56-d4c8-47e9-bee0-19ddefdea951",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "145dd1f1-3318-48f5-9d26-03a74dec379e",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "d92db193-883f-430d-8ea9-955813abf212",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "e0154537-8999-4a94-8f9f-81ab13d25f2b",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "473e1e94-f63d-4dd6-a858-eb7da926d0f6",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "c8c3e917-90f3-4e7e-b997-295f81d2b73f",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "937478f5-a902-4ddb-8b51-831f9f771caa",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "f67c8f24-a0f9-4535-ae89-59356e507c0e",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "766a0458-5afc-42fe-a065-a6eecd8d3789",
+        "css": { "backgroundImage": "url('')" }
+      }
+    ]
+  },
+  "page5": {
+    "defaultItem": {
+      "width": "58px",
+      "height": "58px",
+      "backgroundSize": "cover"
+    },
+    "grid": [
+      {
+        "uuid": "476dcdb8-dd04-4723-b395-c92cb9a343fd",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "638d077a-2783-479c-9073-c0f5c04af99e",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "31c36724-5aca-4520-9fff-0b2102d2f96d",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "95b69abe-14b4-45f1-ad14-fc9ebcac9cbb",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "3b3557f7-0f3f-4ac9-9117-0fa64051fb86",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "61d1ba8d-526d-4c5c-914d-191fecdba662",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "bdab54f9-4508-44b9-9297-1fad22aaf7ae",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "227e1394-8e9f-43a8-a38b-3fecbcfc01bd",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "5e4ad555-b42c-4db8-a0aa-96eae3e8a965",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "3cb26d63-5a65-46fb-ad4d-dae870f16d32",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "f9f63cee-6387-41ea-b9c0-b4e45db585f5",
+        "css": { "backgroundImage": "url('')" }
+      },
+      {
+        "uuid": "e7299358-3796-4bd2-9073-b368c480d254",
+        "css": { "backgroundImage": "url('')" }
+      }
+    ]
+  },
+  "ok": [
+    "f1e41353-a0d6-40df-99ee-4050b897588a",
+    "7985c674-410d-42e5-89aa-948f8c96cc93",
+    "cf511ca6-2f00-4409-8b8e-f478a7efd5fb",
+    "460801aa-9d8f-4d16-b36f-d5913f741a58",
+    "d6771cc3-e326-4c14-992b-ceb3a5774037"
+  ]
+}
