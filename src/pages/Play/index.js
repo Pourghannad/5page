@@ -94,11 +94,13 @@ const Play = (props) => {
         const currentLevel = require(`./level/${queryParams.level}.json`);
         return (
             <>
-            <button className={style["back"]} onClick={() => {
-                props.history.push('/', {from: "play"})
-            }}></button>
             <div className={classNames(style["intro-scroll"], {[style["active"]] : intro})}>scroll horizontally</div>
-            <h4>Level {queryParams.level}</h4>
+            <div className={style["play-head"]}>
+                <button className={style["back"]} onClick={() => {
+                    props.history.push('/', {from: "play"})
+                }}></button>
+                <h4>Level {queryParams.level}</h4>
+            </div>
                 <div ref={playContainerRef} className={classNames(style["play-main-container"], {[style["intro"]]: modalStatus === 'intro'})}>
                     <div className={style["page-container"]}>
                         <span className={style["text"]}>Standard</span>

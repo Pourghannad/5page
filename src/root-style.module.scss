@@ -11,6 +11,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        transform: translateZ(0);
         .ads-container { 
             position: fixed;
             height: 50px;
