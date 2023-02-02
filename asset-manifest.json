@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/5page/static/css/main.af35c774.chunk.css",
+    "main.js": "/5page/static/js/main.d4ea7fc9.chunk.js",
+    "main.js.map": "/5page/static/js/main.d4ea7fc9.chunk.js.map",
+    "runtime-main.js": "/5page/static/js/runtime-main.015ee029.js",
+    "runtime-main.js.map": "/5page/static/js/runtime-main.015ee029.js.map",
+    "static/js/2.c14af8c7.chunk.js": "/5page/static/js/2.c14af8c7.chunk.js",
+    "static/js/2.c14af8c7.chunk.js.map": "/5page/static/js/2.c14af8c7.chunk.js.map",
+    "index.html": "/5page/index.html",
+    "precache-manifest.a19391ef9617d6e7f099df7e1f0536d8.js": "/5page/precache-manifest.a19391ef9617d6e7f099df7e1f0536d8.js",
+    "service-worker.js": "/5page/service-worker.js",
+    "static/css/main.af35c774.chunk.css.map": "/5page/static/css/main.af35c774.chunk.css.map",
+    "static/js/2.c14af8c7.chunk.js.LICENSE.txt": "/5page/static/js/2.c14af8c7.chunk.js.LICENSE.txt",
+    "static/media/fonts.scss": "/5page/static/media/SpaceGrotesk-Regular.fbbf6d98.woff",
+    "static/media/azard.dc588f53.svg": "/5page/static/media/azard.dc588f53.svg",
+    "static/media/checked.c6f2233c.svg": "/5page/static/media/checked.c6f2233c.svg",
+    "static/media/help.mp4": "/5page/static/media/help.ca92b90a.mp4",
+    "static/media/play.00337609.svg": "/5page/static/media/play.00337609.svg",
+    "static/media/wrong.62efe098.svg": "/5page/static/media/wrong.62efe098.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.015ee029.js",
+    "static/js/2.c14af8c7.chunk.js",
+    "static/css/main.af35c774.chunk.css",
+    "static/js/main.d4ea7fc9.chunk.js"
+  ]
+}
