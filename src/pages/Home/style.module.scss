@@ -78,6 +78,13 @@
                 animation-iteration-count: 4;
                 opacity: 0;
             }
+            span {
+                position: absolute;
+                transform: translate3d(0px, 0px, 0px);
+                &:nth-of-type(1) {
+                    transform: translate3d(20px, 10px, 0px);
+                }
+            }
             @keyframes actionButton {
                 0% {
                     opacity: 1;

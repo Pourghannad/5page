@@ -23,6 +23,18 @@ const Home = (props) => {
                 <div className={style["action-button-container"]}>
                     <button onClick={() => setLevelModal(true)}>
                         <Play />
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
+                        <span>5</span>
                     </button>
                 </div>
             </React.Fragment>
