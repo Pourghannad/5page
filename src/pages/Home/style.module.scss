@@ -48,6 +48,38 @@
             top: -3px;
             box-shadow: 0 0 10px 1px rgb(0 116 214 / 10%);
         }
+        &:after {
+            content: "5";
+            position: absolute;
+            font-size: 8px;
+            color: #fff;
+            opacity: 0.3;
+            transform: translate3d(15px, 10px, 0px);
+            animation-name: fiveAnimate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 9s;
+        }
+        @keyframes fiveAnimate {
+            0% { 
+                transform: translate3d(15px, 10px, 0px);
+            }
+            25% {
+                transform: translate3d(15px, -55px, 0px);
+            }
+            50% {
+                transform: translate3d(-92px, -55px, 0px);
+            }
+            75% {
+                transform: translate3d(-92px, 55px, 0px);
+            }
+            92% {
+                transform: translate3d(15px, 55px, 0px);
+            }
+            100% {
+                transform: translate3d(15px, 10px, 0px);
+            }
+        }
     }
     .action-button-container {
         display: flex;
