@@ -75,14 +75,59 @@
                 transform: scale3d(1,1,1);
                 animation-name: actionButton;
                 animation-duration: 2s;
-                animation-iteration-count: 4;
+                animation-iteration-count: 2;
+                animation-delay: 2s;
                 opacity: 0;
             }
             span {
                 position: absolute;
-                transform: translate3d(0px, 0px, 0px);
+                transform: translate3d(10px, 0px, 0px);
+                animation-name: homeFive;
+                animation-duration: 400ms;
+                animation-iteration-count: 2;
+                color: #fff;
+                opacity: 0;
                 &:nth-of-type(1) {
                     transform: translate3d(20px, 10px, 0px);
+                    animation-delay: 400ms;
+                }
+                &:nth-of-type(2) {
+                    transform: translate3d(-20px, 10px, 0px);
+                    animation-delay: 250ms;
+                }
+                &:nth-of-type(3) {
+                    transform: translate3d(-20px, -10px, 0px);
+                    animation-delay: 50ms;
+                }
+                &:nth-of-type(4) {
+                    transform: translate3d(20px, -10px, 0px);
+                    animation-delay: 350ms;
+                }
+                @keyframes homeFive {
+                    0% {
+                        transform: translate3d(15px, -10px, 0px);
+                        opacity: 1;
+                    }
+                    20% {
+                        transform: translate3d(10px, 10px, 0px);
+                        opacity: 0.1;
+                    }
+                    25% { 
+                        transform: translate3d(-10px, 5px, 0px);
+                        opacity: 0.5;
+                    }
+                    35% {
+                        transform: translate3d(10px, -5px, 0px);
+                        opacity: 0.1;
+                    }
+                    80% {
+                        transform: translate3d(-15px, 2px, 0px);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translate3d(10px, 0px, 0px);
+                        opacity: 0.2;
+                    }
                 }
             }
             @keyframes actionButton {

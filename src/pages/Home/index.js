@@ -28,13 +28,6 @@ const Home = (props) => {
                         <span>5</span>
                         <span>5</span>
                         <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
-                        <span>5</span>
                     </button>
                 </div>
             </React.Fragment>
