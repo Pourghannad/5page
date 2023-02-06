@@ -8,12 +8,19 @@
         height: 100%;
     }
     &.check {
-        path:not(.checked) {
+        path:not(:last-of-type) {
             stroke: #0c511e;
-            stroke-width: 2px;
+            stroke-width: 4px;
             stroke-dasharray: 0px;
             animation-duration: 1500ms;
             animation-name: checkedModalAnimation;
+        }
+        path:last-of-type {
+            stroke-width: 3px;
+            stroke-linejoin: round;
+            stroke: #1a9433;
+            fill: rgb(26 148 51 / 22%);
+            stroke-linecap: butt;
         }
     }
     @keyframes checkedModalAnimation {
