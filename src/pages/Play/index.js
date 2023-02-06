@@ -2,12 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { withRouter } from "react-router";
 import style from "./style.module.scss";
 import Grid from "./component/Grid";
-import { ReactComponent as CheckedSvg } from "../../assets/checked.svg";
-import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import classNames from "classnames";
 import { LSG, LSS } from "../../utils/store";
 import useQueryParams from "../../utils/useQueryParams";
 import Help from "../../assets/help.mp4";
+import StateModal from "./component/StateModal";
 const Play = (props) => {
   const playContainerRef = useRef(null);
   const [selected, setSelected] = useState({});
@@ -165,17 +164,10 @@ const Play = (props) => {
           </button>
         )}
         {modalStatus === "win" && (
-          <div className={classNames(style["status-modal"], style["check"])}>
-            <CheckedSvg />
-          </div>
+          <StateModal state="win" />
         )}
         {modalStatus === "wrong" && (
-          <div className={classNames(style["status-modal"], style["wrong"])}>
-            <WrongSvg />
-            <span>
-              <WrongSvg />
-            </span>
-          </div>
+          <StateModal state="wrong" />
         )}
         {modalStatus === "intro" && (
           <div className={style["intro-modal"]}>
