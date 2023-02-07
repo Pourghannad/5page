@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import style from "./root-style.module.scss";
+import Loading from "./components/loading";
 import "./reset.scss";
 import "./fonts.scss";
 
@@ -13,7 +14,7 @@ const Root = () => {
       <main className={style["main-container"]}>
         <section className={style["wrapper"]}>
           <Switch>
-            <Suspense fallback={<>Loading...</>}>
+            <Suspense fallback={<Loading />}>
               <Route exact path="/" component={Home} />
               <Route exact path="/play" component={Play} />
             </Suspense>
