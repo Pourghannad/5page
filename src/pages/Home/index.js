@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import style from "./style.module.scss";
-import { withRouter } from "react-router";
 import Intro from "./component/intro"
 import { ReactComponent as Play } from "../../assets/play.svg";
 import { LSG } from "../../utils/store";
-const Home = (props) => {
+import LevelSelect from "./component/LevelSelect";
+const Home = () => {
     const [intro, setIntro] = useState(!LSG('intro'));
     const [levelModal, setLevelModal] = useState(false);
     useEffect(() => {
@@ -31,23 +31,9 @@ const Home = (props) => {
                     </button>
                 </div>
             </React.Fragment>
-            <div className={classNames(style["level-modal"], {[style["active"]]: levelModal})}>
-                <h6>LEVEL SELECT</h6>
-                <div>
-                    <span onClick={() => props.history.push("/play?level=1")}>1</span>
-                    <span onClick={() => props.history.push("/play?level=2")}>2</span>
-                    <span onClick={() => props.history.push("/play?level=3")}>3</span>
-                    <span onClick={() => props.history.push("/play?level=4")}>4</span>
-                    <span onClick={() => props.history.push("/play?level=5")}>5</span>
-                    <span onClick={() => props.history.push("/play?level=6")}>6</span>
-                    <span onClick={() => props.history.push("/play?level=7")}>7</span>
-                    <span onClick={() => props.history.push("/play?level=8")}>8</span>
-                    <span onClick={() => props.history.push("/play?level=9")}>9</span>
-                    <span onClick={() => props.history.push("/play?level=10")}>10</span>
-                </div>
-            </div>
+            <LevelSelect state={levelModal} />
         </div>
     );
 };
 
-export default withRouter(Home);
+export default Home;
