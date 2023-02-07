@@ -217,6 +217,16 @@
     padding: 60px 15px;
     align-items: center;
     max-width: 500px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transform: scale3d(1.9, 1.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+        visibility: visible;
+    }
     h6 {
         color: #00b2a9;
         display: flex;

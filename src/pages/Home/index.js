@@ -31,23 +31,21 @@ const Home = (props) => {
                     </button>
                 </div>
             </React.Fragment>
-            {levelModal && 
-                <div className={style["level-modal"]}>
-                    <h6>LEVEL SELECT</h6>
-                    <div>
-                        <span onClick={() => props.history.push("/play?level=1")}>1</span>
-                        <span onClick={() => props.history.push("/play?level=2")}>2</span>
-                        <span onClick={() => props.history.push("/play?level=3")}>3</span>
-                        <span onClick={() => props.history.push("/play?level=4")}>4</span>
-                        <span onClick={() => props.history.push("/play?level=5")}>5</span>
-                        <span onClick={() => props.history.push("/play?level=6")}>6</span>
-                        <span onClick={() => props.history.push("/play?level=7")}>7</span>
-                        <span onClick={() => props.history.push("/play?level=8")}>8</span>
-                        <span onClick={() => props.history.push("/play?level=9")}>9</span>
-                        <span onClick={() => props.history.push("/play?level=10")}>10</span>
-                    </div>
+            <div className={classNames(style["level-modal"], {[style["active"]]: levelModal})}>
+                <h6>LEVEL SELECT</h6>
+                <div>
+                    <span onClick={() => props.history.push("/play?level=1")}>1</span>
+                    <span onClick={() => props.history.push("/play?level=2")}>2</span>
+                    <span onClick={() => props.history.push("/play?level=3")}>3</span>
+                    <span onClick={() => props.history.push("/play?level=4")}>4</span>
+                    <span onClick={() => props.history.push("/play?level=5")}>5</span>
+                    <span onClick={() => props.history.push("/play?level=6")}>6</span>
+                    <span onClick={() => props.history.push("/play?level=7")}>7</span>
+                    <span onClick={() => props.history.push("/play?level=8")}>8</span>
+                    <span onClick={() => props.history.push("/play?level=9")}>9</span>
+                    <span onClick={() => props.history.push("/play?level=10")}>10</span>
                 </div>
-            }
+            </div>
         </div>
     );
 };
