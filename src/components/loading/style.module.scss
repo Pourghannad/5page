@@ -24,7 +24,13 @@
                 transform: translate3d(0px, 0px, 0px)scale3d(1,1,1);
             }
             20% {
-                transform: translate3d(0px, -10px, 0px)scale3d(1,1.35,1);
+                transform: translate3d(0px, -20px, 0px)scale3d(1,1.35,1);
+            }
+            50% {
+                transform: translate3d(0px, -10px, 0px)scale3d(1,1.35,1)skewX(70deg);
+            }
+            52% {
+                transform: translate3d(20px, -10px, 0px)scale3d(1,1.35,1)skewX(-20deg);
             }
             80% {
                 transform: translate3d(0px, 10px, 0px)scale3d(1.35,1.25,1);
