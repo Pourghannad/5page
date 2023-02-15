@@ -53,12 +53,12 @@
             position: absolute;
             font-size: 8px;
             color: #fff;
-            opacity: 0.3;
+            opacity: 0.175;
             transform: translate3d(15px, 10px, 0px);
             animation-name: fiveAnimate;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
-            animation-duration: 9s;
+            animation-duration: 10s;
         }
         @keyframes fiveAnimate {
             0% { 
