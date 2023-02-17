@@ -19,7 +19,7 @@ const Grid = (props) => {
     return (
         <div className={classnames(style["grid-container"], {[style["standard"]]: props.standard})}>
             <div className={style["items-container"]}>
-                {props.data.grid.map((item, key) => {
+                {props.data ? props.data.grid.map((item, key) => {
                     const itemCss = cloneObject(item.css);
                     const defaultCss = cloneObject(props.data.defaultItem);
                     return (
@@ -34,7 +34,7 @@ const Grid = (props) => {
                             <span style={Object.assign(defaultCss, itemCss)}></span>
                         </div>
                     );
-                })}
+                }) : <span>Loading</span>}
             </div>
         </div>
     );

@@ -12,6 +12,7 @@ const Play = (props) => {
   const [selected, setSelected] = useState({});
   const [modalStatus, setModalStatus] = useState(!LSG("intro") ? "intro" : "");
   const [intro, setIntro] = useState(false);
+  const [levelData, setLevelData] = useState({});
   const { queryParams } = useQueryParams();
   useEffect(() => {
     if (playContainerRef.current && modalStatus === "") {
@@ -27,6 +28,14 @@ const Play = (props) => {
       playContainerRef.current.scrollLeft = 0;
     }
   }, [props.location]);
+
+  useEffect(() => {
+    if (queryParams.level) {
+      fetch(`/5page/level/${queryParams.level}.json`).then((response) => response.json()).then((data) => {
+        setLevelData(data);
+      });
+    }
+  }, [queryParams.level]);
 
   const handleSelected = (uuid, page) => {
     if (selected[page]) {
@@ -64,7 +73,7 @@ const Play = (props) => {
   };
 
   const handleSubmit = () => {
-    const currentLevel = require(`./level/${queryParams.level}.json`);
+    const currentLevel = levelData;
     if (
       selected[1].length === 1 &&
       selected[2].length === 1 &&
@@ -93,7 +102,7 @@ const Play = (props) => {
     }
   };
   if (queryParams.level) {
-    const currentLevel = require(`./level/${queryParams.level}.json`);
+    const currentLevel = levelData;
     return (
       <>
         <div
