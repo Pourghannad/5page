@@ -1,0 +1,479 @@
+{
+    "standard": {
+      "standard": true,
+      "defaultItem": {
+              "width": "12px",
+              "height": "12px",
+              "backgroundColor": "#00B2A9"
+      },
+      "grid": [{
+          "css": {
+              "width": "6px",
+              "height": "2px"
+          }
+      },{
+          "css": {
+            "width": "10px",
+            "height": "30px"
+          }
+      },{
+          "css": {
+              "width": "2px"
+          }
+      },{
+          "css": {
+            "width": "20px",
+            "height": "10px",
+            "borderRadius": "50px"
+          }
+      },{
+          "css": {}
+      },{
+          "css": {}
+      },{
+          "css": {}
+      },{
+          "css": {
+              "width": "52px",
+              "height": "52px",
+              "borderRadius": "50px"
+
+          },
+          "active": true
+      },{
+          "css": {}
+      },{
+          "css": {}
+      },{
+          "css": {}
+      },{
+          "css": {
+              "width": "5px"
+          }
+      }]
+  },
+  "page1": {
+      "defaultItem": {
+        "width": "50px",
+        "height": "50px",
+        "backgroundColor": "#00B2A9"
+      },
+      "grid": [
+        {
+          "uuid": "cc00e1e9-d0c4-4db2-a529-cd8754373bc7",
+          "css": {
+            "width": "20px",
+            "height": "50px",
+            "borderRadius": "50px 0px 0px 0px"
+          }
+        },
+        {
+          "uuid": "d60a6ac2-7929-4467-acbb-319866e55590",
+          "css": {
+            "width": "50px",
+            "height": "20px",
+            "borderRadius": "50px 50px 0px 0px"
+          }
+        },
+        {
+          "uuid": "87c5e176-5825-4e77-9de8-8e466a992013",
+          "css": {}
+        },
+        {
+          "uuid": "862d7031-c485-418e-a78c-2774898ae63f",
+          "css": {
+            "height": "10px"
+          }
+        },
+        {
+          "uuid": "92be99ca-a4ae-44de-98de-f0ec9a395540",
+          "css": {
+            "width": "20px"
+          }
+        },
+        {
+          "uuid": "937dac27-97e4-4f27-961e-2a5bffde4aa0",
+          "css": {
+            "width": "6px",
+            "height": "6px"
+          }
+        },
+        {
+          "uuid": "a55c4c8a-778f-4ca5-9f46-e1c7d1a93fb9",
+          "css": {
+            "borderRadius": "0px 50px"
+          }
+        },
+        {
+          "uuid": "b511d3dd-7082-40ca-b937-149c63c3ab27",
+          "css": {
+            "borderRadius": "0px 50px 50px 50px"
+          }
+        },
+        {
+          "uuid": "50ccc3fb-cf50-47bf-ac9e-2cc9de167f20",
+          "css": {
+            "width": "16px",
+            "height": "2px"
+          }
+        },
+        {
+          "uuid": "9028f4a3-8fa1-4e8e-8ae2-3b91a43c9dfc",
+          "css": {}
+        },
+        {
+          "uuid": "7da247a9-8483-4db3-b7a1-4a9353d44201",
+          "css": {
+            "height": "1px"
+          }
+        },
+        {
+          "uuid": "14277f44-4181-4d13-a3b7-1a4df36c8fce",
+          "css": {
+            "width": "20px",
+            "height": "20px",
+            "borderRadius": "50px"
+          }
+        }
+      ]
+    },
+    "page2": {
+      "defaultItem": {
+        "width": "12px",
+        "height": "45px",
+        "backgroundColor": "#00B2A9"
+      },
+      "grid": [
+        {
+          "uuid": "b73a3f78-257c-479d-ba04-3ca5945b361a",
+          "css": {
+            "width": "8px",
+            "height": "8px",
+            "borderRadius": "50px"
+          }
+        },
+        {
+          "uuid": "9623b2d3-7293-447c-8b3f-09e5538d3e7f",
+          "css": {}
+        },
+        {
+          "uuid": "66560ee5-876d-438a-abba-92f141ea7595",
+          "css": {
+            "borderRadius": "50px 0 0 0"
+          }
+        },
+        {
+          "uuid": "b482d68a-c08e-4f1a-b2a7-d0c3adac6e0f",
+          "css": {
+            "borderRadius": "50px 0 0 50px"
+          }
+        },
+        {
+          "uuid": "4dd554b2-e22b-4dc5-968e-06540cffb017",
+          "css": {
+            "width": "40px",
+            "height": "40px"
+          }
+        },
+        {
+          "uuid": "e5f1594a-40ad-48df-886b-332e044af70c",
+          "css": {
+            "width": "8px",
+            "height": "40px",
+            "borderRadius": "0 50px 0 50px"
+          }
+        },
+        {
+          "uuid": "b761f2a1-238e-48c9-9ead-0c9bc5505f4a",
+          "css": {}
+        },
+        {
+          "uuid": "8adbdae8-f40a-4189-a2de-cbbbf75775a7",
+          "css": {
+            "height": "5px",
+            "width": "30px",
+            "borderRadius": "0 0 0 50px"
+          }
+        },
+        {
+          "uuid": "d40f70da-fe34-4d7e-a6f5-1c6334c41783",
+          "css": {}
+        },
+        {
+          "uuid": "94ffc934-928c-4a8c-b6bf-204e322c3783",
+          "css": {
+            "height": "25px",
+            "width": "30px",
+            "borderRadius": "0 0 50px 50px"
+          }
+        },
+        {
+          "uuid": "1d6c98fc-93e6-46a3-bb43-d2aa9ab443b8",
+          "css": {
+            "width": "30px",
+            "height": "5px"
+          }
+        },
+        {
+          "uuid": "1b1a3bf4-d329-415b-b8f3-b72ee86476db",
+          "css": {}
+        }
+      ]
+    },
+    "page3": {
+      "defaultItem": {
+        "width": "18px",
+        "height": "18px",
+        "backgroundColor": "#00B2A9"
+      },
+      "grid": [
+        {
+          "uuid": "11d23474-6fa0-4901-b0fa-f59047503b3b",
+          "css": {}
+        },
+        {
+          "uuid": "8c02f434-a210-4ae7-afbf-90d423948a86",
+          "css": {
+            "width": "20px",
+            "height": "2px"
+            
+          }
+        },
+        {
+          "uuid": "6b1822e6-0f37-47b1-a7f5-e2498424e3dc",
+          "css": {
+            "width": "20px",
+            "height": "2px"
+          }
+        },
+        {
+          "uuid": "512138cd-2fff-4484-abea-bcb5c9bdf9a3",
+          "css": {
+            "borderRadius": "50px"
+          }
+        },
+        {
+          "uuid": "35bdf751-94dc-4095-b6b4-353cb774e516",
+          "css": {
+            "borderRadius": "15px 0 50px 0"
+          }
+        },
+        {
+          "uuid": "a25fd2ca-b19d-4d53-a70c-b3747ddb6897",
+          "css": {}
+        },
+        {
+          "uuid": "2557e914-47c8-4cd8-8e90-c00d054e4905",
+          "css": {
+            "height": "45px"
+          }
+        },
+        {
+          "uuid": "c50739f3-74e6-487e-ac19-d3c773efeddf",
+          "css": {}
+        },
+        {
+          "uuid": "2bd04d22-bec0-4cc0-bb4c-983a85baddde",
+          "css": {}
+        },
+        {
+          "uuid": "e976e0cb-b14d-49fb-bd74-0ef197b2cbdd",
+          "css": {
+            "width": "10px"
+          }
+        },
+        {
+          "uuid": "438333a7-701e-40f2-84f9-ee24116f6431",
+          "css": {}
+        },
+        {
+          "uuid": "217a6131-5fe7-43df-984b-6c4cbb910ad0",
+          "css": {
+            "width": "3px"
+          }
+        }
+      ]
+    },
+    "page4": {
+      "defaultItem": {
+        "width": "20px",
+        "height": "25px",
+        "backgroundColor": "#00B2A9"
+      },
+      "grid": [
+        {
+          "uuid": "bc1773cb-2943-4a84-8b2d-90c68f50a78e",
+          "css": {
+            "width": "1px"
+          }
+        },
+        {
+          "uuid": "239f825e-7c81-40d6-9fb8-14476773b006",
+          "css": {
+            "height": "1px"
+          }
+        },
+        {
+          "uuid": "74d1b98d-a0c3-4620-844e-16f5c4c93667",
+          "css": {
+            "height": "40px",
+            "width": "40px",
+            "borderRadius": "50px"
+
+          }
+        },
+        {
+          "uuid": "31867ef3-0001-4477-a641-139822ab71a4",
+          "css": {
+            "borderRadius": "15px",
+            "height": "2px"
+          }
+        },
+        {
+          "uuid": "c2d065e5-7caf-49fe-8637-da73b56fed43",
+          "css": {
+            "width": "35px"
+          }
+        },
+        {
+          "uuid": "076cf3ed-9c22-4640-a462-bb562a4d4684",
+          "css": {
+            "height": "45px",
+            "width": "20px",
+            "borderRadius": "30px",
+            "backgroundColor": "rgb(123 129 129)"
+          }
+        },
+        {
+          "uuid": "68ad3357-37b3-4fee-877d-1801a6abb8bb",
+          "css": {
+            "backgroundColor": "rgb(123 129 129)"
+          }
+        },
+        {
+          "uuid": "ed92ca47-6ccf-4702-a14a-83e8862835a4",
+          "css": {
+            "height": "50px",
+            "backgroundColor": "rgb(139 60 60)",
+            "borderRadius": "50px 0 0 20px"
+          }
+        },
+        {
+          "uuid": "66c2f701-c7f8-4306-b7ef-c46459bf7108",
+          "css": {}
+        },
+        {
+          "uuid": "f7d8ac12-2a95-4d16-af7d-52b9ece263dd",
+          "css": {}
+        },
+        {
+          "uuid": "cc10ee22-7edc-4878-a7cf-1ff203e5f6fe",
+          "css": {
+            "height": "2px",
+            "width": "2px"
+          }
+        },
+        {
+          "uuid": "511bb985-136a-43ad-9d92-34bc4f1c3fec",
+          "css": {}
+        }
+      ]
+    },
+    "page5": {
+      "defaultItem": {
+        "width": "50px",
+        "height": "50px",
+        "backgroundColor": "#00B2A9"
+      },
+      "grid": [
+        {
+          "uuid": "dc0092c3-91f8-4787-a059-0bae9fbb4702",
+          "css": {
+            "backgroundColor": "rgb(98 60 86)"
+          }
+        },
+        {
+          "uuid": "5b58dfcc-90ba-4e08-a0ce-af65d81713be",
+          "css": {}
+        },
+        {
+          "uuid": "8ed5d064-e9cf-4f3a-b0f2-b52e4abf4a5f",
+          "css": {
+            "backgroundColor": "rgb(98 60 86)",
+            "borderRadius": "50px 0 0 0"
+          }
+        },
+        {
+          "uuid": "393e6562-8bf8-4aad-8c85-68887e36608e",
+          "css": {
+            "width": "20px",
+            "height": "20px",
+            "borderRadius": "0 20px 30px 50px"
+          }
+        },
+        {
+          "uuid": "53e72211-2865-46ac-a256-65a56eab66e7",
+          "css": {
+            "height": "55px",
+            "width": "20px"
+          }
+        },
+        {
+          "uuid": "4f999b8a-a468-47c3-a0ca-d4b12323f647",
+          "css": {
+            "backgroundColor": "rgb(19 19 19)"
+          }
+        },
+        {
+          "uuid": "f7664407-9321-4b0c-8946-36b9f9ea0f96",
+          "css": {
+            "backgroundColor": "rgb(78 35 44)",
+            "width": "20px",
+            "height": "20px",
+            "borderRadius": "50px"
+          }
+        },
+        {
+          "uuid": "76652187-c8d9-4913-a67a-62e66d5c5078",
+          "css": {
+            "borderRadius": "50px 0 0 50px"
+          }
+        },
+        {
+          "uuid": "95eb193c-42ba-4a5c-871a-2f04456a479f",
+          "css": {
+            "height": "40px",
+            "width": "40px"
+          }
+        },
+        {
+          "uuid": "b1f0fc1b-413d-4c26-90a8-46bd85d93c24",
+          "css": {
+            "height": "30px",
+            "width": "30px"
+          }
+        },
+        {
+          "uuid": "cfb8a533-a211-46c7-b149-21dd02e3275a",
+          "css": {
+            "height": "20px",
+            "width": "20px"
+          }
+        },
+        {
+          "uuid": "b4cee5fd-9af6-4f61-95b2-00617b410e89",
+          "css": {
+            "height": "18px",
+            "width": "5px"
+          }
+        }
+      ]
+    },
+    "ok": [
+      "14277f44-4181-4d13-a3b7-1a4df36c8fce",
+      "b73a3f78-257c-479d-ba04-3ca5945b361a",
+      "512138cd-2fff-4484-abea-bcb5c9bdf9a3",
+      "74d1b98d-a0c3-4620-844e-16f5c4c93667",
+      "f7664407-9321-4b0c-8946-36b9f9ea0f96"
+    ]
+}
