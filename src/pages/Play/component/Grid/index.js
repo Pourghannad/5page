@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import style from "./style.module.scss";
 import classnames from "classnames";
 import { cloneObject } from '../../../../utils/lodash';
+import Loading from "../../../../components/loading";
 const Grid = (props) => {
     const [selected, setSelected] = useState([]);
     const itemHandleClick = (param) => {
@@ -34,7 +35,7 @@ const Grid = (props) => {
                             <span style={Object.assign(defaultCss, itemCss)}></span>
                         </div>
                     );
-                }) : <span>Loading</span>}
+                }) : <Loading />}
             </div>
         </div>
     );
