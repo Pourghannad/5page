@@ -3,8 +3,8 @@ const levelGenerator = () => {
             "standard": {
                 "standard": true,
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
                 },
                 "grid": [{
@@ -60,8 +60,8 @@ const levelGenerator = () => {
             },
             "page1": {
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
             },
             "grid": [{
@@ -128,8 +128,8 @@ const levelGenerator = () => {
             },
             "page2": {
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
                 },
                 "grid": [
@@ -209,8 +209,8 @@ const levelGenerator = () => {
               },
             "page3": {
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
                 },
                 "grid": [
@@ -290,8 +290,8 @@ const levelGenerator = () => {
             },
             "page4": {
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
                 },
                 "grid": [
@@ -371,8 +371,8 @@ const levelGenerator = () => {
             },
             "page5": {
                 "defaultItem": {
-                  "width": "58px",
-                  "height": "58px",
+                  "width": "75px",
+                  "height": "75px",
                   "backgroundSize": "cover"
                 },
                 "grid": [

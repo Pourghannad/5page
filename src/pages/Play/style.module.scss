@@ -101,7 +101,7 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 50px;
-    padding-top: 4px;
+    padding-top: 20px;
     width: 100%;
     &.intro {
         filter: blur(10px);
@@ -114,13 +114,13 @@
         display: flex;
         justify-content: center;
         font-weight: 300;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         
     }
 }
 .submit {
     position: absolute;
-    bottom: 6em;
+    bottom: 5em;
     appearance: none;
     background-color: rgb(69 27 122 / 60%);
     color: #fff;

@@ -2,8 +2,8 @@
     "standard": {
       "standard": true,
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
@@ -73,8 +73,8 @@
     },
     "page1": {
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
@@ -155,8 +155,8 @@
     },
     "page2": {
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
@@ -236,8 +236,8 @@
     },
     "page3": {
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
@@ -318,8 +318,8 @@
     },
     "page4": {
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
@@ -401,8 +401,8 @@
     },
     "page5": {
       "defaultItem": {
-        "width": "58px",
-        "height": "58px",
+        "width": "75px",
+        "height": "75px",
         "backgroundSize": "cover"
       },
       "grid": [
