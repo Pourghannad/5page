@@ -4,10 +4,9 @@ import style from "./style.module.scss";
 import Intro from "./component/intro"
 import { ReactComponent as Play } from "../../assets/play.svg";
 import { LSG } from "../../utils/store";
-import LevelSelect from "./component/LevelSelect";
-const Home = () => {
+import { withRouter } from "react-router-dom";
+const Home = (props) => {
     const [intro, setIntro] = useState(!LSG('intro'));
-    const [levelModal, setLevelModal] = useState(false);
     useEffect(() => {
         setTimeout(() => {
             setIntro(false);
@@ -21,7 +20,7 @@ const Home = () => {
             <React.Fragment>
                 <span className={style["fivepage-logo-type"]}>5Page</span>
                 <div className={style["action-button-container"]}>
-                    <button onClick={() => setLevelModal(true)}>
+                    <button onClick={() => props.history.push('/level')}>
                         <Play />
                         <span>5</span>
                         <span>5</span>
@@ -31,9 +30,8 @@ const Home = () => {
                     </button>
                 </div>
             </React.Fragment>
-            <LevelSelect state={levelModal} />
         </div>
     );
 };
 
-export default Home;
+export default withRouter(Home);

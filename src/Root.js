@@ -6,6 +6,7 @@ import "./reset.scss";
 import "./fonts.scss";
 
 const Home = React.lazy(() => import("./pages/Home"));
+const Level = React.lazy(() => import("./pages/Level"));
 const Play = React.lazy(() => import("./pages/Play"));
 
 const Root = () => {
@@ -16,6 +17,7 @@ const Root = () => {
           <Switch>
             <Suspense fallback={<Loading />}>
               <Route exact path="/" component={Home} />
+              <Route exact path="/level" component={Level} />
               <Route exact path="/play" component={Play} />
             </Suspense>
           </Switch>
