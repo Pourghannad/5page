@@ -103,6 +103,23 @@
     padding-bottom: 50px;
     padding-top: 20px;
     width: 100%;
+    > div {
+        position: relative;
+        &:not(:last-of-type) {
+            &:before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background-color: rgb(255 255 255 / 10%);
+                right: -6px;
+                margin: auto;
+                top: 35px;
+                bottom: 0;
+            }
+
+        }
+    }
     &.intro {
         filter: blur(10px);
         overflow: hidden;
