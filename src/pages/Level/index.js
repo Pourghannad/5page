@@ -19,10 +19,6 @@ const Level = (props) => {
                 <span onClick={() => props.history.push("/play?level=9")}>9</span>
                 <span onClick={() => props.history.push("/play?level=10")}>10</span>
                 <span onClick={() => props.history.push("/play?level=11")}>11</span>
-                <span className={style["soon"]}>12</span>
-                <span className={style["soon"]}>13</span>
-                <span className={style["soon"]}>14</span>
-                <span className={style["soon"]}>15</span>
             </div>
         </div>
     )
