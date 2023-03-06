@@ -88,6 +88,19 @@ const Play = (props) => {
     ) {
       setModalStatus("win");
       if (queryParams.level !== "11") {
+        let levelStorage  = {};
+        try {
+          levelStorage = JSON.parse(LSG("level"));
+        } catch (error) {
+          levelStorage = {[queryParams.level]: 1};
+        }
+        console.log('levelStorage', levelStorage);
+        // if (LSG("level")) {
+        //   const q = JSON.stringify({[queryParams.level]: 1});
+        //   LSS("level", {...levelStorage, q});
+        // } else {
+        //   LSS("level", JSON.stringify({[queryParams.level]: 1}));
+        // }
         props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
         setSelected({});
         setTimeout(() => {
@@ -95,6 +108,7 @@ const Play = (props) => {
         }, 2000);
       }
     } else {
+      
       setModalStatus("wrong");
       setTimeout(() => {
         setModalStatus("");
