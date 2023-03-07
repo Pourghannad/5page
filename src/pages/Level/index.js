@@ -10,47 +10,80 @@ const Level = (props) => {
   const [level, setLevel] = useState([
     {
       number: 1,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      },
     },
     {
       number: 2,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 3,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 4,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 5,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 6,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 7,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 8,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 9,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 10,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
     {
       number: 11,
-      count: 0,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
     },
   ]);
 
@@ -84,7 +117,7 @@ const Level = (props) => {
             key={`level-${item.number}`}
             onClick={() => props.history.push(`/play?level=${item.number}`)}
           >
-            {item.count === 1 && (
+            {item.count.correct === 1 && (
               <span className={style["check"]}>
                 <CheckSmallSvg />
               </span>

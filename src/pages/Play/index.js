@@ -76,6 +76,12 @@ const Play = (props) => {
 
   const handleSubmit = () => {
     const currentLevel = levelData;
+    let levelStorage = [];
+    try {
+      levelStorage = JSON.parse(LSG("level")) || [];
+    } catch (error) {
+      levelStorage = [{ number: queryParams.level, count: { correct: 1 } }];
+    }
     if (
       selected[1].length === 1 &&
       selected[2].length === 1 &&
@@ -89,20 +95,20 @@ const Play = (props) => {
       currentLevel["ok"][4] === selected[5][0]
     ) {
       setModalStatus("win");
-      let levelStorage = [];
-      try {
-        levelStorage = JSON.parse(LSG("level")) || [];
-      } catch (error) {
-        levelStorage = [{ number: queryParams.level, count: 1 }];
-      }
-      if (levelStorage && !levelStorage.find((item) => item.number === queryParams.level*1)) {
+      if (!levelStorage.find((item) => item.number === queryParams.level * 1)) {
         LSS(
           "level",
           JSON.stringify([
             ...levelStorage,
-            { number: queryParams.level * 1, count: 1 },
+            { number: queryParams.level * 1, count: { correct: 1 } },
           ])
         );
+      } else {
+        const currentLevelIndex = levelStorage.findIndex((item) => {
+          return item.number === queryParams.level * 1;
+        });
+        levelStorage[currentLevelIndex].count.correct = 1;
+        LSS("level", JSON.stringify(levelStorage));
       }
       if (queryParams.level !== "11") {
         props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
@@ -112,6 +118,29 @@ const Play = (props) => {
         }, 2000);
       }
     } else {
+      const currentLevelCount = levelStorage.find(
+        (item) => item.number === queryParams.level * 1
+      );
+      if (!currentLevelCount) {
+        LSS(
+          "level",
+          JSON.stringify([
+            ...levelStorage,
+            {
+              number: queryParams.level * 1,
+              count: { wrong: currentLevelCount?.count?.wrong + 1 || 1 },
+            },
+          ])
+        );
+      } else {
+        if (!currentLevelCount.count.correct) {
+          const currentLevelIndex = levelStorage.findIndex((item) => {
+            return item.number === queryParams.level * 1;
+          });
+          levelStorage[currentLevelIndex].count.wrong += 1;
+          LSS("level", JSON.stringify(levelStorage));
+        }
+      }
       setModalStatus("wrong");
       setTimeout(() => {
         setModalStatus("");
