@@ -64,10 +64,10 @@ const Level = (props) => {
       const sortedLevels = merge(level, levelObject, 'number').sort((a,b) => {
         if (a.number < b.number)  return -1;
         return 1;
-      });
+      }) || level;
       setLevel(sortedLevels);
     }
-  }, []);
+  }, [level]);
   return (
     <div
       className={classNames(style["level-modal"], { [style["active"]]: true })}

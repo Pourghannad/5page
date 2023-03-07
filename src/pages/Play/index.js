@@ -102,8 +102,8 @@ const Play = (props) => {
           { number: queryParams.level * 1, count: 1 },
         ])
       );
-      props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
       if (queryParams.level !== "11") {
+        props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
         setSelected({});
         setTimeout(() => {
           setModalStatus("");
