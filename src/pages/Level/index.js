@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import style from "./style.module.scss";
 import { withRouter } from "react-router";
+import { ReactComponent as CheckSmallSvg } from "../../assets/check-small.svg";
 import { LSG } from "../../utils/store";
+import { merge } from "../../utils/lodash";
 
 const Level = (props) => {
   const [level, setLevel] = useState([
@@ -52,13 +54,18 @@ const Level = (props) => {
     },
   ]);
   useEffect(() => {
-    let levelObject = {};
+    let levelObject = [];
     try {
-      levelObject = JSON.parse(LSG("level"));
+      levelObject = JSON.parse(LSG("level")) || [];
     } catch (error) {
-      levelObject = {};
+      levelObject = [];
     }
     if (Object.keys(levelObject).length > 0) {
+      const sortedLevels = merge(level, levelObject, 'number').sort((a,b) => {
+        if (a.number < b.number)  return -1;
+        return 1;
+      });
+      setLevel(sortedLevels);
     }
   }, []);
   return (
@@ -72,6 +79,7 @@ const Level = (props) => {
             key={`level-${item.number}`}
             onClick={() => props.history.push(`/play?level=${item.number}`)}
           >
+            {item.count === 1 && <span className={style["check"]}><CheckSmallSvg /></span>}
             {item.number}
           </span>
         ))}

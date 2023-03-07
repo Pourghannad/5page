@@ -31,9 +31,11 @@ const Play = (props) => {
 
   useEffect(() => {
     if (queryParams.level) {
-      fetch(`/5page/level/${queryParams.level}.json`).then((response) => response.json()).then((data) => {
-        setLevelData(data);
-      });
+      fetch(`/5page/level/${queryParams.level}.json`)
+        .then((response) => response.json())
+        .then((data) => {
+          setLevelData(data);
+        });
     }
   }, [queryParams.level]);
 
@@ -87,22 +89,27 @@ const Play = (props) => {
       currentLevel["ok"][4] === selected[5][0]
     ) {
       setModalStatus("win");
+      let levelStorage = [];
+      try {
+        levelStorage = JSON.parse(LSG("level")) || [];
+      } catch (error) {
+        levelStorage = [{ number: queryParams.level, count: 1 }];
+      }
+      LSS(
+        "level",
+        JSON.stringify([
+          ...levelStorage,
+          { number: queryParams.level * 1, count: 1 },
+        ])
+      );
+      props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
       if (queryParams.level !== "11") {
-        let levelStorage  = {};
-        try {
-          levelStorage = JSON.parse(LSG("level"));
-        } catch (error) {
-          levelStorage = {[queryParams.level]: 1};
-        }
-        LSS("level", JSON.stringify({...levelStorage, [queryParams.level]: 1}));
-        props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
         setSelected({});
         setTimeout(() => {
           setModalStatus("");
         }, 2000);
       }
     } else {
-      
       setModalStatus("wrong");
       setTimeout(() => {
         setModalStatus("");
@@ -124,7 +131,7 @@ const Play = (props) => {
           <button
             className={style["back"]}
             onClick={() => {
-              props.history.push("/", { from: "play" });
+              props.history.push("/level", { from: "play" });
             }}
           ></button>
           <h4>Level {queryParams.level}</h4>
@@ -180,12 +187,8 @@ const Play = (props) => {
             Submit
           </button>
         )}
-        {modalStatus === "win" && (
-          <StateModal state="win" />
-        )}
-        {modalStatus === "wrong" && (
-          <StateModal state="wrong" />
-        )}
+        {modalStatus === "win" && <StateModal state="win" />}
+        {modalStatus === "wrong" && <StateModal state="wrong" />}
         {modalStatus === "intro" && (
           <div className={style["intro-modal"]}>
             <h5>About the game</h5>
