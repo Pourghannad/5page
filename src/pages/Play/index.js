@@ -95,13 +95,15 @@ const Play = (props) => {
       } catch (error) {
         levelStorage = [{ number: queryParams.level, count: 1 }];
       }
-      LSS(
-        "level",
-        JSON.stringify([
-          ...levelStorage,
-          { number: queryParams.level * 1, count: 1 },
-        ])
-      );
+      if (levelStorage && !levelStorage.find((item) => item.number === queryParams.level*1)) {
+        LSS(
+          "level",
+          JSON.stringify([
+            ...levelStorage,
+            { number: queryParams.level * 1, count: 1 },
+          ])
+        );
+      }
       if (queryParams.level !== "11") {
         props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
         setSelected({});
