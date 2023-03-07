@@ -53,6 +53,7 @@ const Level = (props) => {
       count: 0,
     },
   ]);
+
   useEffect(() => {
     let levelObject = [];
     try {
@@ -61,13 +62,17 @@ const Level = (props) => {
       levelObject = [];
     }
     if (Object.keys(levelObject).length > 0) {
-      const sortedLevels = merge(level, levelObject, 'number').sort((a,b) => {
-        if (a.number < b.number)  return -1;
+      const sortedLevels =
+      merge(level, levelObject, "number").sort((a, b) => {
+        if (a.number < b.number) return -1;
         return 1;
       }) || level;
-      setLevel(sortedLevels);
+      if (JSON.stringify(level) !== JSON.stringify(sortedLevels)) {
+        setLevel(sortedLevels);
+      }
     }
   }, [level]);
+
   return (
     <div
       className={classNames(style["level-modal"], { [style["active"]]: true })}
@@ -79,7 +84,11 @@ const Level = (props) => {
             key={`level-${item.number}`}
             onClick={() => props.history.push(`/play?level=${item.number}`)}
           >
-            {item.count === 1 && <span className={style["check"]}><CheckSmallSvg /></span>}
+            {item.count === 1 && (
+              <span className={style["check"]}>
+                <CheckSmallSvg />
+              </span>
+            )}
             {item.number}
           </span>
         ))}
