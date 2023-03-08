@@ -3,6 +3,7 @@ import classNames from "classnames";
 import style from "./style.module.scss";
 import { withRouter } from "react-router";
 import { ReactComponent as CheckSmallSvg } from "../../assets/check-small.svg";
+import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import { LSG } from "../../utils/store";
 import { merge } from "../../utils/lodash";
 
@@ -106,6 +107,16 @@ const Level = (props) => {
     }
   }, [level]);
 
+  const WrongIconRender = (count) => {
+    const meta = [];
+    for (let i = 0; i < count; i += 1) {
+      meta.push(
+        <span className={style["wrong"]}><WrongSvg /></span> ,
+      );
+    }
+    return meta;
+  }
+
   return (
     <div
       className={classNames(style["level-modal"], { [style["active"]]: true })}
@@ -120,6 +131,11 @@ const Level = (props) => {
             {item.count.correct === 1 && (
               <span className={style["check"]}>
                 <CheckSmallSvg />
+              </span>
+            )}
+            {item.count.wrong > 0 && (
+              <span className={style["wrong-wrapper"]}>
+                {WrongIconRender(item.count.wrong)}
               </span>
             )}
             {item.number}

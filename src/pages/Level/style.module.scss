@@ -63,6 +63,17 @@
                 opacity: 0.35;
                 cursor: not-allowed;
             }
+            .wrong-wrapper {
+                display: flex;
+                position: absolute;
+                bottom: -5px;
+                left: 5px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #000;
+                }
+            }
             .check {
                 position: absolute;
                 width: 20px;
