@@ -107,16 +107,6 @@ const Level = (props) => {
     }
   }, [level]);
 
-  const WrongIconRender = (count) => {
-    const meta = [];
-    for (let i = 0; i < count; i += 1) {
-      meta.push(
-        <span className={style["wrong"]}><WrongSvg /></span> ,
-      );
-    }
-    return meta;
-  }
-
   return (
     <div
       className={classNames(style["level-modal"], { [style["active"]]: true })}
@@ -135,7 +125,7 @@ const Level = (props) => {
             )}
             {item.count.wrong > 0 && (
               <span className={style["wrong-wrapper"]}>
-                {WrongIconRender(item.count.wrong)}
+                <span className={style["wrong"]}><WrongSvg /><span>{item.count.wrong}</span></span> 
               </span>
             )}
             {item.number}
