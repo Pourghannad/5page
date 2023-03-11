@@ -86,6 +86,13 @@ const Level = (props) => {
         wrong: 0
       }
     },
+    {
+      number: 12,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
   ]);
 
   useEffect(() => {
