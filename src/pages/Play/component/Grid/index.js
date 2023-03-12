@@ -28,7 +28,7 @@ const Grid = (props) => {
       <div className={style["items-container"]}>
         {props.data ? (
           props.data.grid.map((item, key) => {
-            const itemCss = cloneObject(item.css);
+            const itemCss = cloneObject(item?.css || {});
             const defaultCss = cloneObject(props.data.defaultItem);
             return (
               <div
@@ -41,9 +41,9 @@ const Grid = (props) => {
               >
                 {item.objects && item.objects.length > 0 ? (
                     <div className={style["multi-object-wrapper"]}>
-                        {item.objects.map((object) => {
+                        {item.objects.map((object, index) => {
                           return (
-                            <div style={cloneObject(object)}></div>
+                            <div key={index} style={cloneObject(object)}></div>
                           )
                         })}
                     </div>
