@@ -24,9 +24,18 @@
             &.selected {
                 box-shadow: 0 0 0 3px rgb(0 178 169 / 50%);
             }
-            span {
-               
-                
+            .multi-object-wrapper {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                > div {
+                    width: 48%;
+                    height: 100%;
+                    background-size: cover;
+                }
             }
         }
     }
