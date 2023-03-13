@@ -2,7 +2,7 @@
   "standard": {
     "standard": true,
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },
@@ -168,7 +168,7 @@
   },
   "page1": {
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },
@@ -249,7 +249,7 @@
   },
   "page2": {
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },
@@ -330,7 +330,7 @@
   },
   "page3": {
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },
@@ -411,7 +411,7 @@
   },
   "page4": {
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },
@@ -492,7 +492,7 @@
   },
   "page5": {
     "defaultItem": {
-      "width": "75px",
+      "width": "92px",
       "height": "75px",
       "backgroundSize": "cover"
     },

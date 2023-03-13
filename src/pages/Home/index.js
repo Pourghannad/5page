@@ -5,9 +5,11 @@ import Intro from "./component/intro"
 import { ReactComponent as Play } from "../../assets/play.svg";
 import { LSG } from "../../utils/store";
 import { withRouter } from "react-router-dom";
+import levelGeneratorObjects from "../../utils/levelGenerator"
 const Home = (props) => {
     const [intro, setIntro] = useState(!LSG('intro'));
     useEffect(() => {
+        console.log(levelGeneratorObjects());
         setTimeout(() => {
             setIntro(false);
         }, 1200);
