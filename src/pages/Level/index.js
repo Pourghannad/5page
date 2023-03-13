@@ -91,7 +91,8 @@ const Level = (props) => {
       count: {
         correct: 0,
         wrong: 0
-      }
+      },
+      soon: true
     },
   ]);
 
@@ -124,6 +125,7 @@ const Level = (props) => {
           <span
             key={`level-${item.number}`}
             onClick={() => props.history.push(`/play?level=${item.number}`)}
+            className={classNames({[style["soon"]]: item?.soon})}
           >
             {item.count.correct === 1 && (
               <span className={style["check"]}>

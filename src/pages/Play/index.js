@@ -75,76 +75,82 @@ const Play = (props) => {
   };
 
   const handleSubmit = () => {
-    const currentLevel = levelData;
-    let levelStorage = [];
-    try {
-      levelStorage = JSON.parse(LSG("level")) || [];
-    } catch (error) {
-      levelStorage = [{ number: queryParams.level, count: { correct: 1 } }];
-    }
-    if (
-      selected[1].length === 1 &&
-      selected[2].length === 1 &&
-      selected[3].length === 1 &&
-      selected[4].length === 1 &&
-      selected[5].length === 1 &&
-      currentLevel["ok"][0] === selected[1][0] &&
-      currentLevel["ok"][1] === selected[2][0] &&
-      currentLevel["ok"][2] === selected[3][0] &&
-      currentLevel["ok"][3] === selected[4][0] &&
-      currentLevel["ok"][4] === selected[5][0]
-    ) {
-      setModalStatus("win");
-      if (!levelStorage.find((item) => item.number === queryParams.level * 1)) {
-        LSS(
-          "level",
-          JSON.stringify([
-            ...levelStorage,
-            { number: queryParams.level * 1, count: { correct: 1 } },
-          ])
-        );
-      } else {
-        const currentLevelIndex = levelStorage.findIndex((item) => {
-          return item.number === queryParams.level * 1;
-        });
-        levelStorage[currentLevelIndex].count.correct = 1;
-        LSS("level", JSON.stringify(levelStorage));
+    if (submitCondition()) {
+      const currentLevel = levelData;
+      let levelStorage = [];
+      try {
+        levelStorage = JSON.parse(LSG("level")) || [];
+      } catch (error) {
+        levelStorage = [{ number: queryParams.level, count: { correct: 1 } }];
       }
-      if (queryParams.level !== "11") {
-        props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
-        setSelected({});
-        setTimeout(() => {
-          setModalStatus("");
-        }, 2000);
-      }
-    } else {
-      const currentLevelCount = levelStorage.find(
-        (item) => item.number === queryParams.level * 1
-      );
-      if (!currentLevelCount) {
-        LSS(
-          "level",
-          JSON.stringify([
-            ...levelStorage,
-            {
-              number: queryParams.level * 1,
-              count: { wrong: currentLevelCount?.count?.wrong + 1 || 1 },
-            },
-          ])
-        );
-      } else {
-        if (!currentLevelCount.count.correct) {
+      if (
+        selected[1].length === 1 &&
+        selected[2].length === 1 &&
+        selected[3].length === 1 &&
+        selected[4].length === 1 &&
+        selected[5].length === 1 &&
+        currentLevel["ok"][0] === selected[1][0] &&
+        currentLevel["ok"][1] === selected[2][0] &&
+        currentLevel["ok"][2] === selected[3][0] &&
+        currentLevel["ok"][3] === selected[4][0] &&
+        currentLevel["ok"][4] === selected[5][0]
+      ) {
+        setModalStatus("win");
+        if (
+          !levelStorage.find((item) => item.number === queryParams.level * 1)
+        ) {
+          LSS(
+            "level",
+            JSON.stringify([
+              ...levelStorage,
+              { number: queryParams.level * 1, count: { correct: 1 } },
+            ])
+          );
+        } else {
           const currentLevelIndex = levelStorage.findIndex((item) => {
             return item.number === queryParams.level * 1;
           });
-          levelStorage[currentLevelIndex].count.wrong += 1;
+          levelStorage[currentLevelIndex].count.correct = 1;
           LSS("level", JSON.stringify(levelStorage));
         }
+        if (queryParams.level !== "11") {
+          props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
+          setSelected({});
+          setTimeout(() => {
+            setModalStatus("");
+          }, 2000);
+        }
+      } else {
+        const currentLevelCount = levelStorage.find(
+          (item) => item.number === queryParams.level * 1
+        );
+        if (!currentLevelCount) {
+          LSS(
+            "level",
+            JSON.stringify([
+              ...levelStorage,
+              {
+                number: queryParams.level * 1,
+                count: { wrong: currentLevelCount?.count?.wrong + 1 || 1 },
+              },
+            ])
+          );
+        } else {
+          if (!currentLevelCount.count.correct) {
+            const currentLevelIndex = levelStorage.findIndex((item) => {
+              return item.number === queryParams.level * 1;
+            });
+            levelStorage[currentLevelIndex].count.wrong += 1;
+            LSS("level", JSON.stringify(levelStorage));
+          }
+        }
+        setModalStatus("wrong");
+        setTimeout(() => {
+          setModalStatus("");
+        }, 4000);
       }
-      setModalStatus("wrong");
-      setTimeout(() => {
-        setModalStatus("");
-      }, 4000);
+    } else {
+      alert("Please select one item on all five pages first.");
     }
   };
   if (queryParams.level) {
@@ -213,11 +219,14 @@ const Play = (props) => {
             />
           </div>
         </div>
-        {submitCondition() && (
-          <button onClick={handleSubmit} className={style["submit"]}>
-            Submit
-          </button>
-        )}
+        <button
+          onClick={handleSubmit}
+          className={classNames(style["submit"], {
+            [style["active"]]: submitCondition(),
+          })}
+        >
+          Submit
+        </button>
         {modalStatus === "win" && <StateModal state="win" />}
         {modalStatus === "wrong" && <StateModal state="wrong" />}
         {modalStatus === "intro" && (
