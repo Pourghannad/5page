@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import style from "./style.module.scss";
 import { withRouter } from "react-router";
-import { ReactComponent as CheckSmallSvg } from "../../assets/check-small.svg";
-import { ReactComponent as WrongSvg } from "../../assets/wrong.svg";
 import { LSG } from "../../utils/store";
 import { merge } from "../../utils/lodash";
+import { ReactComponent as StartSvg } from "../../assets/star.svg";
 
 const Level = (props) => {
   const [level, setLevel] = useState([
@@ -127,14 +126,19 @@ const Level = (props) => {
             onClick={() => props.history.push(`/play?level=${item.number}`)}
             className={classNames({[style["soon"]]: item?.soon})}
           >
+            <div className={style["star-wrapper"]}>
+
+            </div>
             {item.count.correct === 1 && (
               <span className={style["check"]}>
-                <CheckSmallSvg />
+                <StartSvg />
+                <StartSvg />
+                <StartSvg />
               </span>
             )}
             {item.count.wrong > 0 && (
               <span className={style["wrong-wrapper"]}>
-                <span className={style["wrong"]}><WrongSvg /><span>{item.count.wrong}</span></span> 
+                <span className={style["wrong"]}><span>{item.count.wrong}</span></span> 
               </span>
             )}
             {item.number}
