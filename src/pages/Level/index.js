@@ -126,21 +126,15 @@ const Level = (props) => {
             onClick={() => props.history.push(`/play?level=${item.number}`)}
             className={classNames({[style["soon"]]: item?.soon})}
           >
-            <div className={style["star-wrapper"]}>
-
-            </div>
-            {item.count.correct === 1 && (
-              <span className={style["check"]}>
-                <StartSvg />
-                <StartSvg />
-                <StartSvg />
-              </span>
-            )}
-            {item.count.wrong > 0 && (
-              <span className={style["wrong-wrapper"]}>
-                <span className={style["wrong"]}><span>{item.count.wrong}</span></span> 
-              </span>
-            )}
+            {(item.count.wrong || item.count.correct) ?
+              <div className={classNames(style["star-wrapper"], {
+                [style["three-star"]]: !item.count?.wrong && item.count.correct,
+                [style["two-star"]]: item.count?.wrong && item.count?.wrong < 2  && item.count.correct,
+                [style["one-star"]]: item.count?.wrong && item.count?.wrong >= 2  && item.count.correct
+              })}>
+                <StartSvg /><StartSvg /><StartSvg />
+              </div>
+            : ''}
             {item.number}
           </span>
         ))}

@@ -40,11 +40,11 @@
       z-index: -1;
     }
   }
-  div {
+  > div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 50px 0;
+    margin: 40px 0;
     max-width: 295px;
     > span {
       display: flex;
@@ -64,54 +64,49 @@
         opacity: 0.35;
         cursor: not-allowed;
       }
-      .wrong-wrapper {
-        display: flex;
+      .star-wrapper {
         position: absolute;
-        top: 2px;
-        right: 2px;
-        width: 24px;
-        height: 24px;
-        border: 2px solid #000;
+        bottom: -6px;
         svg {
           width: 20px;
           height: 20px;
-          fill: #000;
-          position: relative;
-          top: -1px;
-        }
-        .wrong {
-          > span {
-            position: absolute;
-            font-size: 6px;
-            width: 9px;
-            height: 9px;
-            background-color: #901c1c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            left: -6px;
-            bottom: -6px;
-            border-radius: 50%;
-            text-shadow: 1px 1px 2px #000;
+          path {
+            fill: transparent;
+            stroke: #000;
+            stroke-width: 45px;
           }
         }
-      }
-      .check {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        bottom: 4px;
-        left: 4px;
-        border: 2px solid #090304;
-        svg {
-          fill: #80ff69;
-          width: 50px;
-          height: 50px;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin: auto;
-          transform: translate3d(-50%, -40%, 0px);
+        &.three-star {
+          svg path {
+            stroke: transparent;
+            fill: #eaff00;
+          }
+        }
+        &.two-star {
+          svg {
+            path {
+              stroke: #eaff00;
+              fill: transparent;
+            }
+            &:not(:last-of-type) {
+              path {
+                fill: #eaff00;
+              }
+            }
+          }
+        }
+        &.one-star {
+          svg {
+            path {
+              stroke: #eaff00;
+              fill: transparent;
+            }
+            &:first-of-type {
+              path {
+                fill: #eaff00;
+              }
+            }
+          }
         }
       }
     }
