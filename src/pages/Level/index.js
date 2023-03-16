@@ -7,6 +7,7 @@ import { merge } from "../../utils/lodash";
 import { ReactComponent as StartSvg } from "../../assets/star.svg";
 
 const Level = (props) => {
+  const [active, setActive] = useState(false);
   const [level, setLevel] = useState([
     {
       number: 1,
@@ -114,9 +115,15 @@ const Level = (props) => {
     }
   }, [level]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setActive(true);
+    }, 100);
+  }, [])
+
   return (
     <div
-      className={classNames(style["level-modal"], { [style["active"]]: true })}
+      className={classNames(style["level-modal"], { [style["active"]]: active })}
     >
       <h6>LEVEL SELECT</h6>
       <div>
@@ -134,7 +141,7 @@ const Level = (props) => {
               })}>
                 <StartSvg /><StartSvg /><StartSvg />
               </div>
-            : ''}
+            : <></>}
             {item.number}
           </span>
         ))}
