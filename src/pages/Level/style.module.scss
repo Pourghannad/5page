@@ -1,3 +1,10 @@
+$levelAnimationDuration: 120ms;
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
 .level-modal {
   position: fixed;
   width: 100%;
@@ -14,14 +21,10 @@
   max-width: 500px;
   transition-property: transform;
   transition-duration: 290ms;
-  transform: scale3d(2.1, 1.5, 1) translate3d(50px, 110px, 0px);
+  transition-timing-function: ease-in;
+  // transform: scale3d(2.1, 1.5, 1) translate3d(50px, 110px, 0px);
   opacity: 0;
   visibility: hidden;
-  &.active {
-    transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
-    opacity: 1;
-    visibility: visible;
-  }
   h6 {
     color: #00b2a9;
     display: flex;
@@ -60,6 +63,15 @@
       color: #fff;
       box-shadow: 0 0 0 1px rgb(255 255 255 / 50%);
       position: relative;
+      transition-property: transform;
+      transition-duration: $levelAnimationDuration;
+      @for $i from 1 through 12 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: $levelAnimationDuration * 0.35 * $i;
+          // transform: translate3d(calc(#{$i}px + 10px + #{randomNum(0, 70)}px) , #{randomNum(0, 120)}px, 0px);
+          transform: translate3d(calc(#{$i}px + 35px), 90px, 0px);
+        }
+      }
       &.soon {
         opacity: 0.35;
         cursor: not-allowed;
@@ -109,6 +121,14 @@
           }
         }
       }
+    }
+  }
+  &.active {
+    transform: scale3d(1, 1, 1) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    visibility: visible;
+    > div > span {
+      transform: translate3d(0px, 0px, 0px);
     }
   }
 }
