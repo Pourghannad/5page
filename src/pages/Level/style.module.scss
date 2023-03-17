@@ -1,4 +1,4 @@
-$levelAnimationDuration: 120ms;
+$levelAnimationDuration: 200ms;
 @function randomNum($min, $max) {
   $rand: random();
   $randomNum: $min + floor($rand * (($max - $min) + 1));
@@ -61,9 +61,10 @@ $levelAnimationDuration: 120ms;
       cursor: pointer;
       margin: 8px 0px;
       color: #fff;
+      opacity: 0.125;
       box-shadow: 0 0 0 1px rgb(255 255 255 / 50%);
       position: relative;
-      transition-property: transform;
+      transition-property: transform, opacity;
       transition-duration: $levelAnimationDuration;
       @for $i from 1 through 12 {
         &:nth-of-type(#{$i}) {
@@ -129,6 +130,7 @@ $levelAnimationDuration: 120ms;
     visibility: visible;
     > div > span {
       transform: translate3d(0px, 0px, 0px);
+      opacity: 1;
     }
   }
 }
