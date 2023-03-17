@@ -73,10 +73,6 @@ $levelAnimationDuration: 200ms;
           transform: translate3d(calc(#{$i}px + 35px), 90px, 0px);
         }
       }
-      &.soon {
-        opacity: 0.35;
-        cursor: not-allowed;
-      }
       .star-wrapper {
         position: absolute;
         bottom: -6px;
@@ -131,6 +127,10 @@ $levelAnimationDuration: 200ms;
     > div > span {
       transform: translate3d(0px, 0px, 0px);
       opacity: 1;
+      &.soon {
+        opacity: 0.35;
+        cursor: not-allowed;
+      }
     }
   }
 }
