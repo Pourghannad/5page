@@ -61,7 +61,7 @@ $levelAnimationDuration: 200ms;
       cursor: pointer;
       margin: 8px 0px;
       color: #fff;
-      opacity: 0.125;
+      opacity: 0;
       box-shadow: 0 0 0 1px rgb(255 255 255 / 50%);
       position: relative;
       transition-property: transform, opacity;
@@ -70,7 +70,7 @@ $levelAnimationDuration: 200ms;
         &:nth-of-type(#{$i}) {
           transition-delay: $levelAnimationDuration * 0.35 * $i;
           // transform: translate3d(calc(#{$i}px + 10px + #{randomNum(0, 70)}px) , #{randomNum(0, 120)}px, 0px);
-          transform: translate3d(calc(#{$i}px + 35px), 90px, 0px);
+          transform: translate3d(calc(#{$i}px + 35px), 90px, 0px) scale3d(2.5,3.5,1);
         }
       }
       .star-wrapper {
@@ -125,7 +125,7 @@ $levelAnimationDuration: 200ms;
     opacity: 1;
     visibility: visible;
     > div > span {
-      transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0px, 0px, 0px)scale3d(1,1,1);
       opacity: 1;
       &.soon {
         opacity: 0.35;
