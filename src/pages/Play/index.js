@@ -180,7 +180,7 @@ const Play = (props) => {
           })}
         >
           <div className={style["page-container"]}>
-            <span className={style["text"]}>Standard</span>
+            <span className={style["text"]}>Pattern detection</span>
             <Grid standard data={currentLevel.standard} />
           </div>
           <div className={style["page-container"]}>
