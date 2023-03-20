@@ -219,14 +219,16 @@ const Play = (props) => {
             />
           </div>
         </div>
-        <button
-          onClick={handleSubmit}
-          className={classNames(style["submit"], {
-            [style["active"]]: submitCondition(),
-          })}
-        >
-          Submit
-        </button>
+        <div className={classNames(style["submit-wrapper"], {
+              [style["active"]]: submitCondition(),
+            })}>
+          <button
+            onClick={handleSubmit}
+            className={style["submit"]}
+          >
+            Submit
+          </button>
+        </div>
         {modalStatus === "win" && <StateModal state="win" />}
         {modalStatus === "wrong" && <StateModal state="wrong" />}
         {modalStatus === "intro" && (

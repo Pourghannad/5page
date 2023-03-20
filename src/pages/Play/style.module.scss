@@ -100,8 +100,7 @@
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 25px;
-    padding-top: 10px;
+    padding-bottom: 15px;
     width: 100%;
     > div {
         position: relative;
@@ -153,22 +152,66 @@
         
     }
 }
-.submit {
+.submit-wrapper {
     position: absolute;
     bottom: 4em;
+    opacity: 0.4;
+    appearance: none;
+    width: 76%;
+    transition-duration: 250ms;
+    transition-property: opacity;
+    transition-delay: 100ms;
     @media (max-height: 650px) {
         bottom: 1.25em;
     }
-    opacity: 0.4;
-    appearance: none;
-    background-color: rgb(69 27 122 / 60%);
-    color: #fff;
-    padding: 0.75em 0em;
-    border: 3px solid rgb(55 18 101);
-    width: 76%;
-    cursor: pointer;
+    .submit {
+        cursor: pointer;
+        background-color: rgb(69 27 122 / 60%);
+        color: #fff;
+        width: 100%;
+        padding: 0.75em 0em;
+        border: 3px solid rgb(55 18 101);
+    }
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(55 18 101);
+        will-change: transform,opacity;
+        opacity: 0;
+        visibility: hidden;
+        bottom: 0px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        transform: translate3d(0px, 0px, 0px)scale3d(1, 1, 1)rotateX(0deg);
+        animation-duration: 210ms;
+        animation-iteration-count: 2;
+    }
+    @keyframes submit {
+        0% {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(0px, 5px, 0px)scale3d(1, 1, 1)rotateX(0deg);
+        }
+        20% {
+            visibility: visible;
+            opacity: 0.9;
+            transform: translate3d(0px, 5px, 0px)scale3d(1, 1, 1)rotateX(-90deg);
+        }
+        100% {
+            visibility: hidden;
+            opacity: 0;
+            transform: translate3d(-5px, 0px, 0px) scale3d(3.8, 2.2, 1)rotateX(220deg);
+
+        }
+    }
     &.active {
         opacity: 1;
+        &:before {
+            animation-name: submit;
+        }
     }
 }
 .intro-modal {
