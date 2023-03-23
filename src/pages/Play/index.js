@@ -35,6 +35,10 @@ const Play = (props) => {
         .then((response) => response.json())
         .then((data) => {
           setLevelData(data);
+        }).catch((err) => {
+          alert(err);
+          setLevelData({});
+          props.history.push(`/level`);
         });
     }
   }, [queryParams.level]);

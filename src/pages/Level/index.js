@@ -125,7 +125,15 @@ const Level = (props) => {
     <div
       className={classNames(style["level-modal"], { [style["active"]]: active })}
     >
-      <h6>LEVEL SELECT</h6>
+      <header>
+        <h6>LEVEL SELECT</h6>
+        <button
+            className={style["back"]}
+            onClick={() => {
+              props.history.push("/", { from: "level" });
+            }}
+          ></button>
+      </header>
       <div>
         {level.map((item) => (
           <span
