@@ -41,7 +41,7 @@ const Play = (props) => {
           props.history.push(`/level`);
         });
     }
-  }, [queryParams.level]);
+  }, [props.history, queryParams.level]);
 
   const handleSelected = (uuid, page) => {
     if (selected[page]) {
