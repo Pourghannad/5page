@@ -130,7 +130,7 @@ const Level = (props) => {
         {level.map((item) => (
           <span
             key={`level-${item.number}`}
-            onClick={() => props.history.push(`/play?level=${item.number}`)}
+            onClick={() => item?.soon ? null : props.history.push(`/play?level=${item.number}`)}
             className={classNames({[style["soon"]]: item?.soon})}
           >
             {(item.count.wrong || item.count.correct) ?
