@@ -16,10 +16,12 @@ const Play = (props) => {
   const { queryParams } = useQueryParams();
   useEffect(() => {
     if (playContainerRef.current && modalStatus === "") {
-      setIntro(true);
+      if (!LSG("level")) {
+        setIntro(true);
+      }
       setTimeout(() => {
         setIntro(false);
-      }, 1500);
+      }, 1700);
     }
   }, [modalStatus]);
 
@@ -151,7 +153,7 @@ const Play = (props) => {
         setModalStatus("wrong");
         setTimeout(() => {
           setModalStatus("");
-        }, 4000);
+        }, 1300);
       }
     } else {
       alert("Please select one item on all five pages first.");

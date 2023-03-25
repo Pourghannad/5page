@@ -8,9 +8,6 @@ const StateModal = ({ state = "wrong" }) => (
     {state === "wrong" && (
       <div className={classNames(style["status-modal"], style["wrong"])}>
         <WrongSvg />
-        <span>
-          <WrongSvg />
-        </span>
       </div>
     )}
     {state === "win" && (

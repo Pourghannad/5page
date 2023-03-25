@@ -48,38 +48,6 @@
                 animation-iteration-count: 2;
             }
         }
-        > span {
-            right: 0;
-            left: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform: scale3d(1.1, 1.1, 1);
-            svg path {
-                fill: transparent;
-                opacity: 0;
-                stroke: rgb(100 18 18 / 50%);
-                stroke-width: 3px;
-                stroke-linecap: round;
-                stroke-dasharray: 2525px;
-                stroke-dashoffset: 0px;
-                animation-duration: 1800ms;
-                animation-timing-function: linear;
-                animation-delay: 1.85s;
-                animation-name: wrongdModalAnimationStroke;
-                animation-iteration-count: 1;
-            }
-        }
-    }
-    @keyframes wrongdModalAnimationStroke {
-        0% {
-            stroke-dashoffset: 0px;
-            opacity: 1;
-        }
-        100% {
-            stroke-dashoffset: 2525px;
-            opacity: 1;
-        }
     }
     @keyframes wrongdModalAnimation {
         0% {
