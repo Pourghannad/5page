@@ -8,6 +8,7 @@
     appearance: none;
     background-color: transparent;
     z-index: 2;
+    background-color: #090304;
     cursor: pointer;
     &:before, &:after {
         content: "";
@@ -70,22 +71,35 @@
 }
 
 .play-head {
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
     height: 58px;
-    background-color: #120b10;
+    &:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #00b2a9;
+        z-index: 1;
+        top: 28px;
+    }
     h4 {
         color: #00b2a9;
         text-align: center;
         position: absolute;
+        background-color: #090304;
         font-family: SpaceGrotesk;
         top: 18px;
         letter-spacing: 1px;
         font-size: 16px;
         text-shadow: 3px 3px 0px rgb(255 255 255 / 10%);
-        width: 100%;
+        z-index: 1;
+        padding: 0px 16px;
     }
 }
 
