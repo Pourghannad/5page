@@ -107,7 +107,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,(calc(-50% - 35px)));
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
@@ -168,7 +168,7 @@
 }
 .submit-wrapper {
     position: absolute;
-    bottom: 4em;
+    bottom: 4.5em;
     opacity: 0.4;
     appearance: none;
     width: 76%;
