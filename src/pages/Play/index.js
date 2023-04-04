@@ -7,18 +7,18 @@ import { LSG, LSS } from "../../utils/store";
 import useQueryParams from "../../utils/useQueryParams";
 import Help from "../../assets/help.mp4";
 import StateModal from "./component/StateModal";
-// import { useAudio } from "../../utils/useAudio";
 import useSound from 'use-sound';
 import gameOver from '../../assets/game-over.mp3';
+import gameSuccess from '../../assets/success.mp3';
 const Play = (props) => {
   const playContainerRef = useRef(null);
-  // const [playing, toggle] = useAudio(require("../../assets/game-over.mp3"));
   const [selected, setSelected] = useState({});
   const [modalStatus, setModalStatus] = useState(!LSG("intro") ? "intro" : "");
   const [intro, setIntro] = useState(false);
   const [levelData, setLevelData] = useState({});
   const { queryParams } = useQueryParams();
-  const [play] = useSound(gameOver);
+  const [playGameOver] = useSound(gameOver);
+  const [playGameSuccess] = useSound(gameSuccess);
   useEffect(() => {
     if (playContainerRef.current && modalStatus === "") {
       if (!LSG("level")) {
@@ -107,6 +107,7 @@ const Play = (props) => {
         currentLevel["ok"][4] === selected[5][0]
       ) {
         setModalStatus("win");
+        playGameSuccess();
         if (
           !levelStorage.find((item) => item.number === queryParams.level * 1)
         ) {
@@ -129,7 +130,7 @@ const Play = (props) => {
           setSelected({});
           setTimeout(() => {
             setModalStatus("");
-          }, 2000);
+          }, 3000);
         }
       } else {
         const currentLevelCount = levelStorage.find(
@@ -156,7 +157,7 @@ const Play = (props) => {
           }
         }
         setModalStatus("wrong");
-        play();
+        playGameOver();
         setTimeout(() => {
           setModalStatus("");
         }, 2500);
