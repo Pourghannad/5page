@@ -7,13 +7,18 @@ import { LSG, LSS } from "../../utils/store";
 import useQueryParams from "../../utils/useQueryParams";
 import Help from "../../assets/help.mp4";
 import StateModal from "./component/StateModal";
+// import { useAudio } from "../../utils/useAudio";
+import useSound from 'use-sound';
+import gameOver from '../../assets/game-over.mp3';
 const Play = (props) => {
   const playContainerRef = useRef(null);
+  // const [playing, toggle] = useAudio(require("../../assets/game-over.mp3"));
   const [selected, setSelected] = useState({});
   const [modalStatus, setModalStatus] = useState(!LSG("intro") ? "intro" : "");
   const [intro, setIntro] = useState(false);
   const [levelData, setLevelData] = useState({});
   const { queryParams } = useQueryParams();
+  const [play] = useSound(gameOver);
   useEffect(() => {
     if (playContainerRef.current && modalStatus === "") {
       if (!LSG("level")) {
@@ -151,9 +156,10 @@ const Play = (props) => {
           }
         }
         setModalStatus("wrong");
+        play();
         setTimeout(() => {
           setModalStatus("");
-        }, 1300);
+        }, 2500);
       }
     } else {
       alert("Please select one item on all five pages first.");

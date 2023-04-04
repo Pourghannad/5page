@@ -11,7 +11,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "use-sound": "^4.0.1"
   },
   "scripts": {
     "start": "PORT=5555 react-scripts --openssl-legacy-provider start",
@@ -36,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.55.0",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "sass": "^1.55.0"
   }
 }
