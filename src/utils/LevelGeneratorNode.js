@@ -72,8 +72,6 @@ const level = {
   },
   page1: {
     defaultItem: {
-      width: "75px",
-      height: "75px",
       backgroundSize: "cover",
     },
     grid: [
