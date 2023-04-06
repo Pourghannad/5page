@@ -101,7 +101,7 @@ $levelAnimationDuration: 200ms;
       position: relative;
       transition-property: transform, opacity;
       transition-duration: $levelAnimationDuration;
-      @for $i from 1 through 12 {
+      @for $i from 1 through 13 {
         &:nth-of-type(#{$i}) {
           transition-delay: $levelAnimationDuration * 0.35 * $i;
           // transform: translate3d(calc(#{$i}px + 10px + #{randomNum(0, 70)}px) , #{randomNum(0, 120)}px, 0px);
