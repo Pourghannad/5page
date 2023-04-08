@@ -54,6 +54,7 @@
             position: absolute;
             font-size: 8px;
             color: #fff;
+            visibility: hidden;
             opacity: 0.175;
             transform: translate3d(15px, 10px, 0px);
             animation-name: fiveAnimate;
@@ -98,7 +99,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            &:before {
+            &:last-of-type:before {
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -174,32 +175,43 @@
                     transform: scale3d(2,2,1);
                 }
             }
-            svg {
-                width: 25px;
-                height: 25px;
-                path {
-                    stroke: #00B2A9;
+            &:last-of-type {
+                margin-left: 20px;
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    path {
+                        stroke: #00B2A9;
+                    }
+                    @keyframes playActionAnimation {
+                        0% {
+                            stroke-dashoffset: 0px;
+                        }
+                        90% { 
+                            stroke-dashoffset: 570px;
+                        }
+                        100% {
+                            stroke-dashoffset: 760px;
+                        }
+                    }
                 }
-                @keyframes playActionAnimation {
-                    0% {
-                        stroke-dashoffset: 0px;
-                    }
-                    90% { 
-                        stroke-dashoffset: 570px;
-                    }
-                    100% {
-                        stroke-dashoffset: 760px;
-                    }
+                svg {
+                    stroke-width: 10px;
+                    stroke-dasharray: 190px;
+                    stroke-dashoffset: 0px;
+                    animation-name: playActionAnimation;
+                    animation-iteration-count: infinite;
+                    animation-duration: 3s;
+                    animation-timing-function: linear;
                 }
             }
-            svg {
-                stroke-width: 10px;
-                stroke-dasharray: 190px;
-                stroke-dashoffset: 0px;
-                animation-name: playActionAnimation;
-                animation-iteration-count: infinite;
-                animation-duration: 3s;
-                animation-timing-function: linear;
+            &:first-of-type {
+                svg {
+                    width: 32px;
+                    height: 32px;
+                    fill: rgb(255 255 255 / 70%);
+                    transform: translate3d(-2px, 2px, 0px);
+                }
             }
         }
     }
