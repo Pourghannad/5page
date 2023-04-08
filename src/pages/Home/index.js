@@ -22,7 +22,7 @@ const Home = (props) => {
             <React.Fragment>
                 <span className={style["fivepage-logo-type"]}>5Page</span>
                 <div className={style["action-button-container"]}>
-                    <button aria-label="About" onClick={() => props.history.push('/about')}>
+                    <button style={{display: "none"}} aria-label="About" onClick={() => props.history.push('/about')}>
                         <About />
                     </button>
                     <button aria-label="Play" onClick={() => isLevel ? props.history.push('/level') : props.history.push('/play?level=1')}>
