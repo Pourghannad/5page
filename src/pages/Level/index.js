@@ -100,6 +100,20 @@ const Level = (props) => {
         wrong: 0
       }
     },
+    {
+      number: 14,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
+    {
+      number: 15,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
   ]);
 
   useEffect(() => {
