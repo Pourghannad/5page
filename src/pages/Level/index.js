@@ -112,7 +112,8 @@ const Level = (props) => {
       count: {
         correct: 0,
         wrong: 0
-      }
+      },
+      soon: true
     },
   ]);
 
