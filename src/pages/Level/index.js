@@ -7,7 +7,7 @@ import { merge } from "../../utils/lodash";
 import { ReactComponent as StartSvg } from "../../assets/star.svg";
 
 const Level = (props) => {
-  const [active, setActive] = useState(LSG("intro"));
+  const [active, setActive] = useState(false);
   const [level, setLevel] = useState([
     {
       number: 1,
@@ -99,6 +99,21 @@ const Level = (props) => {
         correct: 0,
         wrong: 0
       }
+    },
+    {
+      number: 14,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
+    {
+      number: 15,
+      count: {
+        correct: 0,
+        wrong: 0
+      },
+      soon: true
     },
   ]);
 

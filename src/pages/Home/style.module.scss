@@ -1,206 +1,216 @@
 .home-page-container {
-    .intro-wrapper {
-        background-color: #090304;
+  .intro-wrapper {
+    background-color: #090304;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+    transition-property: opacity, z-index;
+    transition-delay: 200ms opacity;
+    transition-delay: 400ms z-index;
+    transition-duration: 200ms;
+    svg path {
+      transition: fill 200ms;
+    }
+    &.deactive-intro {
+      opacity: 0;
+      z-index: -2;
+      svg path {
+        fill: #090304;
+      }
+    }
+  }
+  .fivepage-logo-type {
+    color: #c8102e;
+    font-weight: bold;
+    font-family: SpaceGrotesk;
+    font-size: 42px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    width: 105px;
+    height: 112px;
+    justify-content: flex-end;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    margin: auto;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgb(200 16 47 / 8%);
+      right: -3px;
+      top: -3px;
+      box-shadow: 0 0 10px 1px rgb(0 116 214 / 10%);
+    }
+    &:after {
+      content: "5";
+      position: absolute;
+      font-size: 8px;
+      color: #fff;
+      visibility: hidden;
+      opacity: 0.175;
+      transform: translate3d(15px, 10px, 0px);
+      animation-name: fiveAnimate;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+    }
+    @keyframes fiveAnimate {
+      0% {
+        transform: translate3d(15px, 10px, 0px);
+      }
+      25% {
+        transform: translate3d(15px, -55px, 0px);
+      }
+      50% {
+        transform: translate3d(-92px, -55px, 0px);
+      }
+      75% {
+        transform: translate3d(-92px, 55px, 0px);
+      }
+      92% {
+        transform: translate3d(15px, 55px, 0px);
+      }
+      100% {
+        transform: translate3d(15px, 10px, 0px);
+      }
+    }
+  }
+  .action-button-container {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    button {
+      width: 50px;
+      height: 50px;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      &:last-of-type:before {
+        content: "";
+        position: absolute;
         width: 100%;
         height: 100%;
+        box-shadow: 0 0 0 1px #ffffff;
+        transform-origin: center center;
+        transform: scale3d(1, 1, 1);
+        animation-name: actionButton;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-delay: 2s;
+        opacity: 0;
+      }
+      span {
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        opacity: 1;
-        transition-property: opacity, z-index;
-        transition-delay: 200ms opacity;
-        transition-delay: 400ms z-index;
-        transition-duration: 200ms;
-        svg path {
-            transition: fill 200ms;
+        transform: translate3d(10px, 0px, 0px);
+        animation-name: homeFive;
+        animation-duration: 400ms;
+        animation-iteration-count: 2;
+        color: #fff;
+        opacity: 0;
+        margin-top: -55px;
+        &:nth-of-type(1) {
+          transform: translate3d(20px, 5px, 0px);
+          animation-delay: 400ms;
         }
-        &.deactive-intro {
-            opacity: 0;
-            z-index: -2;
-            svg path {
-                fill: #090304;
-            }
+        &:nth-of-type(2) {
+          transform: translate3d(-20px, 10px, 0px);
+          animation-delay: 250ms;
         }
-
-    }
-    .fivepage-logo-type {
-        color: #C8102E;
-        font-weight: bold;
-        font-family: SpaceGrotesk;
-        font-size: 42px;
-        letter-spacing: 1px;
-        display: flex;
-        align-items: center;
-        padding-right: 10px;
-        width: 105px;
-        height: 112px;
-        justify-content: flex-end;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-        margin: auto;
-        position: relative;
-        &:before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 1px solid rgb(200 16 47 / 8%);
-            right: -3px;
-            top: -3px;
-            box-shadow: 0 0 10px 1px rgb(0 116 214 / 10%);
+        &:nth-of-type(3) {
+          transform: translate3d(-20px, -10px, 0px);
+          animation-delay: 50ms;
         }
-        &:after {
-            content: "5";
-            position: absolute;
-            font-size: 8px;
-            color: #fff;
-            opacity: 0.175;
-            transform: translate3d(15px, 10px, 0px);
-            animation-name: fiveAnimate;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            animation-duration: 10s;
+        &:nth-of-type(4) {
+          transform: translate3d(20px, -10px, 0px);
+          animation-delay: 350ms;
         }
-        @keyframes fiveAnimate {
-            0% { 
-                transform: translate3d(15px, 10px, 0px);
+        @keyframes homeFive {
+          0% {
+            transform: translate3d(15px, -10px, 0px);
+            opacity: 1;
+          }
+          20% {
+            transform: translate3d(10px, 10px, 0px);
+            opacity: 0.1;
+          }
+          25% {
+            transform: translate3d(-10px, 5px, 0px);
+            opacity: 0.5;
+          }
+          35% {
+            transform: translate3d(10px, -5px, 0px);
+            opacity: 0.1;
+          }
+          80% {
+            transform: translate3d(-15px, 2px, 0px);
+            opacity: 1;
+          }
+          100% {
+            transform: translate3d(10px, 0px, 0px);
+            opacity: 0.2;
+          }
+        }
+      }
+      @keyframes actionButton {
+        0% {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+        100% {
+          opacity: 0;
+          transform: scale3d(2, 2, 1);
+        }
+      }
+      &:last-of-type {
+        svg {
+          width: 25px;
+          height: 25px;
+          path {
+            stroke: #00b2a9;
+          }
+          @keyframes playActionAnimation {
+            0% {
+              stroke-dashoffset: 0px;
             }
-            25% {
-                transform: translate3d(15px, -55px, 0px);
-            }
-            50% {
-                transform: translate3d(-92px, -55px, 0px);
-            }
-            75% {
-                transform: translate3d(-92px, 55px, 0px);
-            }
-            92% {
-                transform: translate3d(15px, 55px, 0px);
+            90% {
+              stroke-dashoffset: 570px;
             }
             100% {
-                transform: translate3d(15px, 10px, 0px);
+              stroke-dashoffset: 760px;
             }
+          }
         }
-    }
-    .action-button-container {
-        display: flex;
-        margin-top: 20px;
-        justify-content: center;
-        button {
-            width: 50px;
-            height: 50px;
-            appearance: none;
-            border: 0;
-            background: transparent;
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            &:before {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                box-shadow: 0 0 0 1px #ffffff;
-                transform-origin: center center;
-                transform: scale3d(1,1,1);
-                animation-name: actionButton;
-                animation-duration: 2s;
-                animation-iteration-count: 2;
-                animation-delay: 2s;
-                opacity: 0;
-            }
-            span {
-                position: absolute;
-                transform: translate3d(10px, 0px, 0px);
-                animation-name: homeFive;
-                animation-duration: 400ms;
-                animation-iteration-count: 2;
-                color: #fff;
-                opacity: 0;
-                margin-top: -55px;
-                &:nth-of-type(1) {
-                    transform: translate3d(20px, 5px, 0px);
-                    animation-delay: 400ms;
-                }
-                &:nth-of-type(2) {
-                    transform: translate3d(-20px, 10px, 0px);
-                    animation-delay: 250ms;
-                }
-                &:nth-of-type(3) {
-                    transform: translate3d(-20px, -10px, 0px);
-                    animation-delay: 50ms;
-                }
-                &:nth-of-type(4) {
-                    transform: translate3d(20px, -10px, 0px);
-                    animation-delay: 350ms;
-                }
-                @keyframes homeFive {
-                    0% {
-                        transform: translate3d(15px, -10px, 0px);
-                        opacity: 1;
-                    }
-                    20% {
-                        transform: translate3d(10px, 10px, 0px);
-                        opacity: 0.1;
-                    }
-                    25% { 
-                        transform: translate3d(-10px, 5px, 0px);
-                        opacity: 0.5;
-                    }
-                    35% {
-                        transform: translate3d(10px, -5px, 0px);
-                        opacity: 0.1;
-                    }
-                    80% {
-                        transform: translate3d(-15px, 2px, 0px);
-                        opacity: 1;
-                    }
-                    100% {
-                        transform: translate3d(10px, 0px, 0px);
-                        opacity: 0.2;
-                    }
-                }
-            }
-            @keyframes actionButton {
-                0% {
-                    opacity: 1;
-                    transform: scale3d(1,1,1);
-                }
-                100% {
-                    opacity: 0;
-                    transform: scale3d(2,2,1);
-                }
-            }
-            svg {
-                width: 25px;
-                height: 25px;
-                path {
-                    stroke: #00B2A9;
-                }
-                @keyframes playActionAnimation {
-                    0% {
-                        stroke-dashoffset: 0px;
-                    }
-                    90% { 
-                        stroke-dashoffset: 570px;
-                    }
-                    100% {
-                        stroke-dashoffset: 760px;
-                    }
-                }
-            }
-            svg {
-                stroke-width: 10px;
-                stroke-dasharray: 190px;
-                stroke-dashoffset: 0px;
-                animation-name: playActionAnimation;
-                animation-iteration-count: infinite;
-                animation-duration: 3s;
-                animation-timing-function: linear;
-            }
+        svg {
+          stroke-width: 10px;
+          stroke-dasharray: 190px;
+          stroke-dashoffset: 0px;
+          animation-name: playActionAnimation;
+          animation-iteration-count: infinite;
+          animation-duration: 3s;
+          animation-timing-function: linear;
         }
+      }
+      &:first-of-type {
+        svg {
+          width: 32px;
+          height: 32px;
+          fill: rgb(255 255 255 / 70%);
+          transform: translate3d(-2px, 2px, 0px);
+        }
+      }
     }
+  }
 }

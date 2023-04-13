@@ -473,6 +473,6 @@ const level = {
     "d6771cc3-e326-4c14-992b-ceb3a5774037",
   ],
 };
-fs.writeFile("public/level/15.json", JSON.stringify(level), () => {
+fs.writeFile("public/level/17.json", JSON.stringify(level), () => {
   console.log("done");
 });

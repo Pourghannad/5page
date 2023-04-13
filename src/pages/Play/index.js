@@ -7,9 +7,9 @@ import { LSG, LSS } from "../../utils/store";
 import useQueryParams from "../../utils/useQueryParams";
 import Help from "../../assets/help.mp4";
 import StateModal from "./component/StateModal";
-import useSound from 'use-sound';
-import gameOver from '../../assets/game-over.mp3';
-import gameSuccess from '../../assets/success.mp3';
+import useSound from "use-sound";
+import gameOver from "../../assets/game-over.mp3";
+import gameSuccess from "../../assets/success.mp3";
 const Play = (props) => {
   const playContainerRef = useRef(null);
   const [selected, setSelected] = useState({});
@@ -23,6 +23,14 @@ const Play = (props) => {
     if (playContainerRef.current && modalStatus === "") {
       if (!LSG("level")) {
         setIntro(true);
+        setTimeout(() => {
+          if (playContainerRef.current) {
+            playContainerRef.current.scrollLeft = 300;
+            setTimeout(() => {
+              playContainerRef.current.scrollLeft = 0;
+            }, 350);
+          }
+        }, 1500);
       }
       setTimeout(() => {
         setIntro(false);
@@ -42,7 +50,8 @@ const Play = (props) => {
         .then((response) => response.json())
         .then((data) => {
           setLevelData(data);
-        }).catch((err) => {
+        })
+        .catch((err) => {
           alert(err);
           setLevelData({});
           props.history.push(`/level`);
@@ -125,7 +134,7 @@ const Play = (props) => {
           levelStorage[currentLevelIndex].count.correct = 1;
           LSS("level", JSON.stringify(levelStorage));
         }
-        if (queryParams.level !== "13") {
+        if (queryParams.level !== "14") {
           props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
           setSelected({});
           setTimeout(() => {
@@ -170,13 +179,15 @@ const Play = (props) => {
     const currentLevel = levelData;
     return (
       <>
-        <div
-          className={classNames(style["intro-scroll"], {
-            [style["active"]]: intro,
-          })}
-        >
-          scroll horizontally
-        </div>
+        {intro && (
+          <div
+            className={classNames(style["intro-scroll"], {
+              [style["active"]]: intro,
+            })}
+          >
+            scroll horizontally
+          </div>
+        )}
         <div className={style["play-head"]}>
           <button
             className={style["back"]}
@@ -232,13 +243,12 @@ const Play = (props) => {
             />
           </div>
         </div>
-        <div className={classNames(style["submit-wrapper"], {
-              [style["active"]]: submitCondition(),
-            })}>
-          <button
-            onClick={handleSubmit}
-            className={style["submit"]}
-          >
+        <div
+          className={classNames(style["submit-wrapper"], {
+            [style["active"]]: submitCondition(),
+          })}
+        >
+          <button onClick={handleSubmit} className={style["submit"]}>
             Submit
           </button>
         </div>

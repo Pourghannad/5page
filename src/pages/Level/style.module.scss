@@ -1,4 +1,4 @@
-$levelAnimationDuration: 200ms;
+$levelAnimationDuration: 120ms;
 @function randomNum($min, $max) {
   $rand: random();
   $randomNum: $min + floor($rand * (($max - $min) + 1));
@@ -58,25 +58,25 @@ $levelAnimationDuration: 200ms;
       background-color: #090304;
       z-index: 2;
       cursor: pointer;
-      &:before, &:after {
-          content: "";
-          width: 16px;
-          height: 2px;
-          right: 9px;
-          background-color: #fff;
-          position: absolute;
-          border-radius: 2px;
+      &:before,
+      &:after {
+        content: "";
+        width: 16px;
+        height: 2px;
+        right: 9px;
+        background-color: #fff;
+        position: absolute;
+        border-radius: 2px;
       }
       &:before {
-          transform: rotate(35deg);
-          top: 19px;
+        transform: rotate(35deg);
+        top: 19px;
       }
       &:after {
-          transform: rotate(-35deg);
-          top: 11px;
+        transform: rotate(-35deg);
+        top: 11px;
       }
-  }
-    
+    }
   }
   > div {
     display: flex;
@@ -101,11 +101,12 @@ $levelAnimationDuration: 200ms;
       position: relative;
       transition-property: transform, opacity;
       transition-duration: $levelAnimationDuration;
-      @for $i from 1 through 13 {
+      @for $i from 1 through 15 {
         &:nth-of-type(#{$i}) {
-          transition-delay: $levelAnimationDuration * 0.35 * $i;
+          transition-delay: $levelAnimationDuration * 0.30 * $i;
           // transform: translate3d(calc(#{$i}px + 10px + #{randomNum(0, 70)}px) , #{randomNum(0, 120)}px, 0px);
-          transform: translate3d(calc(#{$i}px + 35px), 90px, 0px) scale3d(2.5,3.5,1);
+          transform: translate3d(calc(#{$i}px + 35px), 90px, 0px)
+            scale3d(2.5, 3.5, 1);
         }
       }
       .star-wrapper {
@@ -160,7 +161,7 @@ $levelAnimationDuration: 200ms;
     opacity: 1;
     visibility: visible;
     > div > span {
-      transform: translate3d(0px, 0px, 0px)scale3d(1,1,1);
+      transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
       opacity: 1;
       &.soon {
         opacity: 0.35;
