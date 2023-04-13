@@ -260,7 +260,7 @@ const Play = (props) => {
             <video style={{ display: "none" }}>
               <source src={Help} type="video/mp4" />
             </video>
-            On the standard page, one item is selected from among the available
+            On the Pattern detection page, one item is selected from among the available
             boxes due to a special feature compared to the others. Find this
             special feature and select the item that you think has this feature
             on the next 5 pages.
