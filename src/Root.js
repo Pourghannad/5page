@@ -9,6 +9,7 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Level = React.lazy(() => import("./pages/Level"));
 const Play = React.lazy(() => import("./pages/Play"));
 const About = React.lazy(() => import("./pages/About"));
+const Editor = React.lazy(() => import("./pages/Editor"));
 
 const Root = () => {
   return (
@@ -21,6 +22,7 @@ const Root = () => {
               <Route exact path="/level" component={Level} />
               <Route exact path="/play" component={Play} />
               <Route exact path="/about" component={About} />
+              <Route exact path="/editor" component={Editor} />
             </Suspense>
           </Switch>
         </section>
