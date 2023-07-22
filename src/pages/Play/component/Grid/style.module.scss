@@ -26,10 +26,10 @@
                 height: 100%;
             }
             &.active {
-                box-shadow: 0 0 0 5px rgba(51, 156, 32, 0.80);
+                box-shadow: 0 0 0 6px rgba(51, 156, 32, 0.80);
             }
             &.selected {
-                box-shadow: 0 0 0 5px rgba(51, 156, 32, 0.80);
+                box-shadow: 0 0 0 6px rgb(26 127 139);
             }
             .multi-object-wrapper {
                 position: absolute;
