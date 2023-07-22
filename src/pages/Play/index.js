@@ -46,6 +46,7 @@ const Play = (props) => {
 
   useEffect(() => {
     if (queryParams.level) {
+      setLevelData({});
       fetch(`/5page/level/${queryParams.level}.json`)
         .then((response) => response.json())
         .then((data) => {
