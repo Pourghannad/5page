@@ -12,26 +12,5 @@
     justify-content: center;
     overflow: hidden;
     transform: translateZ(0);
-    .ads-container {
-      position: fixed;
-      height: 50px;
-      width: 100%;
-      background-color: #090304;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      bottom: 0;
-      right: 0;
-      color: #50282e;
-      span {
-        display: flex;
-        width: 100%;
-        max-width: 500px;
-        background: #140709;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
-    }
   }
 }
