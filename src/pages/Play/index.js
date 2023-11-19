@@ -5,7 +5,6 @@ import Grid from "./component/Grid";
 import classNames from "classnames";
 import { LSG, LSS } from "../../utils/store";
 import useQueryParams from "../../utils/useQueryParams";
-import Help from "../../assets/help.mp4";
 import StateModal from "./component/StateModal";
 import useSound from "use-sound";
 import gameOver from "../../assets/game-over.mp3";
@@ -258,9 +257,6 @@ const Play = (props) => {
         {modalStatus === "intro" && (
           <div className={style["intro-modal"]}>
             <h5>About the game</h5>
-            <video style={{ display: "none" }}>
-              <source src={Help} type="video/mp4" />
-            </video>
             On the Pattern detection page, one item is selected from among the
             available boxes due to a special feature compared to the others.
             Find this special feature and select the item that you think has
