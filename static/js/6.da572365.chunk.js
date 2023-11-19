@@ -1,0 +1,2 @@
+(this["webpackJsonp5page-pwa"]=this["webpackJsonp5page-pwa"]||[]).push([[6],{48:function(a,e,t){"use strict";t.r(e);var n=t(0),p=t.n(n);e.default=function(){return p.a.createElement(p.a.Fragment,null,"About")}}}]);
+//# sourceMappingURL=6.da572365.chunk.js.map

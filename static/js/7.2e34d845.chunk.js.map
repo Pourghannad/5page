@@ -1,1 +1,0 @@
-{"version":3,"sources":["pages/Editor/index.js"],"names":["Editor"],"mappings":"6GAAA,2BAQeA,UANA,WACX,OACI","file":"static/js/7.2e34d845.chunk.js","sourcesContent":["import React from \"react\";\n\nconst Editor = () => {\n    return (\n        <>Editor</>\n    );\n};\n\nexport default Editor;"],"sourceRoot":""}

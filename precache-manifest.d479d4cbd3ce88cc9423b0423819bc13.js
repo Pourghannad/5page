@@ -1,79 +1,79 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e2c24856bea5a6dc8d7d5a8b5a97977",
+    "revision": "3be3938252660383a8b54fd2ac97d05b",
     "url": "/5page/index.html"
   },
   {
-    "revision": "942fca7208a55dad1bee",
+    "revision": "92d37be9229c7367f7f8",
     "url": "/5page/static/css/3.29e81ad6.chunk.css"
   },
   {
-    "revision": "f3603de1332d0d9cf752",
+    "revision": "51eabede9a45e683a116",
     "url": "/5page/static/css/4.2e880f79.chunk.css"
   },
   {
-    "revision": "81da596fe0a45d6580b9",
+    "revision": "795e66fb3e131a20d8a4",
     "url": "/5page/static/css/5.b4de5a8e.chunk.css"
   },
   {
-    "revision": "7763abcf3910289836b3",
-    "url": "/5page/static/css/main.fda30088.chunk.css"
+    "revision": "bd26ae78e361407e60c0",
+    "url": "/5page/static/css/main.a902331b.chunk.css"
   },
   {
-    "revision": "7f363c5db8f6b1c59592",
-    "url": "/5page/static/js/2.e723fe14.chunk.js"
+    "revision": "3a88776ade42e2057fed",
+    "url": "/5page/static/js/2.ebc6260c.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/5page/static/js/2.e723fe14.chunk.js.LICENSE.txt"
+    "url": "/5page/static/js/2.ebc6260c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "942fca7208a55dad1bee",
-    "url": "/5page/static/js/3.7960451f.chunk.js"
-  },
-  {
-    "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/5page/static/js/3.7960451f.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "f3603de1332d0d9cf752",
-    "url": "/5page/static/js/4.8aec8f25.chunk.js"
+    "revision": "92d37be9229c7367f7f8",
+    "url": "/5page/static/js/3.0b19f729.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/5page/static/js/4.8aec8f25.chunk.js.LICENSE.txt"
+    "url": "/5page/static/js/3.0b19f729.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "81da596fe0a45d6580b9",
-    "url": "/5page/static/js/5.8c0e95e9.chunk.js"
+    "revision": "51eabede9a45e683a116",
+    "url": "/5page/static/js/4.130910fd.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/5page/static/js/5.8c0e95e9.chunk.js.LICENSE.txt"
+    "url": "/5page/static/js/4.130910fd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8dc986a6f13b92ce6965",
-    "url": "/5page/static/js/6.361a80d2.chunk.js"
+    "revision": "795e66fb3e131a20d8a4",
+    "url": "/5page/static/js/5.18bc47a9.chunk.js"
   },
   {
-    "revision": "7fa195fbe3556337622c",
-    "url": "/5page/static/js/7.2e34d845.chunk.js"
+    "revision": "81896c98bac7b5b16ab1d3790da5b937",
+    "url": "/5page/static/js/5.18bc47a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "117838d1b2dae33d1c76",
-    "url": "/5page/static/js/8.3101023a.chunk.js"
+    "revision": "2b5c2b8f038be6de55d1",
+    "url": "/5page/static/js/6.da572365.chunk.js"
+  },
+  {
+    "revision": "cf809f2270da03719186",
+    "url": "/5page/static/js/7.05d7da76.chunk.js"
+  },
+  {
+    "revision": "1a68980fc23e82b65667",
+    "url": "/5page/static/js/8.da41f114.chunk.js"
   },
   {
     "revision": "c15eddeb09b46511cf0731116c7067b0",
-    "url": "/5page/static/js/8.3101023a.chunk.js.LICENSE.txt"
+    "url": "/5page/static/js/8.da41f114.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7763abcf3910289836b3",
-    "url": "/5page/static/js/main.e110fd9a.chunk.js"
+    "revision": "bd26ae78e361407e60c0",
+    "url": "/5page/static/js/main.e8cf8a35.chunk.js"
   },
   {
-    "revision": "ed3a589e55b3dcc7f8f1",
-    "url": "/5page/static/js/runtime-main.45a3acb2.js"
+    "revision": "46d3a8bc7e2bf0df7eb9",
+    "url": "/5page/static/js/runtime-main.da01c68a.js"
   },
   {
     "revision": "788e7c705c377d9e08875341f0e860cb",
@@ -114,10 +114,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6e543a51864d16f6212a1fc2aed8d0d3",
     "url": "/5page/static/media/game-over.6e543a51.mp3"
-  },
-  {
-    "revision": "ca92b90af28b3054b950bb18af262e5c",
-    "url": "/5page/static/media/help.ca92b90a.mp4"
   },
   {
     "revision": "00337609c8f0381198b362a3f210de05",
