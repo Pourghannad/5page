@@ -1,0 +1,18 @@
+.level-editor-container {
+  background-color: rgb(69 38 8 / 45%);
+  padding: 45px 0;
+  > h4 {
+    color: #fff;
+    font-family: SpaceGrotesk;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+  }
+  > div > div > span {
+    color: #fff;
+    font-family: SpaceGrotesk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

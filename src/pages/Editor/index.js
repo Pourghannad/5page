@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import Grid from "../Play/component/Grid";
 
-const levelTest = {
+const emptyLevel = {
   standard: {
     standard: true,
     defaultItem: { backgroundSize: "cover" },
@@ -297,12 +297,12 @@ const levelTest = {
 
 const Editor = () => {
   return (
-    <section className="level-editor-container">
+    <section className={style["level-editor-container"]}>
       <h4>Level Editor</h4>
       <div>
         <div className={style["page-container"]}>
           <span className={style["text"]}>Pattern detection</span>
-          <Grid standard data={levelTest.page1} />
+          <Grid standard data={emptyLevel.standard} />
         </div>
       </div>
     </section>
