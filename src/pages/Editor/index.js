@@ -302,7 +302,7 @@ const Editor = () => {
       <div>
         <div className={style["page-container"]}>
           <span className={style["text"]}>Pattern detection</span>
-          <Grid standard data={emptyLevel.standard} />
+          <Grid editor standard data={emptyLevel.standard} />
         </div>
       </div>
     </section>

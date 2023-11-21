@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import style from "./style.module.scss";
 import classnames from "classnames";
-import { cloneObject } from "../../../../utils/lodash";
-import Loading from "../../../../components/loading";
+import { cloneObject } from "src/utils/lodash";
+import Loading from "src/components/loading";
 const Grid = (props) => {
   const [selected, setSelected] = useState([]);
   const itemHandleClick = (param) => {
@@ -23,6 +23,7 @@ const Grid = (props) => {
     <div
       className={classnames(style["grid-container"], {
         [style["standard"]]: props.standard,
+        [style["editor"]]: props.editor,
       })}
     >
       <div className={style["items-container"]}>
@@ -40,13 +41,13 @@ const Grid = (props) => {
                 })}
               >
                 {item.objects && item.objects.length > 0 ? (
-                    <div className={style["multi-object-wrapper"]}>
-                        {item.objects.map((object, index) => {
-                          return (
-                            <div key={index} style={cloneObject(object)}></div>
-                          )
-                        })}
-                    </div>
+                  <div className={style["multi-object-wrapper"]}>
+                    {item.objects.map((object, index) => {
+                      return (
+                        <div key={index} style={cloneObject(object)}></div>
+                      );
+                    })}
+                  </div>
                 ) : (
                   <span style={Object.assign(defaultCss, itemCss)}></span>
                 )}
