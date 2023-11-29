@@ -51,7 +51,7 @@ $levelAnimationDuration: 120ms;
       position: absolute;
       width: 35px;
       height: 35px;
-      top: -9px;
+      top: -5px;
       left: 20px;
       border: 0;
       appearance: none;
@@ -103,7 +103,7 @@ $levelAnimationDuration: 120ms;
       transition-duration: $levelAnimationDuration;
       @for $i from 1 through 15 {
         &:nth-of-type(#{$i}) {
-          transition-delay: $levelAnimationDuration * 0.30 * $i;
+          transition-delay: $levelAnimationDuration * 0.3 * $i;
           // transform: translate3d(calc(#{$i}px + 10px + #{randomNum(0, 70)}px) , #{randomNum(0, 120)}px, 0px);
           transform: translate3d(calc(#{$i}px + 35px), 90px, 0px)
             scale3d(2.5, 3.5, 1);

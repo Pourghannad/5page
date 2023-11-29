@@ -28,12 +28,12 @@ const Grid = (props) => {
     >
       <div className={style["items-container"]}>
         {props.data ? (
-          props.data.grid.map((item, key) => {
+          props.data.grid.map((item, index) => {
             const itemCss = cloneObject(item?.css || {});
             const defaultCss = cloneObject(props.data.defaultItem);
             return (
               <div
-                key={key}
+                key={index}
                 onClick={() => itemHandleClick(item)}
                 className={classnames(style["item"], {
                   [style["active"]]: item.active,
