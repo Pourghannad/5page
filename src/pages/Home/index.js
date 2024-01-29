@@ -44,6 +44,7 @@ const Home = (props) => {
             <Play />
           </button>
         </div>
+        <span className={style["version-number"]}>V 0.2.0</span>
       </React.Fragment>
     </div>
   );

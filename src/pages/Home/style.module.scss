@@ -12,17 +12,21 @@
     transition-delay: 200ms opacity;
     transition-delay: 400ms z-index;
     transition-duration: 200ms;
+
     svg path {
       transition: fill 200ms;
     }
+
     &.deactive-intro {
       opacity: 0;
       z-index: -2;
+
       svg path {
         fill: #090304;
       }
     }
   }
+
   .fivepage-logo-type {
     color: #c8102e;
     font-weight: bold;
@@ -38,6 +42,7 @@
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     margin: auto;
     position: relative;
+
     &:before {
       content: "";
       position: absolute;
@@ -48,6 +53,7 @@
       top: -3px;
       box-shadow: 0 0 10px 1px rgb(0 116 214 / 10%);
     }
+
     &:after {
       content: "5";
       position: absolute;
@@ -61,31 +67,39 @@
       animation-timing-function: linear;
       animation-duration: 10s;
     }
+
     @keyframes fiveAnimate {
       0% {
         transform: translate3d(15px, 10px, 0px);
       }
+
       25% {
         transform: translate3d(15px, -55px, 0px);
       }
+
       50% {
         transform: translate3d(-92px, -55px, 0px);
       }
+
       75% {
         transform: translate3d(-92px, 55px, 0px);
       }
+
       92% {
         transform: translate3d(15px, 55px, 0px);
       }
+
       100% {
         transform: translate3d(15px, 10px, 0px);
       }
     }
   }
+
   .action-button-container {
     display: flex;
     margin-top: 20px;
     justify-content: center;
+
     button {
       width: 50px;
       height: 50px;
@@ -98,6 +112,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+
       &:last-of-type:before {
         content: "";
         position: absolute;
@@ -112,35 +127,43 @@
         animation-delay: 2s;
         opacity: 0;
       }
+
       @keyframes actionButton {
         0% {
           opacity: 1;
           transform: scale3d(1, 1, 1);
         }
+
         100% {
           opacity: 0;
           transform: scale3d(2, 2, 1);
         }
       }
+
       &:last-of-type {
         svg {
           width: 25px;
           height: 25px;
+
           path {
             stroke: #00b2a9;
           }
+
           @keyframes playActionAnimation {
             0% {
               stroke-dashoffset: 0px;
             }
+
             90% {
               stroke-dashoffset: 570px;
             }
+
             100% {
               stroke-dashoffset: 760px;
             }
           }
         }
+
         svg {
           stroke-width: 10px;
           stroke-dasharray: 190px;
@@ -151,6 +174,7 @@
           animation-timing-function: linear;
         }
       }
+
       &:first-of-type {
         svg {
           width: 32px;
@@ -160,5 +184,17 @@
         }
       }
     }
+  }
+
+  .version-number {
+    position: absolute;
+    color: rgb(200 16 47 / 10%);
+    font-weight: bold;
+    font-family: SpaceGrotesk;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
   }
 }
