@@ -10,6 +10,7 @@
   z-index: 2;
   background-color: #090304;
   cursor: pointer;
+
   &:before,
   &:after {
     content: "";
@@ -20,22 +21,23 @@
     position: absolute;
     border-radius: 2px;
   }
+
   &:before {
     transform: rotate(35deg);
     top: 19px;
   }
+
   &:after {
     transform: rotate(-35deg);
     top: 11px;
   }
 }
+
 .intro-scroll {
   position: absolute;
-  background: linear-gradient(
-    -90deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(-90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 100%);
   font-family: SpaceGrotesk;
   z-index: 2;
   right: 0;
@@ -54,6 +56,7 @@
   animation-iteration-count: infinite;
   transition-property: opacity, visibility;
   transition-duration: 200ms;
+
   &.active {
     opacity: 1;
     visibility: visible;
@@ -65,10 +68,12 @@
     transform: translate3d(0px, 0px, 0px);
     letter-spacing: 0px;
   }
+
   50% {
     transform: translate3d(70px, 0px, 0px);
     letter-spacing: 2px;
   }
+
   100% {
     transform: translate3d(0px, 0px, 0px);
     letter-spacing: 0px;
@@ -83,6 +88,7 @@
   right: 0;
   width: 100%;
   height: 58px;
+
   &:before {
     content: "";
     position: absolute;
@@ -93,6 +99,7 @@
     z-index: 1;
     top: 30px;
   }
+
   h4 {
     color: #00b2a9;
     text-align: center;
@@ -122,11 +129,14 @@
   -webkit-overflow-scrolling: touch;
   padding-bottom: 15px;
   width: 100%;
-  > div {
+
+  >div {
     position: relative;
-    > div {
+
+    >div {
       margin: 0 50px;
     }
+
     &:not(:last-of-type) {
       &:before {
         content: "";
@@ -140,27 +150,33 @@
         bottom: 0;
       }
     }
+
     &:last-of-type {
-      > div {
+      >div {
         margin-right: 0;
       }
-      > span {
+
+      >span {
         padding-left: 50px;
       }
     }
+
     &:first-of-type {
-      > div {
+      >div {
         margin-left: 0;
       }
-      > span {
+
+      >span {
         padding-right: 50px;
       }
     }
   }
+
   &.intro {
     filter: blur(10px);
     overflow: hidden;
   }
+
   .text {
     font-size: 22px;
     color: #fff;
@@ -172,6 +188,7 @@
     padding: 2px;
   }
 }
+
 .submit-wrapper {
   position: absolute;
   bottom: 15vh;
@@ -181,9 +198,11 @@
   transition-duration: 250ms;
   transition-property: opacity;
   transition-delay: 100ms;
+
   @media (max-height: 650px) {
     bottom: 1.25em;
   }
+
   .submit {
     cursor: pointer;
     background-color: rgb(69 27 122 / 60%);
@@ -192,6 +211,7 @@
     padding: 0.75em 0em;
     border: 3px solid rgb(55 18 101);
   }
+
   &:before {
     content: "";
     width: 100%;
@@ -209,23 +229,27 @@
     animation-duration: 200ms;
     animation-iteration-count: 2;
   }
+
   @keyframes submit {
     0% {
       visibility: visible;
       opacity: 1;
       transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
     }
+
     20% {
       visibility: visible;
       opacity: 0.9;
       transform: translate3d(0px, 0px, 0px) scale3d(2, 2, 1);
     }
+
     100% {
       visibility: hidden;
       opacity: 0;
       transform: translate3d(0px, 0px, 0px) scale3d(3.5, 3.5, 1);
     }
   }
+
   // @keyframes submit {
   //     0% {
   //         visibility: visible;
@@ -246,11 +270,13 @@
   // }
   &.active {
     opacity: 1;
+
     &:before {
       animation-name: submit;
     }
   }
 }
+
 .intro-modal {
   position: absolute;
   width: 75%;
@@ -260,6 +286,7 @@
   font-family: SpaceGrotesk;
   font-size: 15px;
   line-height: 24px;
+
   h5 {
     font-size: 16px;
     font-weight: bold;
@@ -267,11 +294,13 @@
     margin-bottom: 8px;
     color: rgb(0 0 0 / 70%);
   }
+
   a {
     color: #000000;
     margin-left: 5px;
     font-size: 16px;
   }
+
   button {
     width: 100%;
     appearance: none;
