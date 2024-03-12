@@ -4,6 +4,7 @@ import style from "./root-style.module.scss";
 import Loading from "./components/loading";
 import "./reset.scss";
 import "./fonts.scss";
+import "./firework.css"
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Level = React.lazy(() => import("./pages/Level"));

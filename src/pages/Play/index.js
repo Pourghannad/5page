@@ -15,6 +15,7 @@ const Play = (props) => {
   const [modalStatus, setModalStatus] = useState(!LSG("intro") ? "intro" : "");
   const [intro, setIntro] = useState(false);
   const [levelData, setLevelData] = useState({});
+  const [finish, setFinish] = useState(false);
   const { queryParams } = useQueryParams();
   const [playGameOver] = useSound(gameOver);
   const [playGameSuccess] = useSound(gameSuccess);
@@ -140,6 +141,8 @@ const Play = (props) => {
           setTimeout(() => {
             setModalStatus("");
           }, 3000);
+        } else {
+          setFinish(true);
         }
       } else {
         const currentLevelCount = levelStorage.find(
@@ -252,6 +255,14 @@ const Play = (props) => {
             Submit
           </button>
         </div>
+        {finish && (
+          <>
+            <div class="pyro">
+              <div class="before"></div>
+              <div class="after"></div>
+            </div>
+          </>
+        )}
         {modalStatus === "win" && <StateModal state="win" />}
         {modalStatus === "wrong" && <StateModal state="wrong" />}
         {modalStatus === "intro" && (
