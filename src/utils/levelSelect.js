@@ -104,4 +104,11 @@ export const LevelSelect = [
         wrong: 0
       }
     },
+    {
+      number: 16,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
   ];

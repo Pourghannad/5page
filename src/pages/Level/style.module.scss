@@ -84,6 +84,10 @@ $levelAnimationDuration: 120ms;
     justify-content: space-between;
     margin: 40px 0;
     max-width: 295px;
+    max-height: 77vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 3px;
     > span {
       display: flex;
       width: 85px;
