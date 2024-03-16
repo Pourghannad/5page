@@ -111,4 +111,18 @@ export const LevelSelect = [
         wrong: 0
       }
     },
+    {
+      number: 17,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    },
+    {
+      number: 18,
+      count: {
+        correct: 0,
+        wrong: 0
+      }
+    }
   ];
