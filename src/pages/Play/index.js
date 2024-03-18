@@ -20,17 +20,9 @@ const Play = (props) => {
   const [playGameOver] = useSound(gameOver);
   const [playGameSuccess] = useSound(gameSuccess);
   useEffect(() => {
-    if (playContainerRef.current && modalStatus === "") {
+    if (playContainerRef?.current && modalStatus === "") {
       if (!LSG("level")) {
         setIntro(true);
-        setTimeout(() => {
-          if (playContainerRef.current) {
-            playContainerRef.current.scrollLeft = 300;
-            setTimeout(() => {
-              playContainerRef.current.scrollLeft = 0;
-            }, 350);
-          }
-        }, 1500);
       }
       setTimeout(() => {
         setIntro(false);
