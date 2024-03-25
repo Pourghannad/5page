@@ -127,7 +127,7 @@ const Play = (props) => {
           levelStorage[currentLevelIndex].count.correct = 1;
           LSS("level", JSON.stringify(levelStorage));
         }
-        if (queryParams.level !== "16") {
+        if (queryParams.level !== "18") {
           props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
           setSelected({});
           setTimeout(() => {
