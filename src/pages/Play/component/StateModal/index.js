@@ -3,11 +3,12 @@ import style from "./style.module.scss";
 import { ReactComponent as CheckedSvg } from "../../../../assets/checked.svg";
 import { ReactComponent as WrongSvg } from "../../../../assets/wrong.svg";
 import classNames from "classnames";
-const StateModal = ({ state = "wrong" }) => (
+const StateModal = ({ state = "wrong", count = [] }) => (
   <>
     {state === "wrong" && (
       <div className={classNames(style["status-modal"], style["wrong"])}>
         <WrongSvg />
+        <p>{count?.length} out of five pages have errors</p>
       </div>
     )}
     {state === "win" && (

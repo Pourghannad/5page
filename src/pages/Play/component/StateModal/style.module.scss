@@ -48,6 +48,16 @@
                 animation-iteration-count: 3;
             }
         }
+        p {
+            text-align: center;
+            position: absolute;
+            color: #fff;
+            z-index: 2123;
+            top: 66px;
+            font-family: 'SpaceGrotesk';
+            left: 0;
+            right: 0;
+        }
     }
     @keyframes wrongdModalAnimation {
         0% {

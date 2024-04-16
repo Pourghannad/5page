@@ -14,6 +14,7 @@ const Play = (props) => {
   const [selected, setSelected] = useState({});
   const [modalStatus, setModalStatus] = useState(!LSG("intro") ? "intro" : "");
   const [intro, setIntro] = useState(false);
+  const [errorsCount, setErrorsCount] = useState([]);
   const [levelData, setLevelData] = useState({});
   const [finish, setFinish] = useState(false);
   const { queryParams } = useQueryParams();
@@ -160,6 +161,35 @@ const Play = (props) => {
             LSS("level", JSON.stringify(levelStorage));
           }
         }
+
+        // currentLevel["ok"][0] === selected[1][0] &&
+        // currentLevel["ok"][1] === selected[2][0] &&
+        // currentLevel["ok"][2] === selected[3][0] &&
+        // currentLevel["ok"][3] === selected[4][0] &&
+        // currentLevel["ok"][4] === selected[5][0]
+        const errorCountArr = [];
+        if (selected[1].length === 1 &&
+          selected[2].length === 1 &&
+          selected[3].length === 1 &&
+          selected[4].length === 1 &&
+          selected[5].length === 1) {
+            if (currentLevel["ok"][0] !== selected[1][0]) {
+              errorCountArr.push(1);
+            }
+            if (currentLevel["ok"][1] !== selected[2][0]) {
+              errorCountArr.push(2);
+            }
+            if (currentLevel["ok"][2] !== selected[3][0]) {
+              errorCountArr.push(3);
+            }
+            if (currentLevel["ok"][3] !== selected[4][0]) {
+              errorCountArr.push(4);
+            }
+            if (currentLevel["ok"][4] !== selected[5][0]) {
+              errorCountArr.push(5);
+            }
+            setErrorsCount(errorCountArr)
+        }
         setModalStatus("wrong");
         playGameOver();
         setTimeout(() => {
@@ -256,7 +286,7 @@ const Play = (props) => {
           </>
         )}
         {modalStatus === "win" && <StateModal state="win" />}
-        {modalStatus === "wrong" && <StateModal state="wrong" />}
+        {modalStatus === "wrong" && <StateModal state="wrong" count={errorsCount} />}
         {modalStatus === "intro" && (
           <div className={style["intro-modal"]}>
             <h5>About the game</h5>
