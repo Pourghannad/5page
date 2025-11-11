@@ -162,11 +162,6 @@ const Play = (props) => {
           }
         }
 
-        // currentLevel["ok"][0] === selected[1][0] &&
-        // currentLevel["ok"][1] === selected[2][0] &&
-        // currentLevel["ok"][2] === selected[3][0] &&
-        // currentLevel["ok"][3] === selected[4][0] &&
-        // currentLevel["ok"][4] === selected[5][0]
         const errorCountArr = [];
         if (selected[1].length === 1 &&
           selected[2].length === 1 &&

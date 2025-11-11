@@ -8,7 +8,7 @@ const StateModal = ({ state = "wrong", count = [] }) => (
     {state === "wrong" && (
       <div className={classNames(style["status-modal"], style["wrong"])}>
         <WrongSvg />
-        <p>{count?.length} out of five pages have errors</p>
+        <p>{count?.length}/5 pages have errors</p>
       </div>
     )}
     {state === "win" && (
