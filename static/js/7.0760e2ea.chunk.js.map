@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/About/index.js"],"names":["About","React","createElement","Fragment"],"mappings":"6GAAA,2BAQeA,UANDA,IAENC,IAAAC,cAAAD,IAAAE,SAAA,KAAE","file":"static/js/7.0760e2ea.chunk.js","sourcesContent":["import React from \"react\";\n\nconst About = () => {\n    return (\n        <>About</>\n    );\n};\n\nexport default About;"],"sourceRoot":""}
