@@ -9,6 +9,11 @@ import StateModal from "./component/StateModal";
 import useSound from "use-sound";
 import gameOver from "../../assets/game-over.mp3";
 import gameSuccess from "../../assets/success.mp3";
+
+const TOTAL_PAGES = 5;
+const MAX_LEVEL = 18;
+const PAGE_KEYS = Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1);
+
 const Play = (props) => {
   const playContainerRef = useRef(null);
   const [selected, setSelected] = useState({});
@@ -17,17 +22,18 @@ const Play = (props) => {
   const [errorsCount, setErrorsCount] = useState([]);
   const [levelData, setLevelData] = useState({});
   const [finish, setFinish] = useState(false);
+  
   const { queryParams } = useQueryParams();
   const [playGameOver] = useSound(gameOver);
   const [playGameSuccess] = useSound(gameSuccess);
+
   useEffect(() => {
     if (playContainerRef?.current && modalStatus === "") {
       if (!LSG("level")) {
         setIntro(true);
+        const timer = setTimeout(() => setIntro(false), 1700);
+        return () => clearTimeout(timer); 
       }
-      setTimeout(() => {
-        setIntro(false);
-      }, 1700);
     }
   }, [modalStatus]);
 
@@ -42,9 +48,7 @@ const Play = (props) => {
       setLevelData({});
       fetch(`/5page/level/${queryParams.level}.json`)
         .then((response) => response.json())
-        .then((data) => {
-          setLevelData(data);
-        })
+        .then((data) => setLevelData(data))
         .catch((err) => {
           alert(err);
           setLevelData({});
@@ -54,262 +58,186 @@ const Play = (props) => {
   }, [props.history, queryParams.level]);
 
   const handleSelected = (uuid, page) => {
-    if (selected[page]) {
-      if (!selected[page].includes(uuid)) {
-        setSelected({ ...selected, [page]: [uuid] });
-      } else {
-        setSelected({
-          ...selected,
-          [page]: selected[page].filter((item) => {
-            return item !== uuid;
-          }),
-        });
-      }
-    } else {
-      setSelected({ ...selected, [page]: [uuid] });
-    }
+    setSelected((prev) => {
+      const currentSelections = prev[page] || [];
+      const isSelected = currentSelections.includes(uuid);
+      
+      return {
+        ...prev,
+        [page]: isSelected ? [] : [uuid], 
+      };
+    });
   };
 
   const submitCondition = () => {
-    if (
-      selected.hasOwnProperty(1) &&
-      selected.hasOwnProperty(2) &&
-      selected.hasOwnProperty(3) &&
-      selected.hasOwnProperty(4) &&
-      selected.hasOwnProperty(5) &&
-      selected[1].length > 0 &&
-      selected[2].length > 0 &&
-      selected[3].length > 0 &&
-      selected[4].length > 0 &&
-      selected[5].length > 0
-    ) {
-      return true;
+    return PAGE_KEYS.every((page) => selected[page]?.length > 0);
+  };
+
+  const updateLevelProgress = (levelNum, isCorrect) => {
+    let levelStorage = [];
+    try {
+      levelStorage = JSON.parse(LSG("level")) || [];
+    } catch (error) {
+      levelStorage = [];
     }
-    return false;
+
+    const levelIndex = levelStorage.findIndex((item) => item.number === levelNum);
+    
+    if (levelIndex === -1) {
+      levelStorage.push({
+        number: levelNum,
+        count: isCorrect ? { correct: 1 } : { wrong: 1 },
+      });
+    } else {
+      if (isCorrect) {
+        levelStorage[levelIndex].count.correct = 1;
+      } else if (!levelStorage[levelIndex].count.correct) {
+        levelStorage[levelIndex].count.wrong = (levelStorage[levelIndex].count.wrong || 0) + 1;
+      }
+    }
+    
+    LSS("level", JSON.stringify(levelStorage));
+  };
+
+  const checkAnswers = (currentLevel) => {
+    const isCorrect = PAGE_KEYS.every(
+      (page) => selected[page][0] === currentLevel.ok[page - 1]
+    );
+    
+    if (isCorrect) return { isCorrect: true, errors: [] };
+    
+    const errors = PAGE_KEYS.filter(
+      (page) => selected[page][0] !== currentLevel.ok[page - 1]
+    );
+    
+    return { isCorrect: false, errors };
   };
 
   const handleSubmit = () => {
-    if (submitCondition()) {
-      const currentLevel = levelData;
-      let levelStorage = [];
-      try {
-        levelStorage = JSON.parse(LSG("level")) || [];
-      } catch (error) {
-        levelStorage = [{ number: queryParams.level, count: { correct: 1 } }];
-      }
-      if (
-        selected[1].length === 1 &&
-        selected[2].length === 1 &&
-        selected[3].length === 1 &&
-        selected[4].length === 1 &&
-        selected[5].length === 1 &&
-        currentLevel["ok"][0] === selected[1][0] &&
-        currentLevel["ok"][1] === selected[2][0] &&
-        currentLevel["ok"][2] === selected[3][0] &&
-        currentLevel["ok"][3] === selected[4][0] &&
-        currentLevel["ok"][4] === selected[5][0]
-      ) {
-        setModalStatus("win");
-        playGameSuccess();
-        if (
-          !levelStorage.find((item) => item.number === queryParams.level * 1)
-        ) {
-          LSS(
-            "level",
-            JSON.stringify([
-              ...levelStorage,
-              { number: queryParams.level * 1, count: { correct: 1 } },
-            ])
-          );
-        } else {
-          const currentLevelIndex = levelStorage.findIndex((item) => {
-            return item.number === queryParams.level * 1;
-          });
-          levelStorage[currentLevelIndex].count.correct = 1;
-          LSS("level", JSON.stringify(levelStorage));
-        }
-        if (queryParams.level !== "18") {
-          props.history.push(`/play?level=${queryParams.level * 1 + 1}`);
-          setSelected({});
-          setTimeout(() => {
-            setModalStatus("");
-          }, 3000);
-        } else {
-          setFinish(true);
-        }
-      } else {
-        const currentLevelCount = levelStorage.find(
-          (item) => item.number === queryParams.level * 1
-        );
-        if (!currentLevelCount) {
-          LSS(
-            "level",
-            JSON.stringify([
-              ...levelStorage,
-              {
-                number: queryParams.level * 1,
-                count: { wrong: currentLevelCount?.count?.wrong + 1 || 1 },
-              },
-            ])
-          );
-        } else {
-          if (!currentLevelCount.count.correct) {
-            const currentLevelIndex = levelStorage.findIndex((item) => {
-              return item.number === queryParams.level * 1;
-            });
-            levelStorage[currentLevelIndex].count.wrong += 1;
-            LSS("level", JSON.stringify(levelStorage));
-          }
-        }
+    if (!submitCondition()) {
+      alert("Please select one item on all five pages first.");
+      return;
+    }
 
-        const errorCountArr = [];
-        if (selected[1].length === 1 &&
-          selected[2].length === 1 &&
-          selected[3].length === 1 &&
-          selected[4].length === 1 &&
-          selected[5].length === 1) {
-            if (currentLevel["ok"][0] !== selected[1][0]) {
-              errorCountArr.push(1);
-            }
-            if (currentLevel["ok"][1] !== selected[2][0]) {
-              errorCountArr.push(2);
-            }
-            if (currentLevel["ok"][2] !== selected[3][0]) {
-              errorCountArr.push(3);
-            }
-            if (currentLevel["ok"][3] !== selected[4][0]) {
-              errorCountArr.push(4);
-            }
-            if (currentLevel["ok"][4] !== selected[5][0]) {
-              errorCountArr.push(5);
-            }
-            setErrorsCount(errorCountArr)
-        }
-        setModalStatus("wrong");
-        playGameOver();
-        setTimeout(() => {
-          setModalStatus("");
-        }, 2500);
+    const currentLevelNum = Number(queryParams.level);
+    const { isCorrect, errors } = checkAnswers(levelData);
+
+    updateLevelProgress(currentLevelNum, isCorrect);
+
+    if (isCorrect) {
+      setModalStatus("win");
+      playGameSuccess();
+      
+      if (currentLevelNum < MAX_LEVEL) {
+        props.history.push(`/play?level=${currentLevelNum + 1}`);
+        setSelected({});
+        setTimeout(() => setModalStatus(""), 3000);
+      } else {
+        setFinish(true);
       }
     } else {
-      alert("Please select one item on all five pages first.");
+      setErrorsCount(errors);
+      setModalStatus("wrong");
+      playGameOver();
+      setTimeout(() => setModalStatus(""), 2500);
     }
   };
-  if (queryParams.level) {
-    const currentLevel = levelData;
-    return (
-      <>
-        {intro && (
-          <div
-            className={classNames(style["intro-scroll"], {
-              [style["active"]]: intro,
-            })}
+
+  if (!queryParams.level) return null;
+
+  const currentLevel = levelData;
+  const isIntroModal = modalStatus === "intro";
+
+  return (
+    <>
+      {intro && (
+        <div
+          className={classNames(style["intro-scroll"], {
+            [style["active"]]: intro,
+          })}
+        >
+          scroll horizontally
+        </div>
+      )}
+      
+      <div className={style["play-head"]}>
+        <button
+          className={style["back"]}
+          onClick={() => props.history.push("/level", { from: "play" })}
+          aria-label="Back to levels"
+        />
+        <h4>Level {queryParams.level}</h4>
+      </div>
+
+      <div
+        ref={playContainerRef}
+        className={classNames(style["play-main-container"], {
+          [style["intro"]]: isIntroModal,
+        })}
+      >
+        <div className={style["page-container"]}>
+          <span className={style["text"]}>Pattern detection</span>
+          <Grid standard data={currentLevel.standard} />
+        </div>
+
+        {PAGE_KEYS.map((page) => (
+          <div key={page} className={style["page-container"]}>
+            <span className={style["text"]}>Page {page}</span>
+            <Grid
+              onSelected={(uuid) => handleSelected(uuid, page)}
+              data={currentLevel[`page${page}`]}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div
+        className={classNames(style["submit-wrapper"], {
+          [style["active"]]: submitCondition(),
+        })}
+      >
+        <button onClick={handleSubmit} className={style["submit"]}>
+          Submit
+        </button>
+      </div>
+
+      {finish && (
+        <div className="pyro">
+          <div className="before" />
+          <div className="after" />
+        </div>
+      )}
+
+      {modalStatus === "win" && <StateModal state="win" />}
+      {modalStatus === "wrong" && (
+        <StateModal state="wrong" count={errorsCount} />
+      )}
+      
+      {isIntroModal && (
+        <div className={style["intro-modal"]}>
+          <h5>About the game</h5>
+          <p>
+            On the Pattern Detection page, one box is selected because it contains a unique feature that sets it apart from the others. Identify this feature, then on each of the next five pages, choose the box that contains the same feature.
+          </p>
+          <a
+            href="https://90theme.ir/upload/help.mp4"
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            scroll horizontally
-          </div>
-        )}
-        <div className={style["play-head"]}>
+            Video
+          </a>
           <button
-            className={style["back"]}
             onClick={() => {
-              props.history.push("/level", { from: "play" });
+              setModalStatus("");
+              LSS("intro", true);
             }}
-          ></button>
-          <h4>Level {queryParams.level}</h4>
-        </div>
-        <div
-          ref={playContainerRef}
-          className={classNames(style["play-main-container"], {
-            [style["intro"]]: modalStatus === "intro",
-          })}
-        >
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Pattern detection</span>
-            <Grid standard data={currentLevel.standard} />
-          </div>
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Page 1</span>
-            <Grid
-              onSelected={(uuid) => handleSelected(uuid, 1)}
-              data={currentLevel.page1}
-            />
-          </div>
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Page 2</span>
-            <Grid
-              onSelected={(uuid) => handleSelected(uuid, 2)}
-              data={currentLevel.page2}
-            />
-          </div>
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Page 3</span>
-            <Grid
-              onSelected={(uuid) => handleSelected(uuid, 3)}
-              data={currentLevel.page3}
-            />
-          </div>
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Page 4</span>
-            <Grid
-              onSelected={(uuid) => handleSelected(uuid, 4)}
-              data={currentLevel.page4}
-            />
-          </div>
-          <div className={style["page-container"]}>
-            <span className={style["text"]}>Page 5</span>
-            <Grid
-              onSelected={(uuid) => handleSelected(uuid, 5)}
-              data={currentLevel.page5}
-            />
-          </div>
-        </div>
-        <div
-          className={classNames(style["submit-wrapper"], {
-            [style["active"]]: submitCondition(),
-          })}
-        >
-          <button onClick={handleSubmit} className={style["submit"]}>
-            Submit
+          >
+            OK
           </button>
         </div>
-        {finish && (
-          <>
-            <div class="pyro">
-              <div class="before"></div>
-              <div class="after"></div>
-            </div>
-          </>
-        )}
-        {modalStatus === "win" && <StateModal state="win" />}
-        {modalStatus === "wrong" && <StateModal state="wrong" count={errorsCount} />}
-        {modalStatus === "intro" && (
-          <div className={style["intro-modal"]}>
-            <h5>About the game</h5>
-            On the Pattern detection page, one item is selected from among the
-            available boxes due to a special feature compared to the others.
-            Find this special feature and select the item that you think has
-            this feature on the next 5 pages.
-            <a
-              href="https://90theme.ir/upload/help.mp4"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Video
-            </a>
-            <button
-              onClick={() => {
-                setModalStatus("");
-                LSS("intro", true);
-              }}
-            >
-              OK
-            </button>
-          </div>
-        )}
-      </>
-    );
-  }
-  return <></>;
+      )}
+    </>
+  );
 };
 
 export default withRouter(Play);
