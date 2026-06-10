@@ -11,7 +11,7 @@ import gameOver from "../../assets/game-over.mp3";
 import gameSuccess from "../../assets/success.mp3";
 
 const TOTAL_PAGES = 5;
-const MAX_LEVEL = 18;
+const MAX_LEVEL = 19;
 const PAGE_KEYS = Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1);
 
 const Play = (props) => {
