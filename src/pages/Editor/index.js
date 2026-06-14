@@ -301,7 +301,7 @@ const Editor = () => {
       <h4>Level Editor</h4>
       <div>
         <div className={style["page-container"]}>
-          <span className={style["text"]}>Pattern detection</span>
+          <span className={style["text"]}>PAGE 0</span>
           <Grid editor standard data={emptyLevel.standard} />
         </div>
       </div>

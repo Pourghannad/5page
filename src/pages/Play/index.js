@@ -176,7 +176,7 @@ const Play = (props) => {
         })}
       >
         <div className={style["page-container"]}>
-          <span className={style["text"]}>Pattern detection</span>
+          <span className={style["text"]}>Page 0</span>
           <Grid standard data={currentLevel.standard} />
         </div>
 
@@ -217,7 +217,7 @@ const Play = (props) => {
         <div className={style["intro-modal"]}>
           <h5>About the game</h5>
           <p>
-            On the Pattern Detection page, one box is selected because it contains a unique feature that sets it apart from the others. Identify this feature, then on each of the next five pages, choose the box that contains the same feature.
+            On the page 0, one box is selected because it contains a unique feature that sets it apart from the others. Identify this feature, then on each of the next five pages, choose the box that contains the same feature.
           </p>
           <a
             href="https://90theme.ir/upload/help.mp4"
