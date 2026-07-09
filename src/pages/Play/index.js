@@ -22,7 +22,7 @@ const Play = (props) => {
   const [errorsCount, setErrorsCount] = useState([]);
   const [levelData, setLevelData] = useState({});
   const [finish, setFinish] = useState(false);
-  
+
   const { queryParams } = useQueryParams();
   const [playGameOver] = useSound(gameOver);
   const [playGameSuccess] = useSound(gameSuccess);
@@ -31,8 +31,8 @@ const Play = (props) => {
     if (playContainerRef?.current && modalStatus === "") {
       if (!LSG("level")) {
         setIntro(true);
-        const timer = setTimeout(() => setIntro(false), 1700);
-        return () => clearTimeout(timer); 
+        const timer = setTimeout(() => setIntro(false), 4000);
+        return () => clearTimeout(timer);
       }
     }
   }, [modalStatus]);
@@ -61,10 +61,10 @@ const Play = (props) => {
     setSelected((prev) => {
       const currentSelections = prev[page] || [];
       const isSelected = currentSelections.includes(uuid);
-      
+
       return {
         ...prev,
-        [page]: isSelected ? [] : [uuid], 
+        [page]: isSelected ? [] : [uuid],
       };
     });
   };
@@ -82,7 +82,7 @@ const Play = (props) => {
     }
 
     const levelIndex = levelStorage.findIndex((item) => item.number === levelNum);
-    
+
     if (levelIndex === -1) {
       levelStorage.push({
         number: levelNum,
@@ -95,7 +95,7 @@ const Play = (props) => {
         levelStorage[levelIndex].count.wrong = (levelStorage[levelIndex].count.wrong || 0) + 1;
       }
     }
-    
+
     LSS("level", JSON.stringify(levelStorage));
   };
 
@@ -103,13 +103,13 @@ const Play = (props) => {
     const isCorrect = PAGE_KEYS.every(
       (page) => selected[page][0] === currentLevel.ok[page - 1]
     );
-    
+
     if (isCorrect) return { isCorrect: true, errors: [] };
-    
+
     const errors = PAGE_KEYS.filter(
       (page) => selected[page][0] !== currentLevel.ok[page - 1]
     );
-    
+
     return { isCorrect: false, errors };
   };
 
@@ -127,7 +127,7 @@ const Play = (props) => {
     if (isCorrect) {
       setModalStatus("win");
       playGameSuccess();
-      
+
       if (currentLevelNum < MAX_LEVEL) {
         props.history.push(`/play?level=${currentLevelNum + 1}`);
         setSelected({});
@@ -159,7 +159,7 @@ const Play = (props) => {
           scroll horizontally
         </div>
       )}
-      
+
       <div className={style["play-head"]}>
         <button
           className={style["back"]}
@@ -212,7 +212,7 @@ const Play = (props) => {
       {modalStatus === "wrong" && (
         <StateModal state="wrong" count={errorsCount} />
       )}
-      
+
       {isIntroModal && (
         <div className={style["intro-modal"]}>
           <h5>About the game</h5>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import style from "./style.module.scss";
 import Intro from "./component/intro";
+import packageJson from '../../../package.json';
 import { ReactComponent as Play } from "../../assets/play.svg";
 import { ReactComponent as About } from "../../assets/about.svg";
 import { LSG } from "../../utils/store";
@@ -44,7 +45,7 @@ const Home = (props) => {
             <Play />
           </button>
         </div>
-        <span className={style["version-number"]}>V 0.2.3</span>
+        <span className={style["version-number"]}>V {packageJson.version}</span>
       </React.Fragment>
     </div>
   );
